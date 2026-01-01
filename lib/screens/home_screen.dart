@@ -19,8 +19,7 @@ class HomeScreen extends StatelessWidget {
         return Container(
             decoration: BoxDecoration(
               image: DecorationImage(
-                image:
-                themeState.isDarkMode
+                image: Theme.of(context).brightness == Brightness.dark
                     ? const AssetImage('assets/bg2.jpeg')
                     : const AssetImage('assets/bg1.jpeg'),
                 fit: BoxFit.cover,
@@ -38,7 +37,7 @@ class HomeScreen extends StatelessWidget {
                   actions: [
                     IconButton(
                       icon: Icon(
-                        themeState.isDarkMode
+                        Theme.of(context).brightness == Brightness.dark
                             ? Icons.light_mode
                             : Icons.dark_mode,
                       ),
@@ -111,53 +110,117 @@ class HomeScreen extends StatelessWidget {
       return const Center(child: Text('No collections found'));
     }
 
-    return GridView.builder(
-      padding: const EdgeInsets.all(16.0),
-      gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-        maxCrossAxisExtent: 150,
-        childAspectRatio: 1.0,
-        crossAxisSpacing: 16.0,
-        mainAxisSpacing: 16.0,
-      ),
-      itemCount: state.collections.length,
-      itemBuilder: (context, index) {
-        final collection = state.collections[index];
-        return Card(
-          elevation: 4.0,
-          color: Theme.of(context).cardColor.withOpacity(0.9),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(12.0),
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        int crossAxisCount;
+        if (constraints.maxWidth < 600) {
+          crossAxisCount = 2; // Mobile
+        } else if (constraints.maxWidth < 1200) {
+          crossAxisCount = 4; // Tablet
+        } else {
+          crossAxisCount = 6; // Desktop
+        }
+
+        return GridView.builder(
+          padding: const EdgeInsets.all(16.0),
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: crossAxisCount,
+            childAspectRatio: 1.0,
+            crossAxisSpacing: 16.0,
+            mainAxisSpacing: 16.0,
           ),
-          child: InkWell(
-            borderRadius: BorderRadius.circular(12.0),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => PlaylistScreen(collection: collection),
-                ),
-              );
-            },
-            child: Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Icon(Icons.folder_open, size: 60.0, color: Colors.greenAccent),
-                  const SizedBox(height: 12.0),
-                  Text(
-                    collection.title,
-                    textAlign: TextAlign.center,
-                    style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                      color: Theme.of(context).colorScheme.onSurface,
-                    ),
-                    maxLines: 2,
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                ],
+          itemCount: state.collections.length,
+          itemBuilder: (context, index) {
+            final collection = state.collections[index];
+            final bool isDark = Theme.of(context).brightness == Brightness.dark;
+            
+            return Card(
+              elevation: 8.0,
+              shadowColor: Colors.black26,
+              color: Colors.transparent, // Transparent for custom decoration
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(20.0),
               ),
-            ),
-          ),
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20.0),
+                  gradient: LinearGradient(
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                    colors: isDark
+                        ? [
+                            Colors.white.withOpacity(0.1),
+                            Colors.white.withOpacity(0.05),
+                          ]
+                        : [
+                            Colors.white.withOpacity(0.8),
+                            Colors.white.withOpacity(0.4),
+                          ],
+                  ),
+                  border: Border.all(
+                    color: isDark 
+                        ? Colors.white.withOpacity(0.2) 
+                        : Colors.white.withOpacity(0.6),
+                    width: 1.0,
+                  ),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.1),
+                      blurRadius: 10,
+                      spreadRadius: 2,
+                    ),
+                  ],
+                ),
+                child: InkWell(
+                  borderRadius: BorderRadius.circular(20.0),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => PlaylistScreen(collection: collection),
+                      ),
+                    );
+                  },
+                  child: Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          padding: const EdgeInsets.all(12),
+                          decoration: BoxDecoration(
+                            color: isDark 
+                                ? Colors.greenAccent.withOpacity(0.2)
+                                : Colors.green.withOpacity(0.1),
+                            shape: BoxShape.circle,
+                          ),
+                          child: Icon(
+                            Icons.folder_open_rounded,
+                            size: 40.0,
+                            color: isDark ? Colors.greenAccent : Colors.green,
+                          ),
+                        ),
+                        const SizedBox(height: 16.0),
+                        Flexible(
+                          child: Text(
+                            collection.title,
+                            textAlign: TextAlign.center,
+                            style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                              fontWeight: FontWeight.bold,
+                              color: Theme.of(context).colorScheme.onSurface,
+                              height: 1.2,
+                            ),
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            );
+          },
         );
       },
     );
