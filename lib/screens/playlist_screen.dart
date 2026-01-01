@@ -7,6 +7,8 @@ import '../blocs/audio/audio_event.dart';
 import '../blocs/audio/audio_state.dart';
 import '../models/audio.dart';
 import '../utils/download_helper.dart';
+import '../widgets/glass_card.dart';
+import 'dart:ui';
 
 class PlaylistScreen extends StatelessWidget {
   final Collection collection;
@@ -37,51 +39,57 @@ class PlaylistScreen extends StatelessWidget {
             backgroundColor: Colors.transparent,
             body: BlocBuilder<AudioBloc, AudioState>(
               builder: (context, state) {
+                final isDark = Theme.of(context).brightness == Brightness.dark;
                 return ListView.builder(
+                  padding: const EdgeInsets.all(16.0),
                   itemCount: collection.audios.length,
                   itemBuilder: (context, index) {
                     final audio = collection.audios[index];
                     // Check if this specific audio is matched by URL
                     final isPlaying = state.currentAudio?.title == audio.title;
 
-                    return ListTile(
-                      leading: Icon(
-                        isPlaying ? Icons.music_note : Icons
-                            .play_circle_outline,
-                        color:  Theme
-                            .of(context)
-                            .iconTheme
-                            .color,
-                      ),
-                      title: Text(
-                        audio.title,
-                        style: TextStyle(
-                          fontWeight: isPlaying ? FontWeight.bold : FontWeight
-                              .normal,
-                          color:Theme
-                              .of(context)
-                              .colorScheme
-                              .onSurface,
-                        ),
-                      ),
-                      subtitle: audio.date != null ? Text(
-                        audio.date!,
-                        style: TextStyle(
-                          color: Theme
-                              .of(context)
-                              .colorScheme
-                              .onSurfaceVariant,
-                        ),
-                      ) : null,
-                      trailing: IconButton(
-                        icon: const Icon(Icons.download),
-                        onPressed: () {
-                          DownloadHelper.downloadAudio(audio.url);
+                    return Padding(
+                      padding: const EdgeInsets.only(bottom: 12.0),
+                      child: GlassCard(
+                        isDark: isDark,
+                        borderRadius: 16,
+                        onTap: () {
+                          context.read<AudioBloc>().add(PlayAudio(audio));
                         },
+                        child: ListTile(
+                          contentPadding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+                          leading: Container(
+                            padding: const EdgeInsets.all(8),
+                            decoration: BoxDecoration(
+                              color: isPlaying ? Theme.of(context).colorScheme.primary.withOpacity(0.2) : Colors.transparent,
+                              shape: BoxShape.circle,
+                            ),
+                            child: Icon(
+                              isPlaying ? Icons.music_note : Icons.play_arrow_rounded,
+                              color: isPlaying ? Theme.of(context).colorScheme.primary : Theme.of(context).iconTheme.color,
+                            ),
+                          ),
+                          title: Text(
+                            audio.title,
+                            style: TextStyle(
+                              fontWeight: isPlaying ? FontWeight.bold : FontWeight.normal,
+                              color: Theme.of(context).colorScheme.onSurface,
+                            ),
+                          ),
+                          subtitle: audio.date != null ? Text(
+                            audio.date!,
+                            style: TextStyle(
+                              color: Theme.of(context).colorScheme.onSurfaceVariant,
+                            ),
+                          ) : null,
+                          trailing: IconButton(
+                            icon: const Icon(Icons.download_rounded),
+                            onPressed: () {
+                              DownloadHelper.downloadAudio(audio.url);
+                            },
+                          ),
+                        ),
                       ),
-                      onTap: () {
-                        context.read<AudioBloc>().add(PlayAudio(audio));
-                      },
                     );
                   },
                 );

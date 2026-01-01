@@ -7,6 +7,8 @@ import '../blocs/audio/audio_state.dart';
 import '../blocs/theme/theme_bloc.dart';
 import '../blocs/theme/theme_event.dart';
 import '../blocs/theme/theme_state.dart';
+import 'dart:ui';
+import '../widgets/glass_card.dart';
 import 'playlist_screen.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -31,44 +33,57 @@ class HomeScreen extends StatelessWidget {
             ),
             child: Scaffold(
               appBar: AppBar(
-                  title: const Text('Pháp Thoại Làng Mai'),
-                  centerTitle: true,
-                  backgroundColor: Colors.transparent,
-                  actions: [
-                    IconButton(
-                      icon: Icon(
-                        Theme.of(context).brightness == Brightness.dark
-                            ? Icons.light_mode
-                            : Icons.dark_mode,
-                      ),
-                      onPressed: () {
-                        context.read<ThemeBloc>().add(ToggleTheme());
-                      },
-                    )
-                  ]
-              ),
-              backgroundColor: Colors.transparent,
-              body: BlocBuilder<AudioBloc, AudioState>(
-                builder: (context, audioState) {
-                  return Column(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(16.0),
-                        child: SearchBar(
-                          hintText: 'Search by title or date...',
-                          leading: const Icon(Icons.search),
-                          onChanged: (query) {
-                            context.read<AudioBloc>().add(SearchAudio(query));
-                          },
+                title: const Text('Pháp Thoại Làng Mai'),
+                centerTitle: true,
+                backgroundColor: Colors.transparent,
+                actions: [
+                  IconButton(
+                    icon: Icon(
+                      Theme.of(context).brightness == Brightness.dark
+                          ? Icons.light_mode
+                          : Icons.dark_mode,
+                    ),
+                    onPressed: () {
+                      context.read<ThemeBloc>().add(ToggleTheme());
+                    },
+                  )
+                ]
+            ),
+            backgroundColor: Colors.transparent,
+            body: BlocBuilder<AudioBloc, AudioState>(
+              builder: (context, audioState) {
+                final isDark = Theme.of(context).brightness == Brightness.dark;
+                return Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: GlassCard(
+                        isDark: isDark,
+                        borderRadius: 30,
+                        child: Padding(
+                           padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                           child: TextField(
+                            decoration: InputDecoration(
+                              hintText: 'Search by title or date...',
+                              icon: Icon(Icons.search, color: Theme.of(context).colorScheme.onSurface),
+                              border: InputBorder.none,
+                              hintStyle: TextStyle(color: Theme.of(context).colorScheme.onSurface.withOpacity(0.6)),
+                            ),
+                            style: TextStyle(color: Theme.of(context).colorScheme.onSurface),
+                            onChanged: (query) {
+                              context.read<AudioBloc>().add(SearchAudio(query));
+                            },
+                          ),
                         ),
                       ),
-                      Expanded(child: _buildBody(context, audioState)),
-                    ],
-                  );
-                },
-              ),
-            ));
-      });
+                    ),
+                    Expanded(child: _buildBody(context, audioState)),
+                  ],
+                );
+              },
+            ),
+          ));
+    });
   }
 
   Widget _buildBody(BuildContext context, AudioState state) {
@@ -76,31 +91,40 @@ class HomeScreen extends StatelessWidget {
       return const Center(child: CircularProgressIndicator());
     }
 
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+
     if (state.isSearching) {
       if (state.searchResults.isEmpty) {
         return const Center(child: Text('No results found'));
       }
       return ListView.builder(
+        padding: const EdgeInsets.all(16.0),
         itemCount: state.searchResults.length,
         itemBuilder: (context, index) {
           final audio = state.searchResults[index];
-          return ListTile(
-            title: Text(
-              audio.title,
-              style: TextStyle(color: Theme.of(context).colorScheme.onSurface),
-            ),
-            subtitle:
-                audio.date != null
+          return Padding(
+            padding: const EdgeInsets.only(bottom: 8.0),
+            child: GlassCard(
+              isDark: isDark,
+              borderRadius: 12,
+              onTap: () {
+                context.read<AudioBloc>().add(PlayAudio(audio));
+              },
+              child: ListTile(
+                title: Text(
+                  audio.title,
+                  style: TextStyle(color: Theme.of(context).colorScheme.onSurface),
+                ),
+                subtitle: audio.date != null
                     ? Text(
-                      audio.date!,
-                      style: TextStyle(
-                        color: Theme.of(context).colorScheme.onSurfaceVariant,
-                      ),
-                    )
+                        audio.date!,
+                        style: TextStyle(
+                            color: Theme.of(context).colorScheme.onSurfaceVariant),
+                      )
                     : null,
-            onTap: () {
-               context.read<AudioBloc>().add(PlayAudio(audio));
-            },
+                trailing: Icon(Icons.play_arrow_rounded, color: Theme.of(context).colorScheme.primary),
+              ),
+            ),
           );
         },
       );
@@ -132,91 +156,58 @@ class HomeScreen extends StatelessWidget {
           itemCount: state.collections.length,
           itemBuilder: (context, index) {
             final collection = state.collections[index];
-            final bool isDark = Theme.of(context).brightness == Brightness.dark;
             
-            return Card(
-              elevation: 8.0,
-              shadowColor: Colors.black26,
-              color: Colors.transparent, // Transparent for custom decoration
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(20.0),
-              ),
-              child: Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20.0),
-                  gradient: LinearGradient(
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                    colors: isDark
-                        ? [
-                            Colors.white.withOpacity(0.1),
-                            Colors.white.withOpacity(0.05),
-                          ]
-                        : [
-                            Colors.white.withOpacity(0.8),
-                            Colors.white.withOpacity(0.4),
-                          ],
+            return GlassCard(
+              isDark: isDark,
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => PlaylistScreen(collection: collection),
                   ),
-                  border: Border.all(
-                    color: isDark 
-                        ? Colors.white.withOpacity(0.2) 
-                        : Colors.white.withOpacity(0.6),
-                    width: 1.0,
-                  ),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withOpacity(0.1),
-                      blurRadius: 10,
-                      spreadRadius: 2,
+                );
+              },
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.all(12),
+                      decoration: BoxDecoration(
+                        color: isDark 
+                            ? Colors.greenAccent.withOpacity(0.2)
+                            : Colors.green.withOpacity(0.1),
+                        shape: BoxShape.circle,
+                        boxShadow: [
+                           BoxShadow(
+                             color: isDark ? Colors.greenAccent.withOpacity(0.1) : Colors.green.withOpacity(0.1),
+                             blurRadius: 12,
+                             spreadRadius: 2,
+                           )
+                        ]
+                      ),
+                      child: Icon(
+                        Icons.folder_open_rounded,
+                        size: 40.0,
+                        color: isDark ? Colors.greenAccent : Colors.green,
+                      ),
+                    ),
+                    const SizedBox(height: 16.0),
+                    Flexible(
+                      child: Text(
+                        collection.title,
+                        textAlign: TextAlign.center,
+                        style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                          fontWeight: FontWeight.bold,
+                          color: Theme.of(context).colorScheme.onSurface,
+                          height: 1.2,
+                        ),
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
+                      ),
                     ),
                   ],
-                ),
-                child: InkWell(
-                  borderRadius: BorderRadius.circular(20.0),
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => PlaylistScreen(collection: collection),
-                      ),
-                    );
-                  },
-                  child: Padding(
-                    padding: const EdgeInsets.all(16.0),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Container(
-                          padding: const EdgeInsets.all(12),
-                          decoration: BoxDecoration(
-                            color: isDark 
-                                ? Colors.greenAccent.withOpacity(0.2)
-                                : Colors.green.withOpacity(0.1),
-                            shape: BoxShape.circle,
-                          ),
-                          child: Icon(
-                            Icons.folder_open_rounded,
-                            size: 40.0,
-                            color: isDark ? Colors.greenAccent : Colors.green,
-                          ),
-                        ),
-                        const SizedBox(height: 16.0),
-                        Flexible(
-                          child: Text(
-                            collection.title,
-                            textAlign: TextAlign.center,
-                            style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                              fontWeight: FontWeight.bold,
-                              color: Theme.of(context).colorScheme.onSurface,
-                              height: 1.2,
-                            ),
-                            maxLines: 2,
-                            overflow: TextOverflow.ellipsis,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
                 ),
               ),
             );
