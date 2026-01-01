@@ -20,7 +20,7 @@ class PlaylistScreen extends StatelessWidget {
         return Container(
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: themeState.isDarkMode ? AssetImage('assets/bg2.jpeg')
+              image: Theme.of(context).brightness == Brightness.dark ? AssetImage('assets/bg2.jpeg')
                   : AssetImage('assets/bg1.jpeg'),
               fit: BoxFit.cover,
               colorFilter: ColorFilter.mode(
