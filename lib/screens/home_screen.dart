@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
 import '../models/audio_view_model.dart';
 import '../models/theme_view_model.dart';
 import 'playlist_screen.dart';
@@ -13,11 +14,16 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Pháp Thoại Làng Mai'),
         centerTitle: true,
+        backgroundColor: Colors.transparent,
         actions: [
           Consumer<ThemeViewModel>(
             builder: (context, themeViewModel, _) {
               return IconButton(
-                icon: Icon(themeViewModel.isDarkMode ? Icons.light_mode : Icons.dark_mode),
+                icon: Icon(
+                  themeViewModel.isDarkMode
+                      ? Icons.light_mode
+                      : Icons.dark_mode,
+                ),
                 onPressed: () {
                   themeViewModel.toggleTheme();
                 },
@@ -26,38 +32,43 @@ class HomeScreen extends StatelessWidget {
           ),
         ],
       ),
-      body: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: const AssetImage('assets/bg.jpg'),
-            fit: BoxFit.cover,
-            colorFilter: ColorFilter.mode(
-              Colors.black.withOpacity(0.2), 
-              BlendMode.darken,
+      body: Consumer<ThemeViewModel>(
+        builder: (BuildContext context, ThemeViewModel theme, Widget? child) {
+          return Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image:
+                    theme.isDarkMode
+                        ? AssetImage('assets/bg2.jpeg')
+                        : AssetImage('assets/bg1.jpeg'),
+                fit: BoxFit.cover,
+                colorFilter: ColorFilter.mode(
+                  Colors.black.withOpacity(0.2),
+                  BlendMode.darken,
+                ),
+              ),
             ),
-          ),
-        ),
-        child: Consumer<AudioViewModel>(
-          builder: (context, viewModel, child) {
-            return Column(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: SearchBar(
-                    hintText: 'Search by title or date...',
-                    leading: const Icon(Icons.search),
-                    onChanged: (query) {
-                      viewModel.search(query);
-                    },
-                  ),
-                ),
-                Expanded(
-                  child: _buildBody(context, viewModel),
-                ),
-              ],
-            );
-          },
-        ),
+            child: Consumer<AudioViewModel>(
+              builder: (context, viewModel, child) {
+                return Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: SearchBar(
+                        hintText: 'Search by title or date...',
+                        leading: const Icon(Icons.search),
+                        onChanged: (query) {
+                          viewModel.search(query);
+                        },
+                      ),
+                    ),
+                    Expanded(child: _buildBody(context, viewModel)),
+                  ],
+                );
+              },
+            ),
+          );
+        },
       ),
     );
   }
@@ -76,8 +87,19 @@ class HomeScreen extends StatelessWidget {
         itemBuilder: (context, index) {
           final audio = viewModel.searchResults[index];
           return ListTile(
-            title: Text(audio.title, style: TextStyle(color: Theme.of(context).colorScheme.onSurface)),
-            subtitle: audio.date != null ? Text(audio.date!, style: TextStyle(color: Theme.of(context).colorScheme.onSurfaceVariant)) : null,
+            title: Text(
+              audio.title,
+              style: TextStyle(color: Theme.of(context).colorScheme.onSurface),
+            ),
+            subtitle:
+                audio.date != null
+                    ? Text(
+                      audio.date!,
+                      style: TextStyle(
+                        color: Theme.of(context).colorScheme.onSurfaceVariant,
+                      ),
+                    )
+                    : null,
             onTap: () {
               viewModel.playAudio(audio);
             },
