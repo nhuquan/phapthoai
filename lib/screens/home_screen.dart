@@ -29,7 +29,7 @@ class HomeScreen extends StatelessWidget {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: const AssetImage('assets/bg.png'),
+            image: const AssetImage('assets/bg.jpg'),
             fit: BoxFit.cover,
             colorFilter: ColorFilter.mode(
               Colors.black.withOpacity(0.2), 
