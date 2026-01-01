@@ -1,22 +1,360 @@
 [
   {
-    "collection": "Pháp thoại năm 2012",
-    "source_url": "https://langmai.org/thien-duong/nghe-phap-thoai/nghe-phap-thoai-audio/phap-thoai-nam-2012/",
+    "collection": "Tổng Quan Đại Tạng 1989",
+    "source_url": "https://langmai.org/thien-duong/nghe-phap-thoai/nghe-phap-thoai-audio/tong-quan-dai-tang-1989/",
     "audios": [
       {
-        "title": "Hạnh phúc gia đình - Hiểu mới thương (23/07/2012)",
-        "date": "2012-07-23",
-        "url": "https://langmai.org/wp-content/uploads/2019/02/Cha%CC%82u-ba%CC%81u-cha%CC%82%CC%81t-%C4%91a%CC%82%CC%80y-the%CC%82%CC%81-gio%CC%9B%CC%81i-Nha%CC%82%CC%81t-Ha%CC%A3nh-converted.mp3"
+        "title": "01",
+        "url": "https://langmai.org/wp-content/uploads/2019/05/01.To%CC%82%CC%89ng-quan-%C4%91a%CC%A3i-ta%CC%A3ng.mp3"
       },
       {
-        "title": "Thiết Lập truyền thông (30/07/2012)",
-        "date": "2012-07-30",
-        "url": "https://langmai.org/wp-content/uploads/2019/02/Truye%CC%82%CC%80n-tho%CC%82ng-ba%CC%86%CC%80ng-nie%CC%A3%CC%82m-hu%CC%9Bo%CC%9Bng-Thi%CC%81ch-Nha%CC%82%CC%81t-Ha%CC%A3nh-converted.mp3"
+        "title": "02",
+        "url": "https://langmai.org/wp-content/uploads/2019/05/02.To%CC%82%CC%89ng-quan-%C4%91a%CC%A3i-ta%CC%A3ng.mp3"
+      },
+      {
+        "title": "03",
+        "url": "https://langmai.org/wp-content/uploads/2019/05/03.To%CC%82%CC%89ng-quan-%C4%91a%CC%A3i-ta%CC%A3ng.mp3"
+      },
+      {
+        "title": "04",
+        "url": "https://langmai.org/wp-content/uploads/2019/05/04.To%CC%82%CC%89ng-quan-%C4%91i%CC%A3a-ta%CC%A3ng.mp3"
+      },
+      {
+        "title": "05",
+        "url": "https://langmai.org/wp-content/uploads/2019/05/05.To%CC%82%CC%89ng-quan-%C4%91a%CC%A3i-ta%CC%A3ng.mp3"
+      },
+      {
+        "title": "06",
+        "url": "https://langmai.org/wp-content/uploads/2019/05/06.To%CC%82%CC%89ng-quan-%C4%91a%CC%A3i-ta%CC%A3ng.mp3"
+      },
+      {
+        "title": "07",
+        "url": "https://langmai.org/wp-content/uploads/2019/05/07.To%CC%82%CC%89ng-quan-%C4%91a%CC%A3i-ta%CC%A3ng.mp3"
+      },
+      {
+        "title": "08",
+        "url": "https://langmai.org/wp-content/uploads/2019/05/08.To%CC%82%CC%89ng-quan-%C4%91a%CC%A3i-ta%CC%A3ng.mp3"
+      },
+      {
+        "title": "09",
+        "url": "https://langmai.org/wp-content/uploads/2019/05/09.To%CC%82%CC%89ng-quan-%C4%91a%CC%A3i-ta%CC%A3ng.mp3"
+      },
+      {
+        "title": "10",
+        "url": "https://langmai.org/wp-content/uploads/2019/05/10.To%CC%82%CC%89ng-quan-%C4%91a%CC%A3i-ta%CC%A3ng.mp3"
+      },
+      {
+        "title": "11",
+        "url": "https://langmai.org/wp-content/uploads/2019/05/11.To%CC%82%CC%89ng-quan-%C4%91i%CC%A3a-ta%CC%A3ng.mp3"
+      },
+      {
+        "title": "12",
+        "url": "https://langmai.org/wp-content/uploads/2019/05/12.To%CC%82%CC%89ng-quan-%C4%91a%CC%A3i-ta%CC%A3ng.mp3"
+      },
+      {
+        "title": "13",
+        "url": "https://langmai.org/wp-content/uploads/2019/05/13.To%CC%82%CC%89ng-quan-%C4%91a%CC%A3i-ta%CC%A3ng.mp3"
+      },
+      {
+        "title": "14",
+        "url": "https://langmai.org/wp-content/uploads/2019/05/14.To%CC%82%CC%89ng-quan-%C4%91a%CC%A3i-ta%CC%A3ng.mp3"
+      },
+      {
+        "title": "15",
+        "url": "https://langmai.org/wp-content/uploads/2019/05/15.To%CC%82%CC%89ng-quan-%C4%91a%CC%A3i-ta%CC%A3ng.mp3"
+      },
+      {
+        "title": "03",
+        "url": "https://langmai.org/wp-content/uploads/2019/05/03.To%CC%82%CC%89ng-quan-%C4%91a%CC%A3i-ta%CC%A3ng.mp3"
+      },
+      {
+        "title": "16",
+        "url": "https://langmai.org/wp-content/uploads/2019/05/16.To%CC%82%CC%89ng-quan-%C4%91a%CC%A3i-ta%CC%A3ng.mp3"
+      },
+      {
+        "title": "17",
+        "url": "https://langmai.org/wp-content/uploads/2019/05/17.To%CC%82%CC%89ng-quan-%C4%91a%CC%A3i-ta%CC%A3ng.mp3"
+      },
+      {
+        "title": "03",
+        "url": "https://langmai.org/wp-content/uploads/2019/05/03.To%CC%82%CC%89ng-quan-%C4%91a%CC%A3i-ta%CC%A3ng.mp3"
+      },
+      {
+        "title": "18",
+        "url": "https://langmai.org/wp-content/uploads/2019/05/18.To%CC%82%CC%89ng-quan-%C4%91a%CC%A3i-ta%CC%A3ng.mp3"
+      },
+      {
+        "title": "19",
+        "url": "https://langmai.org/wp-content/uploads/2019/05/19.To%CC%82%CC%89ng-quan-%C4%91a%CC%A3i-ta%CC%A3ng.mp3"
+      },
+      {
+        "title": "20",
+        "url": "https://langmai.org/wp-content/uploads/2019/05/20.To%CC%82%CC%89ng-quan-%C4%91a%CC%A3i-ta%CC%A3ng.mp3"
+      },
+      {
+        "title": "21",
+        "url": "https://langmai.org/wp-content/uploads/2019/05/21.To%CC%82%CC%89ng-quan-%C4%91a%CC%A3i-ta%CC%A3ng.mp3"
+      },
+      {
+        "title": "22",
+        "url": "https://langmai.org/wp-content/uploads/2019/05/22.To%CC%82%CC%89ng-quan-%C4%91a%CC%A3i-ta%CC%A3ng.mp3"
+      },
+      {
+        "title": "23",
+        "url": "https://langmai.org/wp-content/uploads/2019/05/23.To%CC%82%CC%89ng-quan-%C4%91a%CC%A3i-ta%CC%A3ng.mp3"
+      },
+      {
+        "title": "24",
+        "url": "https://langmai.org/wp-content/uploads/2019/05/24.To%CC%82%CC%89ng-quan-%C4%91a%CC%A3i-ta%CC%A3ng.mp3"
+      },
+      {
+        "title": "25",
+        "url": "https://langmai.org/wp-content/uploads/2019/05/25.To%CC%82%CC%89ng-quan-%C4%91a%CC%A3i-ta%CC%A3ng.mp3"
+      },
+      {
+        "title": "26",
+        "url": "https://langmai.org/wp-content/uploads/2019/05/26.To%CC%82%CC%89ng-quan-%C4%91a%CC%A3i-ta%CC%A3ng.mp3"
+      },
+      {
+        "title": "27",
+        "url": "https://langmai.org/wp-content/uploads/2019/05/27.To%CC%82%CC%89ng-quan-%C4%91i%CC%A3a-ta%CC%A3ng.mp3"
+      },
+      {
+        "title": "28",
+        "url": "https://langmai.org/wp-content/uploads/2019/05/28.To%CC%82%CC%89ng-quan-%C4%91a%CC%A3i-ta%CC%A3ng.mp3"
+      },
+      {
+        "title": "29",
+        "url": "https://langmai.org/wp-content/uploads/2019/05/29.To%CC%82%CC%89ng-quan-%C4%91a%CC%A3i-ta%CC%A3ng.mp3"
+      },
+      {
+        "title": "30",
+        "url": "https://langmai.org/wp-content/uploads/2019/05/30.To%CC%82%CC%89ng-quan-%C4%91a%CC%A3i-ta%CC%A3ng.mp3"
+      },
+      {
+        "title": "31",
+        "url": "https://langmai.org/wp-content/uploads/2019/05/31.To%CC%82%CC%89ng-quan-%C4%91a%CC%A3i-ta%CC%A3ng.mp3"
+      },
+      {
+        "title": "32",
+        "url": "https://langmai.org/wp-content/uploads/2019/05/32.To%CC%82%CC%89ng-quan-%C4%91i%CC%A3a-ta%CC%A3ng.mp3"
+      },
+      {
+        "title": "33",
+        "url": "https://langmai.org/wp-content/uploads/2019/05/33.To%CC%82%CC%89ng-quan-%C4%91a%CC%A3i-ta%CC%A3ng.mp3"
+      },
+      {
+        "title": "34",
+        "url": "https://langmai.org/wp-content/uploads/2019/05/34.To%CC%82%CC%89ng-quan-%C4%91a%CC%A3i-ta%CC%A3ng.mp3"
+      },
+      {
+        "title": "35",
+        "url": "https://langmai.org/wp-content/uploads/2019/05/35.To%CC%82%CC%89ng-quan-%C4%91a%CC%A3i-ta%CC%A3ng.mp3"
+      },
+      {
+        "title": "36",
+        "url": "https://langmai.org/wp-content/uploads/2019/05/36.To%CC%82%CC%89ng-quan-%C4%91a%CC%A3i-ta%CC%A3ng.mp3"
+      },
+      {
+        "title": "37",
+        "url": "https://langmai.org/wp-content/uploads/2019/05/37.To%CC%82%CC%89ng-quan-%C4%91a%CC%A3i-ta%CC%A3ng.mp3"
+      },
+      {
+        "title": "38",
+        "url": "https://langmai.org/wp-content/uploads/2019/05/38.To%CC%82%CC%89ng-quan-%C4%91a%CC%A3i-ta%CC%A3ng.mp3"
+      },
+      {
+        "title": "39",
+        "url": "https://langmai.org/wp-content/uploads/2019/05/39.To%CC%82%CC%89ng-quan-%C4%91a%CC%A3i-ta%CC%A3ng.mp3"
+      },
+      {
+        "title": "40",
+        "url": "https://langmai.org/wp-content/uploads/2019/05/40.To%CC%82%CC%89ng-quan-%C4%91a%CC%A3i-ta%CC%A3ng.mp3"
+      },
+      {
+        "title": "41",
+        "url": "https://langmai.org/wp-content/uploads/2019/05/41.To%CC%82%CC%89ng-quan-%C4%91a%CC%A3i-ta%CC%A3ng.mp3"
+      },
+      {
+        "title": "42",
+        "url": "https://langmai.org/wp-content/uploads/2019/05/42.To%CC%82%CC%89ng-quan-%C4%91a%CC%A3i-ta%CC%A3ng.mp3"
+      },
+      {
+        "title": "43",
+        "url": "https://langmai.org/wp-content/uploads/2019/05/43.To%CC%82%CC%89ng-quan-%C4%91a%CC%A3i-ta%CC%A3ng.mp3"
+      },
+      {
+        "title": "44",
+        "url": "https://langmai.org/wp-content/uploads/2019/05/44.to%CC%82%CC%89ng-quan-%C4%91a%CC%A3i-ta%CC%A3ng.mp3"
+      },
+      {
+        "title": "45",
+        "url": "https://langmai.org/wp-content/uploads/2019/05/45.To%CC%82%CC%89ng-quan-%C4%91a%CC%A3i-ta%CC%A3ng.mp3"
+      },
+      {
+        "title": "46",
+        "url": "https://langmai.org/wp-content/uploads/2019/05/46.To%CC%82%CC%89ng-quan-%C4%91a%CC%A3i-ta%CC%A3ng.mp3"
+      },
+      {
+        "title": "47",
+        "url": "http://langmai.org/wp-content/uploads/2019/05/47.To%CC%82%CC%89ng-quan-%C4%91a%CC%A3i-ta%CC%A3ng.mp3"
+      }
+    ]
+
+  },
+  {
+    "collection": "Pháp thoại năm 2007",
+    "source_url": "https://langmai.org/thien-duong/nghe-phap-thoai/nghe-phap-thoai-audio/phap-thoai-nam-2007-2/",
+    "audios": [
+      {
+        "title": "Bí quyết an lạc trong đời sống (22/02/2007)",
+        "date": "2007-02-22",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/01..Bi%CC%81-quye%CC%82%CC%81t-an-la%CC%A3c-trong-%C4%91o%CC%9B%CC%80i-so%CC%82%CC%81ng.Chu%CC%80a-Pha%CC%81p-Va%CC%82n-2007.02.22.VN_01.mp3"
+      },
+      {
+        "title": "Chuyển hoá khổ đau (01/03/2007)",
+        "date": "2007-03-01",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/02.-Chuye%CC%82%CC%89n-hoa%CC%81-kho%CC%82%CC%89-%C4%91au.-2007.03.01.VN_.Ba%CC%81t-Nha%CC%83_01.mp3"
+      },
+      {
+        "title": "Vấn đáp tại tu viện Bát Nhã",
+        "date": "2007-03-06",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/03.-Va%CC%82%CC%81n-%C4%91a%CC%81p-ta%CC%A3i-Tu-vie%CC%A3%CC%82n-Ba%CC%81t-Nha%CC%83.2007.03.06.VN_01.mp3"
+      },
+      {
+        "title": "Tình thương và hạnh phúc trong Doanh Nghiệp (15/03/2007)",
+        "date": "2007-03-15",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/04.-Ti%CC%80nh-thu%CC%9Bo%CC%9Bng-va%CC%80-ha%CC%A3nh-phu%CC%81c-trong-Doanh-Nghie%CC%A3%CC%82p.-Khu-du-li%CC%A3ch-Va%CC%86n-Tha%CC%81nh.HCM_.2007.03.15.VN_.mp3"
+      },
+      {
+        "title": "Pháp thoại tại Chùa Vĩnh Nghiêm",
+        "date": "2007-03-16",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/05.-Pha%CC%81p-thoa%CC%A3i-ta%CC%A3i-Chu%CC%80a-Vi%CC%83nh-Nghie%CC%82m-.2007.03.16.VN_.mp3"
+      },
+      {
+        "title": "Người thương tôi chết bây giờ ở đâu 01 ? (18/03/2007)",
+        "date": "2007-03-18",
+        "url": "http://langmai.org/wp-content/uploads/2019/04/10.Ngu%CC%9Bo%CC%9B%CC%80i-thu%CC%9Bo%CC%9Bng-to%CC%82i-che%CC%82%CC%81t-ba%CC%82y-gio%CC%9B%CC%80-o%CC%9B%CC%89-%C4%91a%CC%82u.01.%C4%90o%CC%A3c-lo%CC%9B%CC%80i-kha%CC%82%CC%81.2007.04.20.VN_.VN_.n.mp3"
+      },
+      {
+        "title": "Tiếp chuyện với toà soạn báo Giác Ngộ",
+        "date": "2007-03-19",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/07.-Tie%CC%82%CC%81p-chuye%CC%A3%CC%82n-vo%CC%9B%CC%81i-toa%CC%80-soa%CC%A3n-ba%CC%81o-Gia%CC%81c-Ngo%CC%A3%CC%82.-2007.03.19.VN_.mp3"
+      },
+      {
+        "title": "Pháp thoại tại chùa Phổ Quang Mục đích của người tu",
+        "date": "2007-03-22",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/08.-Mu%CC%A3c-%C4%91i%CC%81ch-cu%CC%89a-ngu%CC%9Bo%CC%9B%CC%80i-tu.Chu%CC%80a-Pho%CC%82%CC%89-Quang.HCM2007.03.22.VN_.VN_.mp3"
+      },
+      {
+        "title": "Này thôi hết kiếp đoạn trường từ đây",
+        "date": "2007-03-27",
+        "url": "http://langmai.org/wp-content/uploads/2019/11/2007.03.27-Na%CC%80y-tho%CC%82i-he%CC%82%CC%81t-kie%CC%82%CC%81p-%C4%91oa%CC%A3n-tru%CC%9Bo%CC%9B%CC%80ng-tu%CC%9B%CC%80-%C4%91a%CC%82y-%C4%90a%CC%A3i-Tu%CC%80ng-La%CC%82m.mp3"
+      },
+      {
+        "title": "Hãy là một hành giả (18/04/2007)",
+        "date": "2007-04-18",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/09.Ha%CC%83y-la%CC%80-mo%CC%A3%CC%82t-ha%CC%80nh-gia%CC%89.-2007.04.18.VN_.mp3"
+      },
+      {
+        "title": "Người thương tôi chết bây giờ ở đâu 01",
+        "date": "2007-04-20",
+        "url": "http://langmai.org/wp-content/uploads/2019/04/10.Ngu%CC%9Bo%CC%9B%CC%80i-thu%CC%9Bo%CC%9Bng-to%CC%82i-che%CC%82%CC%81t-ba%CC%82y-gio%CC%9B%CC%80-o%CC%9B%CC%89-%C4%91a%CC%82u.01.%C4%90o%CC%A3c-lo%CC%9B%CC%80i-kha%CC%82%CC%81.2007.04.20.VN_.VN_.n.mp3"
+      },
+      {
+        "title": "Người thương tôi chết bây giờ ở đâu 02",
+        "date": "2007-04-21",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/11.-Ngu%CC%9Bo%CC%9B%CC%80i-thu%CC%9Bo%CC%9Bng-to%CC%82i-che%CC%82%CC%81t-ba%CC%82y-gio%CC%9B%CC%80-o%CC%9B%CC%89-%C4%91a%CC%82u.02.2007.04.21.VN_.Chu%CC%80a-Non.02.mp3"
+      },
+      {
+        "title": "Người thương tôi chết bây giờ ở đâu 03",
+        "date": "2007-04-22",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/12.-Ngu%CC%9Bo%CC%9B%CC%80i-thu%CC%9Bo%CC%9Bng-to%CC%82i-che%CC%82%CC%81t-ba%CC%82y-gio%CC%9B%CC%80-o%CC%9B%CC%89-%C4%91a%CC%82u.03.-2007.04.22.VN_.VN_..Chu%CC%80a-Non.mp3"
+      },
+
+      {
+        "title": "Tuệ giác của đạo Bụt trong Truyện Kiều (23/04/2007)",
+        "date": "2007-04-23",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/13.-Tue%CC%A3%CC%82-gia%CC%81c-cu%CC%89a-%C4%91a%CC%A3o-Bu%CC%A3t-trong-chuye%CC%A3%CC%82n-Kie%CC%82%CC%80u.2007.04.23.VN_.mp3"
+      },
+      {
+        "title": "Để có thể chăm sóc thân và tâm (13/09/2007)",
+        "date": "2007-09-13",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/14.De-co-the-cham-soc-than-va-tam-09-132007-09-13-VN.mp3"
+      },
+      {
+        "title": "Nghệ thuật hóa giải những khó khăn trong gia đình (14/09/2007)",
+        "date": "2007-09-14",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/15.02.Nghe-thuat-hoa-giai-nhung-kho-khan-trong-gia-dinh09-14TNH-2007-09-14-VN.mp3"
+      },
+
+      {
+        "title": "Vấn đáp",
+        "date": "2007-09-15",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/16.03.Cau-hoi-va-tra-loi09-15.TNH-2007-09-15-QA-VN.mp3"
+      },
+      {
+        "title": "Hàn gắn những vết thương trong gia đình (16/09/2007)",
+        "date": "2007-09-16",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/17.Han-gan-nhung-vet-thuong-trong-gia-dinh09-16.TNH-2007-09-16-VN.mp3"
       }
     ]
   },
   {
-    "collection": "Khoá tu tại Hong Kong năm 2011",
+    "collection": "Pháp thoại năm 2008",
+    "source_url": "https://langmai.org/thien-duong/nghe-phap-thoai/nghe-phap-thoai-audio/phap-thoai-nam-2008/",
+    "audios": [
+      {
+        "title": "Đoàn thể của những người tỉnh thức",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/04.-%C4%90oa%CC%80n-the%CC%82%CC%89-cu%CC%89a-nhu%CC%9B%CC%83ng-ngu%CC%9Bo%CC%9B%CC%80i-ti%CC%89nh-thu%CC%9B%CC%81c2008.06.26.LH_.VN_.mp3"
+      },
+      {
+        "title": "Thực tập cho có hạnh phúc",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/05.-Thu%CC%9B%CC%A3c-ta%CC%A3%CC%82p-cho-co%CC%81-ha%CC%A3nh-phu%CC%81c.-TNH-2008-08-01-VIET.mp3"
+      },
+      {
+        "title": "Giảng kinh quán niệm hơi thở năm 2008",
+        "url": "https://langmai.org/phapduong/nghe-phap-thoai-audio/phap-thoai-nam-2008/giang-kinh-quan-niem-hoi-tho-nam-2008/?preview_id=32255&preview_nonce=85c29b7396&preview=true"
+      }
+    ]
+  },
+  {
+    "collection": "Pháp thoại năm 2009",
+    "source_url": "https://langmai.org/thien-duong/nghe-phap-thoai/nghe-phap-thoai-audio/phap-thoai-nam-2009-2/",
+    "audios": [
+      {
+        "title": "Tinh yếu Kinh Quán Niệm Hơi Thở",
+        "date": "2009-07-21",
+        "url": "https://langmai.org/wp-content/uploads/2019/05/2009.07.21.XT_.VN_.Tinh-ye%CC%82%CC%81u-kinh-qua%CC%81n-nie%CC%A3%CC%82m-ho%CC%9Bi-tho%CC%9B%CC%89.mp3"
+      },
+      {
+        "title": "Ngồi yên và nhìn sâu",
+        "date": "2009-07-25",
+        "url": "http://langmai.org/wp-content/uploads/2019/07/2009.07.25.XT_.VN_.Ngo%CC%82%CC%80i-ye%CC%82n-va%CC%80-nhi%CC%80n-sa%CC%82u.mp3"
+      },
+      {
+        "title": "Pháp thoại ngày 23/09/2009",
+        "date": "2009-09-23",
+        "url": "http://langmai.org/wp-content/uploads/2019/07/01.TNH-2009-09-23-VIET.mp3"
+      },
+      {
+        "title": "Pháp thoại ngày 24/09/2009",
+        "date": "2009-09-24",
+        "url": "http://langmai.org/wp-content/uploads/2019/07/02.TNH-2009-09-24-VIET.mp3"
+      },
+      {
+        "title": "Pháp thoại ngày 25/09/2009",
+        "date":  "2009-09-25",
+        "url": "http://langmai.org/wp-content/uploads/2019/07/03.TNH-2009-09-25-VIET.mp3"
+      },
+      {
+        "title": "Giảng kinh quán niệm hơi thở năm 2008",
+        "url": "https://langmai.org/phapduong/nghe-phap-thoai-audio/phap-thoai-nam-2008/giang-kinh-quan-niem-hoi-tho-nam-2008/?preview_id=32255&preview_nonce=85c29b7396&preview=true"
+      }
+    ]
+  },
+  {
+    "collection": "Pháp thoại năm 2011",
     "source_url": "https://langmai.org/thien-duong/nghe-phap-thoai/nghe-phap-thoai-audio/phap-thoai-nam-2011/",
     "audios": [
       {
@@ -67,72 +405,22 @@
     ]
   },
   {
-    "collection": "Pháp thoại năm 2008",
-    "source_url": "https://langmai.org/thien-duong/nghe-phap-thoai/nghe-phap-thoai-audio/phap-thoai-nam-2008/",
+    "collection": "Pháp thoại năm 2012",
+    "source_url": "https://langmai.org/thien-duong/nghe-phap-thoai/nghe-phap-thoai-audio/phap-thoai-nam-2012/",
     "audios": [
       {
-        "title": "Đoàn thể của những người tỉnh thức",
-        "url": "https://langmai.org/wp-content/uploads/2019/04/04.-%C4%90oa%CC%80n-the%CC%82%CC%89-cu%CC%89a-nhu%CC%9B%CC%83ng-ngu%CC%9Bo%CC%9B%CC%80i-ti%CC%89nh-thu%CC%9B%CC%81c2008.06.26.LH_.VN_.mp3"
+        "title": "Hạnh phúc gia đình - Hiểu mới thương (23/07/2012)",
+        "date": "2012-07-23",
+        "url": "https://langmai.org/wp-content/uploads/2019/02/Cha%CC%82u-ba%CC%81u-cha%CC%82%CC%81t-%C4%91a%CC%82%CC%80y-the%CC%82%CC%81-gio%CC%9B%CC%81i-Nha%CC%82%CC%81t-Ha%CC%A3nh-converted.mp3"
       },
       {
-        "title": "Thực tập cho có hạnh phúc",
-        "url": "https://langmai.org/wp-content/uploads/2019/04/05.-Thu%CC%9B%CC%A3c-ta%CC%A3%CC%82p-cho-co%CC%81-ha%CC%A3nh-phu%CC%81c.-TNH-2008-08-01-VIET.mp3"
-      },
-      {
-        "title": "Giảng kinh quán niệm hơi thở năm 2008",
-        "url": "https://langmai.org/phapduong/nghe-phap-thoai-audio/phap-thoai-nam-2008/giang-kinh-quan-niem-hoi-tho-nam-2008/?preview_id=32255&preview_nonce=85c29b7396&preview=true"
-      }
-    ]
-  },
-  {
-    "collection": "Pháp thoại năm 2007",
-    "source_url": "https://langmai.org/thien-duong/nghe-phap-thoai/nghe-phap-thoai-audio/phap-thoai-nam-2007-2/",
-    "audios": [
-      {
-        "title": "Bí quyết an lạc trong đời sống (22/02/2007)",
-        "date": "2007-02-22",
-        "url": "https://langmai.org/wp-content/uploads/2019/04/01..Bi%CC%81-quye%CC%82%CC%81t-an-la%CC%A3c-trong-%C4%91o%CC%9B%CC%80i-so%CC%82%CC%81ng.Chu%CC%80a-Pha%CC%81p-Va%CC%82n-2007.02.22.VN_01.mp3"
-      },
-      {
-        "title": "Chuyển hoá khổ đau (01/03/2007)",
-        "date": "2007-03-01",
-        "url": "https://langmai.org/wp-content/uploads/2019/04/02.-Chuye%CC%82%CC%89n-hoa%CC%81-kho%CC%82%CC%89-%C4%91au.-2007.03.01.VN_.Ba%CC%81t-Nha%CC%83_01.mp3"
-      },
-      {
-        "title": "Tình thương và hạnh phúc trong Doanh Nghiệp (15/03/2007)",
-        "date": "2007-03-15",
-        "url": "https://langmai.org/wp-content/uploads/2019/04/04.-Ti%CC%80nh-thu%CC%9Bo%CC%9Bng-va%CC%80-ha%CC%A3nh-phu%CC%81c-trong-Doanh-Nghie%CC%A3%CC%82p.-Khu-du-li%CC%A3ch-Va%CC%86n-Tha%CC%81nh.HCM_.2007.03.15.VN_.mp3"
-      },
-      {
-        "title": "Người thương tôi chết bây giờ ở đâu 01 ? (18/03/2007)",
-        "date": "2007-03-18",
-        "url": "http://langmai.org/wp-content/uploads/2019/04/10.Ngu%CC%9Bo%CC%9B%CC%80i-thu%CC%9Bo%CC%9Bng-to%CC%82i-che%CC%82%CC%81t-ba%CC%82y-gio%CC%9B%CC%80-o%CC%9B%CC%89-%C4%91a%CC%82u.01.%C4%90o%CC%A3c-lo%CC%9B%CC%80i-kha%CC%82%CC%81.2007.04.20.VN_.VN_.n.mp3"
-      },
-      {
-        "title": "Hãy là một hành giả (18/04/2007)",
-        "date": "2007-04-18",
-        "url": "https://langmai.org/wp-content/uploads/2019/04/09.Ha%CC%83y-la%CC%80-mo%CC%A3%CC%82t-ha%CC%80nh-gia%CC%89.-2007.04.18.VN_.mp3"
-      },
-      {
-        "title": "Tuệ giác của đạo Bụt trong Truyện Kiều (23/04/2007)",
-        "date": "2007-04-23",
-        "url": "https://langmai.org/wp-content/uploads/2019/04/13.-Tue%CC%A3%CC%82-gia%CC%81c-cu%CC%89a-%C4%91a%CC%A3o-Bu%CC%A3t-trong-chuye%CC%A3%CC%82n-Kie%CC%82%CC%80u.2007.04.23.VN_.mp3"
-      },
-      {
-        "title": "Để có thể chăm sóc thân và tâm (13/09/2007)",
-        "date": "2007-09-13",
-        "url": "https://langmai.org/wp-content/uploads/2019/04/14.De-co-the-cham-soc-than-va-tam-09-132007-09-13-VN.mp3"
-      },
-      {
-        "title": "Nghệ thuật hóa giải những khó khăn trong gia đình (14/09/2007)",
-        "date": "2007-09-14",
-        "url": "https://langmai.org/wp-content/uploads/2019/04/15.02.Nghe-thuat-hoa-giai-nhung-kho-khan-trong-gia-dinh09-14TNH-2007-09-14-VN.mp3"
-      },
-      {
-        "title": "Hàn gắn những vết thương trong gia đình (16/09/2007)",
-        "date": "2007-09-16",
-        "url": "https://langmai.org/wp-content/uploads/2019/04/17.Han-gan-nhung-vet-thuong-trong-gia-dinh09-16.TNH-2007-09-16-VN.mp3"
+        "title": "Thiết Lập truyền thông (30/07/2012)",
+        "date": "2012-07-30",
+        "url": "https://langmai.org/wp-content/uploads/2019/02/Truye%CC%82%CC%80n-tho%CC%82ng-ba%CC%86%CC%80ng-nie%CC%A3%CC%82m-hu%CC%9Bo%CC%9Bng-Thi%CC%81ch-Nha%CC%82%CC%81t-Ha%CC%A3nh-converted.mp3"
       }
     ]
   }
+
+
+
 ]
