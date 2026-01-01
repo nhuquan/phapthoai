@@ -14,37 +14,15 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Pháp Thoại Làng Mai'),
-        centerTitle: true,
-        backgroundColor: Colors.transparent,
-        actions: [
-          BlocBuilder<ThemeBloc, ThemeState>(
-            builder: (context, state) {
-              return IconButton(
-                icon: Icon(
-                  state.isDarkMode
-                      ? Icons.light_mode
-                      : Icons.dark_mode,
-                ),
-                onPressed: () {
-                  context.read<ThemeBloc>().add(ToggleTheme());
-                },
-              );
-            },
-          ),
-        ],
-      ),
-      body: BlocBuilder<ThemeBloc, ThemeState>(
-        builder: (BuildContext context, ThemeState themeState) {
-          return Container(
+    return BlocBuilder<ThemeBloc, ThemeState>(
+      builder: (context, themeState) {
+        return Container(
             decoration: BoxDecoration(
               image: DecorationImage(
                 image:
-                    themeState.isDarkMode
-                        ? const AssetImage('assets/bg2.jpeg')
-                        : const AssetImage('assets/bg1.jpeg'),
+                themeState.isDarkMode
+                    ? const AssetImage('assets/bg2.jpeg')
+                    : const AssetImage('assets/bg1.jpeg'),
                 fit: BoxFit.cover,
                 colorFilter: ColorFilter.mode(
                   Colors.black.withOpacity(0.2),
@@ -52,29 +30,46 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
             ),
-            child: BlocBuilder<AudioBloc, AudioState>(
-              builder: (context, audioState) {
-                return Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(16.0),
-                      child: SearchBar(
-                        hintText: 'Search by title or date...',
-                        leading: const Icon(Icons.search),
-                        onChanged: (query) {
-                          context.read<AudioBloc>().add(SearchAudio(query));
-                        },
+            child: Scaffold(
+              appBar: AppBar(
+                  title: const Text('Pháp Thoại Làng Mai'),
+                  centerTitle: true,
+                  backgroundColor: Colors.transparent,
+                  actions: [
+                    IconButton(
+                      icon: Icon(
+                        themeState.isDarkMode
+                            ? Icons.light_mode
+                            : Icons.dark_mode,
                       ),
-                    ),
-                    Expanded(child: _buildBody(context, audioState)),
-                  ],
-                );
-              },
-            ),
-          );
-        },
-      ),
-    );
+                      onPressed: () {
+                        context.read<ThemeBloc>().add(ToggleTheme());
+                      },
+                    )
+                  ]
+              ),
+              backgroundColor: Colors.transparent,
+              body: BlocBuilder<AudioBloc, AudioState>(
+                builder: (context, audioState) {
+                  return Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: SearchBar(
+                          hintText: 'Search by title or date...',
+                          leading: const Icon(Icons.search),
+                          onChanged: (query) {
+                            context.read<AudioBloc>().add(SearchAudio(query));
+                          },
+                        ),
+                      ),
+                      Expanded(child: _buildBody(context, audioState)),
+                    ],
+                  );
+                },
+              ),
+            ));
+      });
   }
 
   Widget _buildBody(BuildContext context, AudioState state) {
@@ -119,7 +114,7 @@ class HomeScreen extends StatelessWidget {
     return GridView.builder(
       padding: const EdgeInsets.all(16.0),
       gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-        maxCrossAxisExtent: 200,
+        maxCrossAxisExtent: 150,
         childAspectRatio: 1.0,
         crossAxisSpacing: 16.0,
         mainAxisSpacing: 16.0,
@@ -148,7 +143,7 @@ class HomeScreen extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Icon(Icons.folder, size: 48.0, color: Colors.blueGrey),
+                  const Icon(Icons.folder_open, size: 60.0, color: Colors.greenAccent),
                   const SizedBox(height: 12.0),
                   Text(
                     collection.title,

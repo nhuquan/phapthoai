@@ -15,25 +15,27 @@ class PlaylistScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(collection.title),
-      ),
-      body: BlocBuilder<ThemeBloc, ThemeState>(
-        builder: (BuildContext context, ThemeState state) {
-          return Container(
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: state.isDarkMode ? AssetImage('assets/bg2.jpeg')
-                : AssetImage('assets/bg1.jpeg'),
-                fit: BoxFit.cover,
-                colorFilter: ColorFilter.mode(
-                  Colors.black.withOpacity(0.2),
-                  BlendMode.darken,
-                ),
+    return BlocBuilder<ThemeBloc, ThemeState> (
+      builder: (BuildContext context, ThemeState themeState) {
+        return Container(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: themeState.isDarkMode ? AssetImage('assets/bg2.jpeg')
+                  : AssetImage('assets/bg1.jpeg'),
+              fit: BoxFit.cover,
+              colorFilter: ColorFilter.mode(
+                Colors.black.withOpacity(0.2),
+                BlendMode.darken,
               ),
             ),
-            child: BlocBuilder<AudioBloc, AudioState>(
+          ),
+          child: Scaffold(
+            appBar: AppBar(
+              title: Text(collection.title),
+              backgroundColor: Colors.transparent,
+            ),
+            backgroundColor: Colors.transparent,
+            body: BlocBuilder<AudioBloc, AudioState>(
               builder: (context, state) {
                 return ListView.builder(
                   itemCount: collection.audios.length,
@@ -85,9 +87,9 @@ class PlaylistScreen extends StatelessWidget {
                 );
               },
             ),
-          );
-        }
-      ),
+          ),
+        );
+      },
     );
   }
 }
