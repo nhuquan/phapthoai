@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../models/audio.dart';
 import '../models/audio_view_model.dart';
+import '../utils/download_helper.dart';
 
 class PlaylistScreen extends StatelessWidget {
   final Collection collection;
@@ -33,6 +34,13 @@ class PlaylistScreen extends StatelessWidget {
                     fontWeight: isPlaying ? FontWeight.bold : FontWeight.normal,
                     color: isPlaying ? Theme.of(context).primaryColor : null,
                   ),
+                ),
+                subtitle: audio.date != null ? Text(audio.date!) : null,
+                trailing: IconButton(
+                  icon: const Icon(Icons.download),
+                  onPressed: () {
+                    DownloadHelper.downloadAudio(audio.url);
+                  },
                 ),
                 onTap: () {
                   viewModel.playAudio(audio);

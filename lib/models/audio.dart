@@ -1,13 +1,15 @@
 class Audio {
   final String title;
   final String url;
+  final String? date;
 
-  Audio({required this.title, required this.url});
+  Audio({required this.title, required this.url, this.date});
 
   factory Audio.fromJson(Map<String, dynamic> json) {
     return Audio(
       title: json['title'] as String,
       url: json['url'] as String,
+      date: json['date'] as String?,
     );
   }
 }

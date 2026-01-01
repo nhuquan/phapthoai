@@ -8,17 +8,36 @@ class AudioViewModel extends ChangeNotifier {
   final AudioPlayer _player = AudioPlayer();
   
   List<Collection> _collections = [];
+  List<Audio> _searchResults = [];
   Audio? _currentAudio;
   bool _isLoading = true;
+  String _searchQuery = '';
 
   AudioViewModel(this._repository) {
     _loadData();
   }
 
   List<Collection> get collections => _collections;
+  List<Audio> get searchResults => _searchResults;
   Audio? get currentAudio => _currentAudio;
   bool get isLoading => _isLoading;
+  bool get isSearching => _searchQuery.isNotEmpty;
   AudioPlayer get player => _player;
+
+  void search(String query) {
+    _searchQuery = query.toLowerCase();
+    if (_searchQuery.isEmpty) {
+      _searchResults = [];
+    } else {
+      final allAudios = _collections.expand((c) => c.audios);
+      _searchResults = allAudios.where((audio) {
+        final title = audio.title.toLowerCase();
+        final date = audio.date?.toLowerCase() ?? '';
+        return title.contains(_searchQuery) || date.contains(_searchQuery);
+      }).toList();
+    }
+    notifyListeners();
+  }
 
   Future<void> _loadData() async {
     try {
