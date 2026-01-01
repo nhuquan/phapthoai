@@ -15,40 +15,59 @@ class PlaylistScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(collection.title),
       ),
-      body: Consumer<AudioViewModel>(
-        builder: (context, viewModel, child) {
-          return ListView.builder(
-            itemCount: collection.audios.length,
-            itemBuilder: (context, index) {
-              final audio = collection.audios[index];
-              final isPlaying = viewModel.currentAudio?.url == audio.url;
-              
-              return ListTile(
-                leading: Icon(
-                  isPlaying ? Icons.music_note : Icons.play_circle_outline,
-                  color: isPlaying ? Theme.of(context).primaryColor : null,
-                ),
-                title: Text(
-                  audio.title,
-                  style: TextStyle(
-                    fontWeight: isPlaying ? FontWeight.bold : FontWeight.normal,
-                    color: isPlaying ? Theme.of(context).primaryColor : null,
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: const AssetImage('assets/bg.png'),
+            fit: BoxFit.cover,
+            colorFilter: ColorFilter.mode(
+              Colors.black.withOpacity(0.2), 
+              BlendMode.darken,
+            ),
+          ),
+        ),
+        child: Consumer<AudioViewModel>(
+          builder: (context, viewModel, child) {
+            return ListView.builder(
+              itemCount: collection.audios.length,
+              itemBuilder: (context, index) {
+                final audio = collection.audios[index];
+                final isPlaying = viewModel.currentAudio?.url == audio.url;
+                
+                return ListTile(
+                  leading: Icon(
+                    isPlaying ? Icons.music_note : Icons.play_circle_outline,
+                    color: isPlaying ? Theme.of(context).primaryColor : Theme.of(context).iconTheme.color,
                   ),
-                ),
-                subtitle: audio.date != null ? Text(audio.date!) : null,
-                trailing: IconButton(
-                  icon: const Icon(Icons.download),
-                  onPressed: () {
-                    DownloadHelper.downloadAudio(audio.url);
+                  title: Text(
+                    audio.title,
+                    style: TextStyle(
+                      fontWeight: isPlaying ? FontWeight.bold : FontWeight.normal,
+                      color: isPlaying 
+                          ? Theme.of(context).primaryColor 
+                          : Theme.of(context).colorScheme.onSurface,
+                    ),
+                  ),
+                  subtitle: audio.date != null ? Text(
+                    audio.date!,
+                    style: TextStyle(
+                      color: Theme.of(context).colorScheme.onSurfaceVariant,
+                    ),
+                  ) : null,
+                  trailing: IconButton(
+                    icon: const Icon(Icons.download),
+                    onPressed: () {
+                      DownloadHelper.downloadAudio(audio.url);
+                    },
+                  ),
+                  onTap: () {
+                    viewModel.playAudio(audio);
                   },
-                ),
-                onTap: () {
-                  viewModel.playAudio(audio);
-                },
-              );
-            },
-          );
-        },
+                );
+              },
+            );
+          },
+        ),
       ),
     );
   }

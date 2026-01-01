@@ -1,98 +1,137 @@
 [
   {
-    "collection": "Pháp thoại năm 2009",
+    "collection": "Pháp thoại năm 2012",
+    "source_url": "https://langmai.org/thien-duong/nghe-phap-thoai/nghe-phap-thoai-audio/phap-thoai-nam-2012/",
     "audios": [
       {
-        "title": "Tinh yếu Kinh Quán Niệm Hơi Thở (21/07/2009)",
-        "url": "https://langmai.org/wp-content/uploads/2019/05/2009.07.21.XT_.VN_.Tinh-ye%CC%82%CC%81u-kinh-qua%CC%81n-nie%CC%A3%CC%82m-ho%CC%9Bi-tho%CC%9B%CC%89.mp3"
+        "title": "Hạnh phúc gia đình - Hiểu mới thương (23/07/2012)",
+        "date": "2012-07-23",
+        "url": "https://langmai.org/thien-duong/nghe-phap-thoai/nghe-phap-thoai-audio/phap-thoai-nam-2012/"
       },
       {
-        "title": "Ngồi yên và nhìn sâu (25/07/2009)",
-        "url": "http://langmai.org/wp-content/uploads/2019/07/2009.07.25.XT_.VN_.Ngo%CC%82%CC%80i-ye%CC%82n-va%CC%80-nhi%CC%80n-sa%CC%82u.mp3"
+        "title": "Thiết Lập truyền thông (30/07/2012)",
+        "date": "2012-07-30",
+        "url": "https://langmai.org/thien-duong/nghe-phap-thoai/nghe-phap-thoai-audio/phap-thoai-nam-2012/"
+      }
+    ]
+  },
+  {
+    "collection": "Pháp Thoại năm 2011",
+    "source_url": "https://langmai.org/thien-duong/nghe-phap-thoai/nghe-phap-thoai-audio/phap-thoai-nam-2011/",
+    "audios": [
+      {
+        "title": "Sinh tử trong từng giây phút (28/04/2011)",
+        "date": "2011-04-28",
+        "url": "https://langmai.org/thien-duong/nghe-phap-thoai/nghe-phap-thoai-audio/phap-thoai-nam-2011/"
       },
       {
-        "title": "Pháp thoại ngày 23/09/2009",
-        "url": "http://langmai.org/wp-content/uploads/2019/07/01.TNH-2009-09-23-VIET.mp3"
+        "title": "Chánh Kiến (05/05/2011)",
+        "date": "2011-05-05",
+        "url": "https://langmai.org/thien-duong/nghe-phap-thoai/nghe-phap-thoai-audio/phap-thoai-nam-2011/"
       },
       {
-        "title": "Pháp thoại ngày 24/09/2009",
-        "url": "http://langmai.org/wp-content/uploads/2019/07/02.TNH-2009-09-24-VIET.mp3"
+        "title": "Leo núi hạnh phúc (15/05/2011)",
+        "date": "2011-05-15",
+        "url": "https://langmai.org/thien-duong/nghe-phap-thoai/nghe-phap-thoai-audio/phap-thoai-nam-2011/"
       },
       {
-        "title": "Pháp thoại ngày 25/09/2009",
-        "url": "http://langmai.org/wp-content/uploads/2019/07/03.TNH-2009-09-25-VIET.mp3"
+        "title": "Thiền tập tiếp nối (12/06/2011)",
+        "date": "2011-06-12",
+        "url": "https://langmai.org/thien-duong/nghe-phap-thoai/nghe-phap-thoai-audio/phap-thoai-nam-2011/"
+      },
+      {
+        "title": "Khất thực thanh tịnh (16/06/2011)",
+        "date": "2011-06-16",
+        "url": "https://langmai.org/thien-duong/nghe-phap-thoai/nghe-phap-thoai-audio/phap-thoai-nam-2011/"
+      },
+      {
+        "title": "Người Phật tử chân chính (28/08/2011)",
+        "date": "2011-08-28",
+        "url": "https://langmai.org/thien-duong/nghe-phap-thoai/nghe-phap-thoai-audio/phap-thoai-nam-2011/"
+      },
+      {
+        "title": "Tịnh Độ trong lòng bàn tay (17/09/2011)",
+        "date": "2011-09-17",
+        "url": "https://langmai.org/thien-duong/nghe-phap-thoai/nghe-phap-thoai-audio/phap-thoai-nam-2011/"
+      },
+      {
+        "title": "Thực tập có mặt cho người thương (30/10/2011)",
+        "date": "2011-10-30",
+        "url": "https://langmai.org/thien-duong/nghe-phap-thoai/nghe-phap-thoai-audio/phap-thoai-nam-2011/"
+      },
+      {
+        "title": "Bảo vệ Đất Mẹ (13/11/2011)",
+        "date": "2011-11-13",
+        "url": "https://langmai.org/thien-duong/nghe-phap-thoai/nghe-phap-thoai-audio/phap-thoai-nam-2011/"
+      }
+    ]
+  },
+  {
+    "collection": "Pháp thoại năm 2008",
+    "source_url": "https://langmai.org/thien-duong/nghe-phap-thoai/nghe-phap-thoai-audio/phap-thoai-nam-2008/",
+    "audios": [
+      {
+        "title": "Đoàn thể của những người tỉnh thức",
+        "url": "https://langmai.org/thien-duong/nghe-phap-thoai/nghe-phap-thoai-audio/phap-thoai-nam-2008/"
+      },
+      {
+        "title": "Thực tập cho có hạnh phúc",
+        "url": "https://langmai.org/thien-duong/nghe-phap-thoai/nghe-phap-thoai-audio/phap-thoai-nam-2008/"
+      },
+      {
+        "title": "Giảng kinh quán niệm hơi thở năm 2008",
+        "url": "https://langmai.org/thien-duong/nghe-phap-thoai/nghe-phap-thoai-audio/phap-thoai-nam-2008/"
       }
     ]
   },
   {
     "collection": "Pháp thoại năm 2007",
+    "source_url": "https://langmai.org/thien-duong/nghe-phap-thoai/nghe-phap-thoai-audio/phap-thoai-nam-2007-2/",
     "audios": [
       {
         "title": "Bí quyết an lạc trong đời sống (22/02/2007)",
-        "url": "https://langmai.org/wp-content/uploads/2019/04/01..Bi%CC%81-quye%CC%82%CC%81t-an-la%CC%A3c-trong-%C4%91o%CC%9B%CC%80i-so%CC%82%CC%81ng.Chu%CC%80a-Pha%CC%81p-Va%CC%82n-2007.02.22.VN_01.mp3"
+        "date": "2007-02-22",
+        "url": "https://langmai.org/thien-duong/nghe-phap-thoai/nghe-phap-thoai-audio/phap-thoai-nam-2007-2/"
       },
       {
         "title": "Chuyển hoá khổ đau (01/03/2007)",
-        "url": "https://langmai.org/wp-content/uploads/2019/04/02.-Chuye%CC%82%CC%89n-hoa%CC%81-kho%CC%82%CC%89-%C4%91au.-2007.03.01.VN_.Ba%CC%81-Nha%CC%83_01.mp3"
-      },
-      {
-        "title": "Vấn đáp tại Tu viện Bát Nhã (06/03/2007)",
-        "url": "https://langmai.org/wp-content/uploads/2019/04/03.-Va%CC%82%CC%81n-%C4%91a%CC%81p-ta%CC%A3i-Tu-vie%CC%A3%CC%82n-Ba%CC%81t-Nha%CC%83.2007.03.06.VN_01.mp3"
+        "date": "2007-03-01",
+        "url": "https://langmai.org/thien-duong/nghe-phap-thoai/nghe-phap-thoai-audio/phap-thoai-nam-2007-2/"
       },
       {
         "title": "Tình thương và hạnh phúc trong Doanh Nghiệp (15/03/2007)",
-        "url": "https://langmai.org/wp-content/uploads/2019/04/04.-Ti%CC%80nh-thu%CC%9Bo%CC%9Bng-va%CC%80-ha%CC%A3nh-phu%CC%81c-trong-Doanh-Nghie%CC%A3%CC%82p.-Khu-du-li%CC%A3ch-Va%CC%86n-Tha%CC%81nh.HCM_.2007.03.15.VN_.mp3"
+        "date": "2007-03-15",
+        "url": "https://langmai.org/thien-duong/nghe-phap-thoai/nghe-phap-thoai-audio/phap-thoai-nam-2007-2/"
       },
       {
-        "title": "Pháp thoại tại Chùa Vĩnh Nghiêm (16/03/2007)",
-        "url": "https://langmai.org/wp-content/uploads/2019/04/05.-Pha%CC%81p-thoa%CC%A3i-ta%CC%A3i-Chu%CC%80a-Vi%CC%83nh-Nghie%CC%82m-.2007.03.16.VN_.mp3"
-      }
-    ]
-  },
-  {
-    "collection": "Pháp thoại năm 2006",
-    "audios": [
-      {
-        "title": "Tình thầy trò (05/03/2006)",
-        "url": "https://langmai.org/wp-content/uploads/2019/05/01.2006.03.05.UH_.VN_.Ti%CC%80nh-tha%CC%82%CC%80y-tro%CC%80.mp3"
+        "title": "Người thương tôi chết bây giờ ở đâu? (18/03/2007)",
+        "date": "2007-03-18",
+        "url": "https://langmai.org/thien-duong/nghe-phap-thoai/nghe-phap-thoai-audio/phap-thoai-nam-2007-2/"
       },
       {
-        "title": "Việc đáng làm (16/03/2006)",
-        "url": "https://langmai.org/wp-content/uploads/2019/05/02.2006.03.16.UH_.VN_.Vie%CC%A3%CC%82c-%C4%91a%CC%81ng-la%CC%80m.mp3"
+        "title": "Hãy là một hành giả (18/04/2007)",
+        "date": "2007-04-18",
+        "url": "https://langmai.org/thien-duong/nghe-phap-thoai/nghe-phap-thoai-audio/phap-thoai-nam-2007-2/"
       },
       {
-        "title": "Kinh quán niệm hơi thở 01 (18/05/2006)",
-        "url": "https://langmai.org/wp-content/uploads/2019/05/03.2006.05.18.NH_.VN_.Kinh-qua%CC%81n-nie%CC%A3%CC%82m-ho%CC%9Bi-tho%CC%9B%CC%89.01.mp3"
-      }
-    ]
-  },
-  {
-    "collection": "Pháp thoại năm 2005",
-    "audios": [
-      {
-        "title": "Phẩm chất sự sống (06/01/2005)",
-        "url": "https://langmai.org/wp-content/uploads/2019/05/01.2005-01-06-pham-chat-su-song.mp3"
+        "title": "Tuệ giác của đạo Bụt trong Truyện Kiều (23/04/2007)",
+        "date": "2007-04-23",
+        "url": "https://langmai.org/thien-duong/nghe-phap-thoai/nghe-phap-thoai-audio/phap-thoai-nam-2007-2/"
       },
       {
-        "title": "Kẻ thù ta không phải con người (09/01/2005)",
-        "url": "https://langmai.org/wp-content/uploads/2019/05/02.2005-01-09-ke-thu-ta-k-phai-con-nguoi.mp3"
-      }
-    ]
-  },
-  {
-    "collection": "Tổng Quan Đại Tạng 1989",
-    "audios": [
-      {
-        "title": "Tổng quan đại tạng 01",
-        "url": "https://langmai.org/wp-content/uploads/2019/05/01.To%CC%82%CC%89ng-quan-%C4%91a%CC%A3i-ta%CC%A3ng.mp3"
+        "title": "Để có thể chăm sóc thân và tâm (13/09/2007)",
+        "date": "2007-09-13",
+        "url": "https://langmai.org/thien-duong/nghe-phap-thoai/nghe-phap-thoai-audio/phap-thoai-nam-2007-2/"
       },
       {
-        "title": "Tổng quan đại tạng 02",
-        "url": "https://langmai.org/wp-content/uploads/2019/05/02.To%CC%82%CC%89ng-quan-%C4%91a%CC%A3i-ta%CC%A3ng.mp3"
+        "title": "Nghệ thuật hóa giải những khó khăn trong gia đình (14/09/2007)",
+        "date": "2007-09-14",
+        "url": "https://langmai.org/thien-duong/nghe-phap-thoai/nghe-phap-thoai-audio/phap-thoai-nam-2007-2/"
       },
       {
-        "title": "Tổng quan đại tạng 03",
-        "url": "https://langmai.org/wp-content/uploads/2019/05/03.To%CC%82%CC%89ng-quan-%C4%91a%CC%A3i-ta%CC%A3ng.mp3"
+        "title": "Hàn gắn những vết thương trong gia đình (16/09/2007)",
+        "date": "2007-09-16",
+        "url": "https://langmai.org/thien-duong/nghe-phap-thoai/nghe-phap-thoai-audio/phap-thoai-nam-2007-2/"
       }
     ]
   }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../models/audio_view_model.dart';
+import '../models/theme_view_model.dart';
 import 'playlist_screen.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -12,27 +13,51 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Pháp Thoại Làng Mai'),
         centerTitle: true,
+        actions: [
+          Consumer<ThemeViewModel>(
+            builder: (context, themeViewModel, _) {
+              return IconButton(
+                icon: Icon(themeViewModel.isDarkMode ? Icons.light_mode : Icons.dark_mode),
+                onPressed: () {
+                  themeViewModel.toggleTheme();
+                },
+              );
+            },
+          ),
+        ],
       ),
-      body: Consumer<AudioViewModel>(
-        builder: (context, viewModel, child) {
-          return Column(
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: SearchBar(
-                  hintText: 'Search by title or date...',
-                  leading: const Icon(Icons.search),
-                  onChanged: (query) {
-                    viewModel.search(query);
-                  },
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: const AssetImage('assets/bg.png'),
+            fit: BoxFit.cover,
+            colorFilter: ColorFilter.mode(
+              Colors.black.withOpacity(0.2), 
+              BlendMode.darken,
+            ),
+          ),
+        ),
+        child: Consumer<AudioViewModel>(
+          builder: (context, viewModel, child) {
+            return Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: SearchBar(
+                    hintText: 'Search by title or date...',
+                    leading: const Icon(Icons.search),
+                    onChanged: (query) {
+                      viewModel.search(query);
+                    },
+                  ),
                 ),
-              ),
-              Expanded(
-                child: _buildBody(context, viewModel),
-              ),
-            ],
-          );
-        },
+                Expanded(
+                  child: _buildBody(context, viewModel),
+                ),
+              ],
+            );
+          },
+        ),
       ),
     );
   }
@@ -51,8 +76,8 @@ class HomeScreen extends StatelessWidget {
         itemBuilder: (context, index) {
           final audio = viewModel.searchResults[index];
           return ListTile(
-            title: Text(audio.title),
-            subtitle: audio.date != null ? Text(audio.date!) : null,
+            title: Text(audio.title, style: TextStyle(color: Theme.of(context).colorScheme.onSurface)),
+            subtitle: audio.date != null ? Text(audio.date!, style: TextStyle(color: Theme.of(context).colorScheme.onSurfaceVariant)) : null,
             onTap: () {
               viewModel.playAudio(audio);
             },
@@ -78,6 +103,7 @@ class HomeScreen extends StatelessWidget {
         final collection = viewModel.collections[index];
         return Card(
           elevation: 4.0,
+          color: Theme.of(context).cardColor.withOpacity(0.9),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12.0),
           ),
@@ -101,7 +127,9 @@ class HomeScreen extends StatelessWidget {
                   Text(
                     collection.title,
                     textAlign: TextAlign.center,
-                    style: Theme.of(context).textTheme.titleMedium,
+                    style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                      color: Theme.of(context).colorScheme.onSurface,
+                    ),
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                   ),
