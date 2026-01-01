@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../models/audio_view_model.dart';
-import '../models/theme_view_model.dart';
+import '../blocs/audio/audio_bloc.dart';
+import '../blocs/audio/audio_event.dart';
+import '../blocs/audio/audio_state.dart';
+import '../blocs/theme/theme_bloc.dart';
+import '../blocs/theme/theme_event.dart';
+import '../blocs/theme/theme_state.dart';
 import 'playlist_screen.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -16,31 +20,31 @@ class HomeScreen extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.transparent,
         actions: [
-          Consumer<ThemeViewModel>(
-            builder: (context, themeViewModel, _) {
+          BlocBuilder<ThemeBloc, ThemeState>(
+            builder: (context, state) {
               return IconButton(
                 icon: Icon(
-                  themeViewModel.isDarkMode
+                  state.isDarkMode
                       ? Icons.light_mode
                       : Icons.dark_mode,
                 ),
                 onPressed: () {
-                  themeViewModel.toggleTheme();
+                  context.read<ThemeBloc>().add(ToggleTheme());
                 },
               );
             },
           ),
         ],
       ),
-      body: Consumer<ThemeViewModel>(
-        builder: (BuildContext context, ThemeViewModel theme, Widget? child) {
+      body: BlocBuilder<ThemeBloc, ThemeState>(
+        builder: (BuildContext context, ThemeState themeState) {
           return Container(
             decoration: BoxDecoration(
               image: DecorationImage(
                 image:
-                    theme.isDarkMode
-                        ? AssetImage('assets/bg2.jpeg')
-                        : AssetImage('assets/bg1.jpeg'),
+                    themeState.isDarkMode
+                        ? const AssetImage('assets/bg2.jpeg')
+                        : const AssetImage('assets/bg1.jpeg'),
                 fit: BoxFit.cover,
                 colorFilter: ColorFilter.mode(
                   Colors.black.withOpacity(0.2),
@@ -48,8 +52,8 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
             ),
-            child: Consumer<AudioViewModel>(
-              builder: (context, viewModel, child) {
+            child: BlocBuilder<AudioBloc, AudioState>(
+              builder: (context, audioState) {
                 return Column(
                   children: [
                     Padding(
@@ -58,11 +62,11 @@ class HomeScreen extends StatelessWidget {
                         hintText: 'Search by title or date...',
                         leading: const Icon(Icons.search),
                         onChanged: (query) {
-                          viewModel.search(query);
+                          context.read<AudioBloc>().add(SearchAudio(query));
                         },
                       ),
                     ),
-                    Expanded(child: _buildBody(context, viewModel)),
+                    Expanded(child: _buildBody(context, audioState)),
                   ],
                 );
               },
@@ -73,19 +77,19 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildBody(BuildContext context, AudioViewModel viewModel) {
-    if (viewModel.isLoading) {
+  Widget _buildBody(BuildContext context, AudioState state) {
+    if (state.isLoading) {
       return const Center(child: CircularProgressIndicator());
     }
 
-    if (viewModel.isSearching) {
-      if (viewModel.searchResults.isEmpty) {
+    if (state.isSearching) {
+      if (state.searchResults.isEmpty) {
         return const Center(child: Text('No results found'));
       }
       return ListView.builder(
-        itemCount: viewModel.searchResults.length,
+        itemCount: state.searchResults.length,
         itemBuilder: (context, index) {
-          final audio = viewModel.searchResults[index];
+          final audio = state.searchResults[index];
           return ListTile(
             title: Text(
               audio.title,
@@ -101,14 +105,14 @@ class HomeScreen extends StatelessWidget {
                     )
                     : null,
             onTap: () {
-              viewModel.playAudio(audio);
+               context.read<AudioBloc>().add(PlayAudio(audio));
             },
           );
         },
       );
     }
 
-    if (viewModel.collections.isEmpty) {
+    if (state.collections.isEmpty) {
       return const Center(child: Text('No collections found'));
     }
 
@@ -120,9 +124,9 @@ class HomeScreen extends StatelessWidget {
         crossAxisSpacing: 16.0,
         mainAxisSpacing: 16.0,
       ),
-      itemCount: viewModel.collections.length,
+      itemCount: state.collections.length,
       itemBuilder: (context, index) {
-        final collection = viewModel.collections[index];
+        final collection = state.collections[index];
         return Card(
           elevation: 4.0,
           color: Theme.of(context).cardColor.withOpacity(0.9),

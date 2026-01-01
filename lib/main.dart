@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'data/audio_repository.dart';
-import 'models/audio_view_model.dart';
-import 'models/theme_view_model.dart';
+import 'blocs/audio/audio_bloc.dart';
+import 'blocs/theme/theme_bloc.dart';
+import 'blocs/theme/theme_state.dart';
 import 'screens/home_screen.dart';
 import 'widgets/player_widget.dart';
+import 'blocs/audio/audio_state.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,21 +18,21 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MultiProvider(
+    return MultiBlocProvider(
       providers: [
-        ChangeNotifierProvider(
-          create: (_) => AudioViewModel(AudioRepository()),
+        BlocProvider(
+          create: (_) => AudioBloc(AudioRepository()),
         ),
-        ChangeNotifierProvider(
-          create: (_) => ThemeViewModel(),
+        BlocProvider(
+          create: (_) => ThemeBloc(),
         ),
       ],
-      child: Consumer<ThemeViewModel>(
-        builder: (context, themeViewModel, child) {
+      child: BlocBuilder<ThemeBloc, ThemeState>(
+        builder: (context, themeState) {
           return MaterialApp(
             title: 'Pháp Thoại Làng Mai',
             debugShowCheckedModeBanner: false,
-            themeMode: themeViewModel.themeMode,
+            themeMode: themeState.themeMode,
             theme: ThemeData(
               colorScheme: ColorScheme.fromSeed(
                 seedColor: Colors.brown,
@@ -53,12 +55,15 @@ class MyApp extends StatelessWidget {
                 child: Column(
                   children: [
                     Expanded(child: child!),
-                    Consumer<AudioViewModel>(
-                      builder: (context, viewModel, _) {
-                        return PlayerWidget(
-                          player: viewModel.player,
-                          currentAudio: viewModel.currentAudio,
-                        );
+                    BlocBuilder<AudioBloc, AudioState>(
+                      builder: (context, audioState) {
+                        if (audioState.player != null) {
+                          return PlayerWidget(
+                            player: audioState.player!,
+                            currentAudio: audioState.currentAudio,
+                          );
+                        }
+                        return const SizedBox.shrink();
                       },
                     ),
                   ],

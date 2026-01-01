@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:phapthoailangmai/blocs/theme/theme_bloc.dart';
+import 'package:phapthoailangmai/blocs/theme/theme_state.dart';
+import '../blocs/audio/audio_bloc.dart';
+import '../blocs/audio/audio_event.dart';
+import '../blocs/audio/audio_state.dart';
 import '../models/audio.dart';
-import '../models/audio_view_model.dart';
 import '../utils/download_helper.dart';
 
 class PlaylistScreen extends StatelessWidget {
@@ -15,59 +19,74 @@ class PlaylistScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(collection.title),
       ),
-      body: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: const AssetImage('assets/bg.jpg'),
-            fit: BoxFit.cover,
-            colorFilter: ColorFilter.mode(
-              Colors.black.withOpacity(0.2), 
-              BlendMode.darken,
+      body: BlocBuilder<ThemeBloc, ThemeState>(
+        builder: (BuildContext context, ThemeState state) {
+          return Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: state.isDarkMode ? AssetImage('assets/bg2.jpeg')
+                : AssetImage('assets/bg1.jpeg'),
+                fit: BoxFit.cover,
+                colorFilter: ColorFilter.mode(
+                  Colors.black.withOpacity(0.2),
+                  BlendMode.darken,
+                ),
+              ),
             ),
-          ),
-        ),
-        child: Consumer<AudioViewModel>(
-          builder: (context, viewModel, child) {
-            return ListView.builder(
-              itemCount: collection.audios.length,
-              itemBuilder: (context, index) {
-                final audio = collection.audios[index];
-                final isPlaying = viewModel.currentAudio?.url == audio.url;
-                
-                return ListTile(
-                  leading: Icon(
-                    isPlaying ? Icons.music_note : Icons.play_circle_outline,
-                    color: isPlaying ? Theme.of(context).primaryColor : Theme.of(context).iconTheme.color,
-                  ),
-                  title: Text(
-                    audio.title,
-                    style: TextStyle(
-                      fontWeight: isPlaying ? FontWeight.bold : FontWeight.normal,
-                      color: isPlaying 
-                          ? Theme.of(context).primaryColor 
-                          : Theme.of(context).colorScheme.onSurface,
-                    ),
-                  ),
-                  subtitle: audio.date != null ? Text(
-                    audio.date!,
-                    style: TextStyle(
-                      color: Theme.of(context).colorScheme.onSurfaceVariant,
-                    ),
-                  ) : null,
-                  trailing: IconButton(
-                    icon: const Icon(Icons.download),
-                    onPressed: () {
-                      DownloadHelper.downloadAudio(audio.url);
-                    },
-                  ),
-                  onTap: () {
-                    viewModel.playAudio(audio);
+            child: BlocBuilder<AudioBloc, AudioState>(
+              builder: (context, state) {
+                return ListView.builder(
+                  itemCount: collection.audios.length,
+                  itemBuilder: (context, index) {
+                    final audio = collection.audios[index];
+                    // Check if this specific audio is matched by URL
+                    final isPlaying = state.currentAudio?.title == audio.title;
+
+                    return ListTile(
+                      leading: Icon(
+                        isPlaying ? Icons.music_note : Icons
+                            .play_circle_outline,
+                        color:  Theme
+                            .of(context)
+                            .iconTheme
+                            .color,
+                      ),
+                      title: Text(
+                        audio.title,
+                        style: TextStyle(
+                          fontWeight: isPlaying ? FontWeight.bold : FontWeight
+                              .normal,
+                          color:Theme
+                              .of(context)
+                              .colorScheme
+                              .onSurface,
+                        ),
+                      ),
+                      subtitle: audio.date != null ? Text(
+                        audio.date!,
+                        style: TextStyle(
+                          color: Theme
+                              .of(context)
+                              .colorScheme
+                              .onSurfaceVariant,
+                        ),
+                      ) : null,
+                      trailing: IconButton(
+                        icon: const Icon(Icons.download),
+                        onPressed: () {
+                          DownloadHelper.downloadAudio(audio.url);
+                        },
+                      ),
+                      onTap: () {
+                        context.read<AudioBloc>().add(PlayAudio(audio));
+                      },
+                    );
                   },
                 );
               },
-            );
-          },
-        ),
+            ),
+          );
+        }
       ),
     );
   }
