@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
       child: BlocBuilder<ThemeBloc, ThemeState>(
         builder: (context, themeState) {
           return MaterialApp(
-            title: 'Pháp Thoại Làng Mai',
+            title: 'Pháp Thoại Sư Ông',
             debugShowCheckedModeBanner: false,
             themeMode: themeState.themeMode,
             theme: ThemeData(

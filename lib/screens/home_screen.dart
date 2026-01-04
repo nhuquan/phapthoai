@@ -89,9 +89,13 @@ class HomeScreen extends StatelessWidget {
                         ),
                       ),
                     ),
+
+                    Expanded(child: _buildBody(context, audioState)),
+
                     Padding(
-                      padding: const EdgeInsets.fromLTRB(16.0, 0, 16.0, 16.0),
-                      child: Column(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
                             "For the best experience, try out native app",
@@ -102,65 +106,59 @@ class HomeScreen extends StatelessWidget {
                               fontSize: 12,
                             ),
                           ),
-                          const SizedBox(height: 4),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              GestureDetector(
-                                onTap:
-                                    () => launchUrl(
-                                      Uri.parse(
-                                        'https://apps.apple.com/vn/app/plum-village-zen-meditation/id1273719339?l=vi',
-                                      ),
-                                      mode: LaunchMode.externalApplication,
-                                    ),
-                                child: Text(
-                                  'iOS',
-                                  style: TextStyle(
-                                    color:
-                                        Theme.of(context).colorScheme.primary,
-                                    fontWeight: FontWeight.bold,
-                                    decoration: TextDecoration.underline,
-                                  ),
-                                ),
+                          SizedBox(width: 10,),
+                          GestureDetector(
+                            onTap:
+                                () => launchUrl(
+                              Uri.parse(
+                                'https://apps.apple.com/vn/app/plum-village-zen-meditation/id1273719339?l=vi',
                               ),
-                              Padding(
-                                padding: const EdgeInsets.symmetric(
-                                  horizontal: 8.0,
-                                ),
-                                child: Text(
-                                  '•',
-                                  style: TextStyle(
-                                    color: Theme.of(
-                                      context,
-                                    ).colorScheme.onSurface.withOpacity(0.6),
-                                  ),
-                                ),
+                              mode: LaunchMode.externalApplication,
+                            ),
+                            child: Text(
+                              'iOS',
+                              style: TextStyle(
+                                color:
+                                Theme.of(context).colorScheme.primary,
+                                fontWeight: FontWeight.bold,
+                                decoration: TextDecoration.underline,
                               ),
-                              GestureDetector(
-                                onTap:
-                                    () => launchUrl(
-                                      Uri.parse(
-                                        'https://play.google.com/store/apps/details?id=org.plumvillageapp&hl=vi',
-                                      ),
-                                      mode: LaunchMode.externalApplication,
-                                    ),
-                                child: Text(
-                                  'Android',
-                                  style: TextStyle(
-                                    color:
-                                        Theme.of(context).colorScheme.primary,
-                                    fontWeight: FontWeight.bold,
-                                    decoration: TextDecoration.underline,
-                                  ),
-                                ),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 8.0,
+                            ),
+                            child: Text(
+                              '•',
+                              style: TextStyle(
+                                color: Theme.of(
+                                  context,
+                                ).colorScheme.onSurface.withOpacity(0.6),
                               ),
-                            ],
+                            ),
+                          ),
+                          GestureDetector(
+                            onTap:
+                                () => launchUrl(
+                              Uri.parse(
+                                'https://play.google.com/store/apps/details?id=org.plumvillageapp&hl=vi',
+                              ),
+                              mode: LaunchMode.externalApplication,
+                            ),
+                            child: Text(
+                              'Android',
+                              style: TextStyle(
+                                color:
+                                Theme.of(context).colorScheme.primary,
+                                fontWeight: FontWeight.bold,
+                                decoration: TextDecoration.underline,
+                              ),
+                            ),
                           ),
                         ],
                       ),
                     ),
-                    Expanded(child: _buildBody(context, audioState)),
                   ],
                 );
               },
