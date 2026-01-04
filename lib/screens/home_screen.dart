@@ -9,6 +9,7 @@ import '../blocs/theme/theme_event.dart';
 import '../blocs/theme/theme_state.dart';
 import 'dart:ui';
 import '../widgets/glass_card.dart';
+import '../widgets/timeline_item.dart';
 import 'playlist_screen.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -136,10 +137,85 @@ class HomeScreen extends StatelessWidget {
 
     return LayoutBuilder(
       builder: (context, constraints) {
-        int crossAxisCount;
         if (constraints.maxWidth < 600) {
-          crossAxisCount = 2; // Mobile
-        } else if (constraints.maxWidth < 1200) {
+          // Mobile View - Timeline List
+          return ListView.builder(
+            padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 24.0),
+            itemCount: state.collections.length,
+            itemBuilder: (context, index) {
+              final collection = state.collections[index];
+              return TimelineItem(
+                isFirst: index == 0,
+                isLast: index == state.collections.length - 1,
+                isDark: isDark,
+                child: Padding(
+                  padding: const EdgeInsets.only(bottom: 24.0),
+                  child: GlassCard(
+                    isDark: isDark,
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => PlaylistScreen(collection: collection),
+                        ),
+                      );
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: Row(
+                        children: [
+                          Container(
+                            padding: const EdgeInsets.all(12),
+                            decoration: BoxDecoration(
+                              color: isDark 
+                                  ? Colors.greenAccent.withOpacity(0.2)
+                                  : Colors.green.withOpacity(0.1),
+                              shape: BoxShape.circle,
+                            ),
+                            child: Icon(
+                              Icons.folder_open_rounded,
+                              size: 24.0,
+                              color: isDark ? Colors.greenAccent : Colors.green,
+                            ),
+                          ),
+                          const SizedBox(width: 16.0),
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  collection.title,
+                                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                                    fontWeight: FontWeight.bold,
+                                    color: Theme.of(context).colorScheme.onSurface,
+                                  ),
+                                ),
+                                const SizedBox(height: 4),
+                                Text(
+                                  "${collection.audios.length} audios",
+                                  style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                                    color: Theme.of(context).colorScheme.onSurfaceVariant,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Icon(
+                            Icons.chevron_right_rounded,
+                            color: Theme.of(context).colorScheme.onSurfaceVariant,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              );
+            },
+          );
+        }
+
+        int crossAxisCount;
+        if (constraints.maxWidth < 1200) {
           crossAxisCount = 4; // Tablet
         } else {
           crossAxisCount = 6; // Desktop

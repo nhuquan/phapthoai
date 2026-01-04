@@ -28,6 +28,14 @@ class AudioBloc extends Bloc<AudioEvent, AudioState> {
     emit(state.copyWith(isLoading: true, player: _player));
     try {
       final collections = await _repository.loadCollections();
+      
+      // Sort collections by year extracted from title
+      collections.sort((a, b) {
+        final yearA = _extractYear(a.title);
+        final yearB = _extractYear(b.title);
+        return yearA.compareTo(yearB);
+      });
+
       emit(state.copyWith(
         collections: collections,
         isLoading: false,
@@ -81,5 +89,13 @@ class AudioBloc extends Bloc<AudioEvent, AudioState> {
   Future<void> close() {
     _player.dispose();
     return super.close();
+  }
+  int _extractYear(String title) {
+    final regex = RegExp(r'\b(19|20)\d{2}\b');
+    final match = regex.firstMatch(title);
+    if (match != null) {
+      return int.parse(match.group(0)!);
+    }
+    return 9999; // Put collections without year at the end
   }
 }

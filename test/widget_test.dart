@@ -8,6 +8,7 @@ void main() {
   testWidgets('App smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
     await tester.pumpWidget(const MyApp());
+    await tester.pumpAndSettle();
 
     // Verify that HomeScreen is displayed
     expect(find.byType(HomeScreen), findsOneWidget);
