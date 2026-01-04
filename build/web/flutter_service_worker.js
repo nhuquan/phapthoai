@@ -3,7 +3,7 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 
-const RESOURCES = {"flutter_bootstrap.js": "213f6176c1ae5a101ea1663314149389",
+const RESOURCES = {"flutter_bootstrap.js": "3d3b28dbda8882f03f83eb25c433d278",
 "version.json": "cc8c2cdbd8519b4acf5eccda1b51a8a5",
 "index.html": "f78730ab4f56f1f7570a2ff761cca68f",
 "/": "f78730ab4f56f1f7570a2ff761cca68f",
@@ -26,7 +26,7 @@ const RESOURCES = {"flutter_bootstrap.js": "213f6176c1ae5a101ea1663314149389",
 "assets/assets/langmai.png": "8706d38e7791767c490b695595bf57a8",
 "assets/assets/langmai_1.png": "186539a4005cb1190aaf59c0ce5087f1",
 "assets/assets/bg2.jpeg": "85ab8bc7358a9a2138329cf910a7fbdc",
-"assets/assets/data.json": "97111773b6447ebc168e72df9a970e95",
+"assets/assets/data.json": "c3fbe152ea58d6a0134f75a27a7a146e",
 "assets/assets/bg1.jpeg": "ad055a7ddb0e2eefdfd8a25729d738d6",
 "canvaskit/skwasm.js": "8060d46e9a4901ca9991edd3a26be4f0",
 "canvaskit/skwasm_heavy.js": "740d43a6b8240ef9e23eed8c48840da4",
