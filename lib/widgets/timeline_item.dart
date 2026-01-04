@@ -50,42 +50,37 @@ class _TimelinePainter extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    final paint = Paint()
-      ..color = color.withOpacity(0.5)
-      ..strokeWidth = 2
-      ..style = PaintingStyle.stroke;
+    final paint =
+        Paint()
+          ..color = color.withOpacity(0.5)
+          ..strokeWidth = 2
+          ..style = PaintingStyle.stroke;
 
-    final dotPaint = Paint()
-      ..color = color
-      ..style = PaintingStyle.fill;
+    final dotPaint =
+        Paint()
+          ..color = color
+          ..style = PaintingStyle.fill;
 
     final center = Offset(size.width / 2, size.height / 2);
-    
+
     // Draw top line
     if (!isFirst) {
-      canvas.drawLine(
-        Offset(size.width / 2, 0),
-        center,
-        paint,
-      );
+      canvas.drawLine(Offset(size.width / 2, 0), center, paint);
     }
 
     // Draw bottom line
     if (!isLast) {
-      canvas.drawLine(
-        center,
-        Offset(size.width / 2, size.height),
-        paint,
-      );
+      canvas.drawLine(center, Offset(size.width / 2, size.height), paint);
     }
 
     // Draw dot
     canvas.drawCircle(center, 6, dotPaint);
-    
+
     // Draw dot border/glow
-    final glowPaint = Paint()
-      ..color = color.withOpacity(0.2)
-      ..style = PaintingStyle.fill;
+    final glowPaint =
+        Paint()
+          ..color = color.withOpacity(0.2)
+          ..style = PaintingStyle.fill;
     canvas.drawCircle(center, 10, glowPaint);
   }
 

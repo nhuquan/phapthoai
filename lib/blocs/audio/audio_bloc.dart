@@ -10,12 +10,12 @@ class AudioBloc extends Bloc<AudioEvent, AudioState> {
   final AudioPlayer _player;
 
   AudioBloc(this._repository)
-      : _player = AudioPlayer(),
-        super(const AudioState()) {
+    : _player = AudioPlayer(),
+      super(const AudioState()) {
     on<LoadCollections>(_onLoadCollections);
     on<SearchAudio>(_onSearchAudio);
     on<PlayAudio>(_onPlayAudio);
-    
+
     // Initialize player and load data
     add(LoadCollections());
   }
@@ -28,7 +28,7 @@ class AudioBloc extends Bloc<AudioEvent, AudioState> {
     emit(state.copyWith(isLoading: true, player: _player));
     try {
       final collections = await _repository.loadCollections();
-      
+
       // Sort collections by year extracted from title
       collections.sort((a, b) {
         final yearA = _extractYear(a.title);
@@ -36,10 +36,7 @@ class AudioBloc extends Bloc<AudioEvent, AudioState> {
         return yearA.compareTo(yearB);
       });
 
-      emit(state.copyWith(
-        collections: collections,
-        isLoading: false,
-      ));
+      emit(state.copyWith(collections: collections, isLoading: false));
     } catch (e) {
       debugPrint("Error loading data: $e");
       emit(state.copyWith(isLoading: false));
@@ -49,33 +46,28 @@ class AudioBloc extends Bloc<AudioEvent, AudioState> {
   void _onSearchAudio(SearchAudio event, Emitter<AudioState> emit) {
     final query = event.query.toLowerCase();
     if (query.isEmpty) {
-      emit(state.copyWith(
-        searchQuery: query,
-        searchResults: [],
-      ));
+      emit(state.copyWith(searchQuery: query, searchResults: []));
     } else {
       final allAudios = state.collections.expand((c) => c.audios);
-      final results = allAudios.where((audio) {
-        final title = audio.title.toLowerCase();
-        final date = audio.date?.toLowerCase() ?? '';
-        return title.contains(query) || date.contains(query);
-      }).toList();
-      emit(state.copyWith(
-        searchQuery: query,
-        searchResults: results,
-      ));
+      final results =
+          allAudios.where((audio) {
+            final title = audio.title.toLowerCase();
+            final date = audio.date?.toLowerCase() ?? '';
+            return title.contains(query) || date.contains(query);
+          }).toList();
+      emit(state.copyWith(searchQuery: query, searchResults: results));
     }
   }
 
   Future<void> _onPlayAudio(PlayAudio event, Emitter<AudioState> emit) async {
     final audio = event.audio;
-    
+
     // Optimistic update
     emit(state.copyWith(currentAudio: audio, isPlaying: true));
 
     try {
       if (_player.playing) {
-          await _player.stop();
+        await _player.stop();
       }
       await _player.setUrl(audio.url);
       await _player.play();
@@ -90,6 +82,7 @@ class AudioBloc extends Bloc<AudioEvent, AudioState> {
     _player.dispose();
     return super.close();
   }
+
   int _extractYear(String title) {
     final regex = RegExp(r'\b(19|20)\d{2}\b');
     final match = regex.firstMatch(title);

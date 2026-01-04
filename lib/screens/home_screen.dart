@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../blocs/audio/audio_bloc.dart';
 import '../blocs/audio/audio_event.dart';
@@ -20,35 +21,36 @@ class HomeScreen extends StatelessWidget {
     return BlocBuilder<ThemeBloc, ThemeState>(
       builder: (context, themeState) {
         return Container(
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: Theme.of(context).brightness == Brightness.dark
-                    ? const AssetImage('assets/bg2.jpeg')
-                    : const AssetImage('assets/bg1.jpeg'),
-                fit: BoxFit.cover,
-                colorFilter: ColorFilter.mode(
-                  Colors.black.withOpacity(0.2),
-                  BlendMode.darken,
-                ),
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image:
+                  Theme.of(context).brightness == Brightness.dark
+                      ? const AssetImage('assets/bg2.jpeg')
+                      : const AssetImage('assets/bg1.jpeg'),
+              fit: BoxFit.cover,
+              colorFilter: ColorFilter.mode(
+                Colors.black.withOpacity(0.2),
+                BlendMode.darken,
               ),
             ),
-            child: Scaffold(
-              appBar: AppBar(
-                title: const Text('Pháp Thoại Làng Mai'),
-                centerTitle: true,
-                backgroundColor: Colors.transparent,
-                actions: [
-                  IconButton(
-                    icon: Icon(
-                      Theme.of(context).brightness == Brightness.dark
-                          ? Icons.light_mode
-                          : Icons.dark_mode,
-                    ),
-                    onPressed: () {
-                      context.read<ThemeBloc>().add(ToggleTheme());
-                    },
-                  )
-                ]
+          ),
+          child: Scaffold(
+            appBar: AppBar(
+              title: const Text('Pháp Thoại Làng Mai'),
+              centerTitle: true,
+              backgroundColor: Colors.transparent,
+              actions: [
+                IconButton(
+                  icon: Icon(
+                    Theme.of(context).brightness == Brightness.dark
+                        ? Icons.light_mode
+                        : Icons.dark_mode,
+                  ),
+                  onPressed: () {
+                    context.read<ThemeBloc>().add(ToggleTheme());
+                  },
+                ),
+              ],
             ),
             backgroundColor: Colors.transparent,
             body: BlocBuilder<AudioBloc, AudioState>(
@@ -57,20 +59,29 @@ class HomeScreen extends StatelessWidget {
                 return Column(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.all(16.0),
+                      padding: const EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 8.0),
                       child: GlassCard(
                         isDark: isDark,
                         borderRadius: 30,
                         child: Padding(
-                           padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                           child: TextField(
+                          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                          child: TextField(
                             decoration: InputDecoration(
                               hintText: 'Search by title or date...',
-                              icon: Icon(Icons.search, color: Theme.of(context).colorScheme.onSurface),
+                              icon: Icon(
+                                Icons.search,
+                                color: Theme.of(context).colorScheme.onSurface,
+                              ),
                               border: InputBorder.none,
-                              hintStyle: TextStyle(color: Theme.of(context).colorScheme.onSurface.withOpacity(0.6)),
+                              hintStyle: TextStyle(
+                                color: Theme.of(
+                                  context,
+                                ).colorScheme.onSurface.withOpacity(0.6),
+                              ),
                             ),
-                            style: TextStyle(color: Theme.of(context).colorScheme.onSurface),
+                            style: TextStyle(
+                              color: Theme.of(context).colorScheme.onSurface,
+                            ),
                             onChanged: (query) {
                               context.read<AudioBloc>().add(SearchAudio(query));
                             },
@@ -78,13 +89,86 @@ class HomeScreen extends StatelessWidget {
                         ),
                       ),
                     ),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(16.0, 0, 16.0, 16.0),
+                      child: Column(
+                        children: [
+                          Text(
+                            "For the best experience, try out native app",
+                            style: TextStyle(
+                              color: Theme.of(
+                                context,
+                              ).colorScheme.onSurface.withOpacity(0.6),
+                              fontSize: 12,
+                            ),
+                          ),
+                          const SizedBox(height: 4),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              GestureDetector(
+                                onTap:
+                                    () => launchUrl(
+                                      Uri.parse(
+                                        'https://apps.apple.com/vn/app/plum-village-zen-meditation/id1273719339?l=vi',
+                                      ),
+                                      mode: LaunchMode.externalApplication,
+                                    ),
+                                child: Text(
+                                  'iOS',
+                                  style: TextStyle(
+                                    color:
+                                        Theme.of(context).colorScheme.primary,
+                                    fontWeight: FontWeight.bold,
+                                    decoration: TextDecoration.underline,
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 8.0,
+                                ),
+                                child: Text(
+                                  '•',
+                                  style: TextStyle(
+                                    color: Theme.of(
+                                      context,
+                                    ).colorScheme.onSurface.withOpacity(0.6),
+                                  ),
+                                ),
+                              ),
+                              GestureDetector(
+                                onTap:
+                                    () => launchUrl(
+                                      Uri.parse(
+                                        'https://play.google.com/store/apps/details?id=org.plumvillageapp&hl=vi',
+                                      ),
+                                      mode: LaunchMode.externalApplication,
+                                    ),
+                                child: Text(
+                                  'Android',
+                                  style: TextStyle(
+                                    color:
+                                        Theme.of(context).colorScheme.primary,
+                                    fontWeight: FontWeight.bold,
+                                    decoration: TextDecoration.underline,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
                     Expanded(child: _buildBody(context, audioState)),
                   ],
                 );
               },
             ),
-          ));
-    });
+          ),
+        );
+      },
+    );
   }
 
   Widget _buildBody(BuildContext context, AudioState state) {
@@ -114,16 +198,24 @@ class HomeScreen extends StatelessWidget {
               child: ListTile(
                 title: Text(
                   audio.title,
-                  style: TextStyle(color: Theme.of(context).colorScheme.onSurface),
+                  style: TextStyle(
+                    color: Theme.of(context).colorScheme.onSurface,
+                  ),
                 ),
-                subtitle: audio.date != null
-                    ? Text(
-                        audio.date!,
-                        style: TextStyle(
-                            color: Theme.of(context).colorScheme.onSurfaceVariant),
-                      )
-                    : null,
-                trailing: Icon(Icons.play_arrow_rounded, color: Theme.of(context).colorScheme.primary),
+                subtitle:
+                    audio.date != null
+                        ? Text(
+                          audio.date!,
+                          style: TextStyle(
+                            color:
+                                Theme.of(context).colorScheme.onSurfaceVariant,
+                          ),
+                        )
+                        : null,
+                trailing: Icon(
+                  Icons.play_arrow_rounded,
+                  color: Theme.of(context).colorScheme.primary,
+                ),
               ),
             ),
           );
@@ -140,7 +232,10 @@ class HomeScreen extends StatelessWidget {
         if (constraints.maxWidth < 600) {
           // Mobile View - Timeline List
           return ListView.builder(
-            padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 24.0),
+            padding: const EdgeInsets.symmetric(
+              horizontal: 16.0,
+              vertical: 24.0,
+            ),
             itemCount: state.collections.length,
             itemBuilder: (context, index) {
               final collection = state.collections[index];
@@ -156,7 +251,9 @@ class HomeScreen extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => PlaylistScreen(collection: collection),
+                          builder:
+                              (context) =>
+                                  PlaylistScreen(collection: collection),
                         ),
                       );
                     },
@@ -167,9 +264,10 @@ class HomeScreen extends StatelessWidget {
                           Container(
                             padding: const EdgeInsets.all(12),
                             decoration: BoxDecoration(
-                              color: isDark 
-                                  ? Colors.greenAccent.withOpacity(0.2)
-                                  : Colors.green.withOpacity(0.1),
+                              color:
+                                  isDark
+                                      ? Colors.greenAccent.withOpacity(0.2)
+                                      : Colors.green.withOpacity(0.1),
                               shape: BoxShape.circle,
                             ),
                             child: Icon(
@@ -185,16 +283,24 @@ class HomeScreen extends StatelessWidget {
                               children: [
                                 Text(
                                   collection.title,
-                                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                                  style: Theme.of(
+                                    context,
+                                  ).textTheme.titleMedium?.copyWith(
                                     fontWeight: FontWeight.bold,
-                                    color: Theme.of(context).colorScheme.onSurface,
+                                    color:
+                                        Theme.of(context).colorScheme.onSurface,
                                   ),
                                 ),
                                 const SizedBox(height: 4),
                                 Text(
                                   "${collection.audios.length} audios",
-                                  style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                                    color: Theme.of(context).colorScheme.onSurfaceVariant,
+                                  style: Theme.of(
+                                    context,
+                                  ).textTheme.bodySmall?.copyWith(
+                                    color:
+                                        Theme.of(
+                                          context,
+                                        ).colorScheme.onSurfaceVariant,
                                   ),
                                 ),
                               ],
@@ -202,7 +308,8 @@ class HomeScreen extends StatelessWidget {
                           ),
                           Icon(
                             Icons.chevron_right_rounded,
-                            color: Theme.of(context).colorScheme.onSurfaceVariant,
+                            color:
+                                Theme.of(context).colorScheme.onSurfaceVariant,
                           ),
                         ],
                       ),
@@ -232,14 +339,15 @@ class HomeScreen extends StatelessWidget {
           itemCount: state.collections.length,
           itemBuilder: (context, index) {
             final collection = state.collections[index];
-            
+
             return GlassCard(
               isDark: isDark,
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => PlaylistScreen(collection: collection),
+                    builder:
+                        (context) => PlaylistScreen(collection: collection),
                   ),
                 );
               },
@@ -251,17 +359,21 @@ class HomeScreen extends StatelessWidget {
                     Container(
                       padding: const EdgeInsets.all(12),
                       decoration: BoxDecoration(
-                        color: isDark 
-                            ? Colors.greenAccent.withOpacity(0.2)
-                            : Colors.green.withOpacity(0.1),
+                        color:
+                            isDark
+                                ? Colors.greenAccent.withOpacity(0.2)
+                                : Colors.green.withOpacity(0.1),
                         shape: BoxShape.circle,
                         boxShadow: [
-                           BoxShadow(
-                             color: isDark ? Colors.greenAccent.withOpacity(0.1) : Colors.green.withOpacity(0.1),
-                             blurRadius: 12,
-                             spreadRadius: 2,
-                           )
-                        ]
+                          BoxShadow(
+                            color:
+                                isDark
+                                    ? Colors.greenAccent.withOpacity(0.1)
+                                    : Colors.green.withOpacity(0.1),
+                            blurRadius: 12,
+                            spreadRadius: 2,
+                          ),
+                        ],
                       ),
                       child: Icon(
                         Icons.folder_open_rounded,
@@ -274,7 +386,9 @@ class HomeScreen extends StatelessWidget {
                       child: Text(
                         collection.title,
                         textAlign: TextAlign.center,
-                        style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                        style: Theme.of(
+                          context,
+                        ).textTheme.titleMedium?.copyWith(
                           fontWeight: FontWeight.bold,
                           color: Theme.of(context).colorScheme.onSurface,
                           height: 1.2,

@@ -15,7 +15,7 @@ void main() {
 
     // Verify that PlayerWidget is displayed (persistent)
     expect(find.byType(PlayerWidget), findsOneWidget);
-    
+
     // Verify title
     expect(find.text('Pháp Thoại Làng Mai'), findsOneWidget);
   });

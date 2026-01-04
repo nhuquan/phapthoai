@@ -17,13 +17,15 @@ class PlaylistScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<ThemeBloc, ThemeState> (
+    return BlocBuilder<ThemeBloc, ThemeState>(
       builder: (BuildContext context, ThemeState themeState) {
         return Container(
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: Theme.of(context).brightness == Brightness.dark ? AssetImage('assets/bg2.jpeg')
-                  : AssetImage('assets/bg1.jpeg'),
+              image:
+                  Theme.of(context).brightness == Brightness.dark
+                      ? AssetImage('assets/bg2.jpeg')
+                      : AssetImage('assets/bg1.jpeg'),
               fit: BoxFit.cover,
               colorFilter: ColorFilter.mode(
                 Colors.black.withOpacity(0.2),
@@ -57,31 +59,53 @@ class PlaylistScreen extends StatelessWidget {
                           context.read<AudioBloc>().add(PlayAudio(audio));
                         },
                         child: ListTile(
-                          contentPadding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+                          contentPadding: const EdgeInsets.symmetric(
+                            horizontal: 16.0,
+                            vertical: 8.0,
+                          ),
                           leading: Container(
                             padding: const EdgeInsets.all(8),
                             decoration: BoxDecoration(
-                              color: isPlaying ? Theme.of(context).colorScheme.primary.withOpacity(0.2) : Colors.transparent,
+                              color:
+                                  isPlaying
+                                      ? Theme.of(
+                                        context,
+                                      ).colorScheme.primary.withOpacity(0.2)
+                                      : Colors.transparent,
                               shape: BoxShape.circle,
                             ),
                             child: Icon(
-                              isPlaying ? Icons.music_note : Icons.play_arrow_rounded,
-                              color: isPlaying ? Theme.of(context).colorScheme.primary : Theme.of(context).iconTheme.color,
+                              isPlaying
+                                  ? Icons.music_note
+                                  : Icons.play_arrow_rounded,
+                              color:
+                                  isPlaying
+                                      ? Theme.of(context).colorScheme.primary
+                                      : Theme.of(context).iconTheme.color,
                             ),
                           ),
                           title: Text(
                             audio.title,
                             style: TextStyle(
-                              fontWeight: isPlaying ? FontWeight.bold : FontWeight.normal,
+                              fontWeight:
+                                  isPlaying
+                                      ? FontWeight.bold
+                                      : FontWeight.normal,
                               color: Theme.of(context).colorScheme.onSurface,
                             ),
                           ),
-                          subtitle: audio.date != null ? Text(
-                            audio.date!,
-                            style: TextStyle(
-                              color: Theme.of(context).colorScheme.onSurfaceVariant,
-                            ),
-                          ) : null,
+                          subtitle:
+                              audio.date != null
+                                  ? Text(
+                                    audio.date!,
+                                    style: TextStyle(
+                                      color:
+                                          Theme.of(
+                                            context,
+                                          ).colorScheme.onSurfaceVariant,
+                                    ),
+                                  )
+                                  : null,
                           trailing: IconButton(
                             icon: const Icon(Icons.download_rounded),
                             onPressed: () {

@@ -23,9 +23,10 @@ class Collection {
   factory Collection.fromJson(Map<String, dynamic> json) {
     return Collection(
       title: json['collection'] as String,
-      audios: (json['audios'] as List)
-          .map((e) => Audio.fromJson(e as Map<String, dynamic>))
-          .toList(),
+      audios:
+          (json['audios'] as List)
+              .map((e) => Audio.fromJson(e as Map<String, dynamic>))
+              .toList(),
     );
   }
 }
