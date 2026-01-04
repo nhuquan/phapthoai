@@ -36,7 +36,17 @@ class HomeScreen extends StatelessWidget {
           ),
           child: Scaffold(
             appBar: AppBar(
-              title: const Text('Pháp Thoại Làng Mai'),
+              leadingWidth: 100, // Make logo area wider
+              leading: Padding(
+                padding: const EdgeInsets.only(left: 16.0),
+                child: Image.asset(
+                  Theme.of(context).brightness == Brightness.dark
+                      ? 'assets/langmai_2.png'
+                      : 'assets/langmai_1.png',
+                  fit: BoxFit.cover,
+                ),
+              ),
+              title: const Text('Pháp Thoại Sư Ông'),
               centerTitle: true,
               backgroundColor: Colors.transparent,
               actions: [
