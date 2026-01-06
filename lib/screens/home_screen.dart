@@ -16,6 +16,12 @@ import 'playlist_screen.dart';
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
+  String? _extractYear(String title) {
+    final regex = RegExp(r'\b(19|20)\d{2}\b');
+    final match = regex.firstMatch(title);
+    return match?.group(0);
+  }
+
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<ThemeBloc, ThemeState>(
@@ -270,18 +276,32 @@ class HomeScreen extends StatelessWidget {
                       child: Row(
                         children: [
                           Container(
-                            padding: const EdgeInsets.all(12),
+                            width: 48,
+                            height: 48,
+                            alignment: Alignment.center,
                             decoration: BoxDecoration(
-                              color:
-                                  isDark
-                                      ? Colors.greenAccent.withOpacity(0.2)
-                                      : Colors.green.withOpacity(0.1),
+                              color: Theme.of(context).colorScheme.tertiaryContainer,
                               shape: BoxShape.circle,
                             ),
-                            child: Icon(
-                              Icons.folder_open_rounded,
-                              size: 24.0,
-                              color: isDark ? Colors.greenAccent : Colors.green,
+                            child: Builder(
+                              builder: (context) {
+                                final year = _extractYear(collection.title);
+                                if (year != null) {
+                                  return Text(
+                                    year,
+                                    style: TextStyle(
+                                      color: Theme.of(context).colorScheme.onTertiaryContainer,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 15,
+                                    ),
+                                  );
+                                }
+                                return Icon(
+                                  Icons.folder_open_rounded,
+                                  size: 24.0,
+                                  color: Theme.of(context).colorScheme.onTertiaryContainer,
+                                );
+                              },
                             ),
                           ),
                           const SizedBox(width: 16.0),
