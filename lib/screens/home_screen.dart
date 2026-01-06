@@ -108,11 +108,12 @@ class HomeScreen extends StatelessWidget {
 
                     Expanded(child: _buildBody(context, audioState)),
 
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
+                    if (!audioState.isSearching)
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
                           Text(
                             "For the best experience, try out native app",
                             style: TextStyle(

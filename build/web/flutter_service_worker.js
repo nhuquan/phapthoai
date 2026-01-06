@@ -3,11 +3,11 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 
-const RESOURCES = {"flutter_bootstrap.js": "30558bd43d4fe5a1403917b29c6dac4b",
+const RESOURCES = {"flutter_bootstrap.js": "9b56535ee0977e103cdcf7ef9d50b430",
 "version.json": "cc8c2cdbd8519b4acf5eccda1b51a8a5",
 "index.html": "f78730ab4f56f1f7570a2ff761cca68f",
 "/": "f78730ab4f56f1f7570a2ff761cca68f",
-"main.dart.js": "47437288b1d17e4b165560d70ffee3cf",
+"main.dart.js": "644c119bf102a443a6a3f9e4b2c1a80a",
 "flutter.js": "24bc71911b75b5f8135c949e27a2984e",
 "favicon.png": "507c525360a4157d1f2f90e198c35e59",
 "icons/Icon-192.png": "507c525360a4157d1f2f90e198c35e59",
@@ -26,7 +26,7 @@ const RESOURCES = {"flutter_bootstrap.js": "30558bd43d4fe5a1403917b29c6dac4b",
 "assets/assets/langmai.png": "8706d38e7791767c490b695595bf57a8",
 "assets/assets/langmai_1.png": "186539a4005cb1190aaf59c0ce5087f1",
 "assets/assets/bg2.jpeg": "85ab8bc7358a9a2138329cf910a7fbdc",
-"assets/assets/data.json": "6e2017860f0d5f6088c940178b223faa",
+"assets/assets/data.json": "2e177a9bf817b26ba630e2cbc8cedde8",
 "assets/assets/bg1.jpeg": "ad055a7ddb0e2eefdfd8a25729d738d6",
 "canvaskit/skwasm.js": "8060d46e9a4901ca9991edd3a26be4f0",
 "canvaskit/skwasm_heavy.js": "740d43a6b8240ef9e23eed8c48840da4",
