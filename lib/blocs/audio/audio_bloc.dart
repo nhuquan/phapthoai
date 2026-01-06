@@ -31,8 +31,14 @@ class AudioBloc extends Bloc<AudioEvent, AudioState> {
     emit(state.copyWith(isLoading: true, player: _player));
     try {
       final collections = await _repository.loadCollections();
-      final prefs = await SharedPreferences.getInstance();
-      final favorites = prefs.getStringList('favorites') ?? [];
+      
+      List<String> favorites = [];
+      try {
+        final prefs = await SharedPreferences.getInstance();
+        favorites = prefs.getStringList('favorites') ?? [];
+      } catch (e) {
+        debugPrint("Error loading preferences: $e");
+      }
 
       // Update collections with favorite status
       final updatedCollections =

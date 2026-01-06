@@ -1,0 +1,8 @@
+import base64
+import json
+
+s = "DQYHD2Fzc2V0cy9iZzEuanBlZwwBDQEHBWFzc2V0Bw9hc3NldHMvYmcxLmpwZWcHD2Fzc2V0cy9iZzIuanBlZwwBDQEHBWFzc2V0Bw9hc3NldHMvYmcyLmpwZWcHEGFzc2V0cy9kYXRhLmpzb24MAQ0BBwVhc3NldAcQYXNzZXRzL2RhdGEuanNvbgcSYXNzZXRzL2xhbmdtYWkucG5nDAENAQcFYXNzZXQHEmFzc2V0cy9sYW5nbWFpLnBuZwcUYXNzZXRzL2xhbmdtYWlfMS5wbmcMAQ0BBwVhc3NldAcUYXNzZXRzL2xhbmdtYWlfMS5wbmcHFGFzc2V0cy9sYW5nbWFpXzIucG5nDAENAQcFYXNzZXQHFGFzc2V0cy9sYW5nbWFpXzIucG5n"
+
+# It looks like raw bytes, not JSON. But let's try to see strings.
+decoded = base64.b64decode(s)
+print(decoded)
