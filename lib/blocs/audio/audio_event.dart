@@ -27,3 +27,12 @@ class PlayAudio extends AudioEvent {
   @override
   List<Object> get props => [audio];
 }
+
+class ToggleFavorite extends AudioEvent {
+  final Collection collection;
+
+  const ToggleFavorite(this.collection);
+
+  @override
+  List<Object> get props => [collection];
+}

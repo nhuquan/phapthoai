@@ -1,7 +1,9 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:just_audio/just_audio.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../../data/audio_repository.dart';
+import '../../models/audio.dart';
 import 'audio_event.dart';
 import 'audio_state.dart';
 
@@ -15,6 +17,7 @@ class AudioBloc extends Bloc<AudioEvent, AudioState> {
     on<LoadCollections>(_onLoadCollections);
     on<SearchAudio>(_onSearchAudio);
     on<PlayAudio>(_onPlayAudio);
+    on<ToggleFavorite>(_onToggleFavorite);
 
     // Initialize player and load data
     add(LoadCollections());
@@ -28,19 +31,73 @@ class AudioBloc extends Bloc<AudioEvent, AudioState> {
     emit(state.copyWith(isLoading: true, player: _player));
     try {
       final collections = await _repository.loadCollections();
+      final prefs = await SharedPreferences.getInstance();
+      final favorites = prefs.getStringList('favorites') ?? [];
 
-      // Sort collections by year extracted from title
-      collections.sort((a, b) {
-        final yearA = _extractYear(a.title);
-        final yearB = _extractYear(b.title);
-        return yearA.compareTo(yearB);
-      });
+      // Update collections with favorite status
+      final updatedCollections =
+          collections.map((c) {
+            return c.copyWith(isFavorite: favorites.contains(c.title));
+          }).toList();
 
-      emit(state.copyWith(collections: collections, isLoading: false));
+      _sortCollections(updatedCollections);
+
+      emit(state.copyWith(collections: updatedCollections, isLoading: false));
     } catch (e) {
       debugPrint("Error loading data: $e");
       emit(state.copyWith(isLoading: false));
     }
+  }
+
+  Future<void> _onToggleFavorite(
+    ToggleFavorite event,
+    Emitter<AudioState> emit,
+  ) async {
+    final collection = event.collection;
+    final updatedCollection = collection.copyWith(
+      isFavorite: !collection.isFavorite,
+    );
+
+    final updatedCollections =
+        state.collections.map((c) {
+          if (c.title == collection.title) {
+            return updatedCollection;
+          }
+          return c;
+        }).toList();
+
+    _sortCollections(updatedCollections);
+
+    emit(state.copyWith(collections: updatedCollections));
+
+    // Persist changes
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      final favorites = prefs.getStringList('favorites') ?? [];
+      if (updatedCollection.isFavorite) {
+        if (!favorites.contains(updatedCollection.title)) {
+          favorites.add(updatedCollection.title);
+        }
+      } else {
+        favorites.remove(updatedCollection.title);
+      }
+      await prefs.setStringList('favorites', favorites);
+    } catch (e) {
+      debugPrint("Error saving favorites: $e");
+    }
+  }
+
+  void _sortCollections(List<Collection> collections) {
+    collections.sort((Collection a, Collection b) {
+      // First sort by favorite status
+      if (a.isFavorite != b.isFavorite) {
+        return a.isFavorite ? -1 : 1;
+      }
+      // Then sort by year
+      final yearA = _extractYear(a.title);
+      final yearB = _extractYear(b.title);
+      return yearB.compareTo(yearA); // Descending order for year
+    });
   }
 
   void _onSearchAudio(SearchAudio event, Emitter<AudioState> emit) {
@@ -89,6 +146,6 @@ class AudioBloc extends Bloc<AudioEvent, AudioState> {
     if (match != null) {
       return int.parse(match.group(0)!);
     }
-    return 9999; // Put collections without year at the end
+    return 0; // Put collections without year at the end
   }
 }

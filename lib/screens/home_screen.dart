@@ -35,7 +35,7 @@ class HomeScreen extends StatelessWidget {
                       : const AssetImage('assets/bg1.jpeg'),
               fit: BoxFit.cover,
               colorFilter: ColorFilter.mode(
-                Colors.black.withOpacity(0.2),
+                Colors.black.withValues(alpha: 0.2),
                 BlendMode.darken,
               ),
             ),
@@ -92,7 +92,7 @@ class HomeScreen extends StatelessWidget {
                               hintStyle: TextStyle(
                                 color: Theme.of(
                                   context,
-                                ).colorScheme.onSurface.withOpacity(0.6),
+                                ).colorScheme.onSurface.withValues(alpha: 0.6),
                               ),
                             ),
                             style: TextStyle(
@@ -119,7 +119,7 @@ class HomeScreen extends StatelessWidget {
                             style: TextStyle(
                               color: Theme.of(
                                 context,
-                              ).colorScheme.onSurface.withOpacity(0.6),
+                              ).colorScheme.onSurface.withValues(alpha: 0.6),
                               fontSize: 12,
                             ),
                           ),
@@ -151,7 +151,7 @@ class HomeScreen extends StatelessWidget {
                               style: TextStyle(
                                 color: Theme.of(
                                   context,
-                                ).colorScheme.onSurface.withOpacity(0.6),
+                                ).colorScheme.onSurface.withValues(alpha: 0.6),
                               ),
                             ),
                           ),
@@ -335,6 +335,24 @@ class HomeScreen extends StatelessWidget {
                               ],
                             ),
                           ),
+                          IconButton(
+                            onPressed: () {
+                              context.read<AudioBloc>().add(
+                                ToggleFavorite(collection),
+                              );
+                            },
+                            icon: Icon(
+                              collection.isFavorite
+                                  ? Icons.favorite
+                                  : Icons.favorite_border,
+                              color:
+                                  collection.isFavorite
+                                      ? Colors.red
+                                      : Theme.of(
+                                        context,
+                                      ).colorScheme.onSurfaceVariant,
+                            ),
+                          ),
                           Icon(
                             Icons.chevron_right_rounded,
                             color:
@@ -380,54 +398,78 @@ class HomeScreen extends StatelessWidget {
                   ),
                 );
               },
-              child: Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.all(12),
-                      decoration: BoxDecoration(
-                        color:
-                            isDark
-                                ? Colors.greenAccent.withOpacity(0.2)
-                                : Colors.green.withOpacity(0.1),
-                        shape: BoxShape.circle,
-                        boxShadow: [
-                          BoxShadow(
+              child: Stack(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          padding: const EdgeInsets.all(12),
+                          decoration: BoxDecoration(
                             color:
                                 isDark
-                                    ? Colors.greenAccent.withOpacity(0.1)
-                                    : Colors.green.withOpacity(0.1),
-                            blurRadius: 12,
-                            spreadRadius: 2,
+                                    ? Colors.greenAccent.withValues(alpha: 0.2)
+                                    : Colors.green.withValues(alpha: 0.1),
+                            shape: BoxShape.circle,
+                            boxShadow: [
+                              BoxShadow(
+                                color:
+                                    isDark
+                                        ? Colors.greenAccent.withValues(alpha: 0.1)
+                                        : Colors.green.withValues(alpha: 0.1),
+                                blurRadius: 12,
+                                spreadRadius: 2,
+                              ),
+                            ],
                           ),
-                        ],
-                      ),
-                      child: Icon(
-                        Icons.folder_open_rounded,
-                        size: 40.0,
-                        color: isDark ? Colors.greenAccent : Colors.green,
-                      ),
-                    ),
-                    const SizedBox(height: 16.0),
-                    Flexible(
-                      child: Text(
-                        collection.title,
-                        textAlign: TextAlign.center,
-                        style: Theme.of(
-                          context,
-                        ).textTheme.titleMedium?.copyWith(
-                          fontWeight: FontWeight.bold,
-                          color: Theme.of(context).colorScheme.onSurface,
-                          height: 1.2,
+                          child: Icon(
+                            Icons.folder_open_rounded,
+                            size: 40.0,
+                            color: isDark ? Colors.greenAccent : Colors.green,
+                          ),
                         ),
-                        maxLines: 2,
-                        overflow: TextOverflow.ellipsis,
+                        const SizedBox(height: 16.0),
+                        Flexible(
+                          child: Text(
+                            collection.title,
+                            textAlign: TextAlign.center,
+                            style: Theme.of(
+                              context,
+                            ).textTheme.titleMedium?.copyWith(
+                              fontWeight: FontWeight.bold,
+                              color: Theme.of(context).colorScheme.onSurface,
+                              height: 1.2,
+                            ),
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Positioned(
+                    top: 8,
+                    right: 8,
+                    child: IconButton(
+                      onPressed: () {
+                        context.read<AudioBloc>().add(
+                          ToggleFavorite(collection),
+                        );
+                      },
+                      icon: Icon(
+                        collection.isFavorite
+                            ? Icons.favorite
+                            : Icons.favorite_border,
+                        color:
+                            collection.isFavorite
+                                ? Colors.red
+                                : Theme.of(context).colorScheme.onSurfaceVariant,
                       ),
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             );
           },

@@ -865,6 +865,833 @@
     ]
   },
   {
+    "collection": "Phật Pháp căn bản - Trái tim của Bụt 1993",
+    "source_url": "https://langmai.org/thien-duong/nghe-phap-thoai/nghe-phap-thoai-audio/1993-1994-trai-tim-cua-but/",
+    "audios": [
+      {
+        "title": "Cách học Phật",
+        "date": "1993-11-21",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/01-TNH-1993-11-21-VN-Hoc-kinh-dien-phai-khon-ngoan.mp3"
+      },
+      {
+        "title": "Tu học Phật, Duyên khởi",
+        "date": "1993-11-25",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/02-TNH-1993-11-25-VN-Cach-thuc-tu-hoc-Phat-Ly-duyen-khoi.mp3"
+      },
+      {
+        "title": "Tứ diệu đế 01",
+        "date": "1993-11-28",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/03-TNH-1993-11-28-VN-Chuyen-phap-luan_Tu-Dieu-De-01.mp3"
+      },
+      {
+        "title": "Tứ diệu đế 02",
+        "date": "1993-12-02",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/04-TNH-1993-12-02-VN-Tu-Dieu-De-02.mp3"
+      },
+      {
+        "title": "Đạo đế, bát chánh đạo",
+        "date": "1993-12-05",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/05-TNH-1993-12-05-VN-Dao-de-Bat-chanh-dao.mp3"
+      },
+      {
+        "title": "Chánh kiến",
+        "date": "1993-12-09",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/06-TNH-1993-12-09-VN-Chanh-Kien.mp3"
+      },
+      {
+        "title": "Chánh tư duy",
+        "date": "1993-12-12",
+        "url": "http://langmai.org/wp-content/uploads/2019/03/07-TNH-1993-12-12-VN-Chanh-Tu-Duy.mp3"
+      },
+      {
+        "title": "Chánh ngữ",
+        "date": "1993-12-16",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/08-TNH-1993-12-16-VN-Chanh-Ngu.mp3"
+      },
+      {
+        "title": "Chánh niệm và 51 tâm hành",
+        "date": "1993-12-19",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/09-TNH-1993-12-19-VN-Chanh-niem-va-51-Tam-hanh.mp3"
+      },
+      {
+        "title": "Chánh niệm 01",
+        "date": "1993-12-23",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/10-TNH-1993-12-23-VN-Chanh-niem-01.mp3"
+      },
+      {
+        "title": "Chánh niệm 02",
+        "date": "1993-12-26",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/11-TNH-1993-12-26-VN-Chanh-niem-02.mp3"
+      },
+      {
+        "title": "Chánh niệm 03",
+        "date": "1993-12-30",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/12-TNH-1993-12-30-VN-Chanh-niem-03.mp3"
+      },
+      {
+        "title": "Đạo đế",
+        "date": "1994-01-06",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/13-TNH-1994-01-06-VN-Su-that-thu-tu-trong-Tu-dieu-de.mp3"
+      },
+      {
+        "title": "Quán chiếu về thọ, tâm hành, tưởng",
+        "date": "1994-01-09",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/14-TNH-1994-01-09-VN14-Quan-chieu-cam-tho.mp3"
+      },
+      {
+        "title": "Quán niệm về pháp, chánh tinh tấn",
+        "date": "1994-01-13",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/15-TNH-1994-01-13-VN.-Quan-niem-ve-Phap-Chanh-tinh-tan-1.mp3"
+      },
+      {
+        "title": "Chánh tinh tấn, chánh định",
+        "date": "1994-01-16",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/16-TNH-1994-01-16-VN.-Chanh-tinh-tan-Chanh-dinh.mp3"
+      },
+      {
+        "title": "Tam pháp ấn",
+        "date": "1994-01-20",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/17-TNH-1994-01-20-VN.-Tam-Phap-Anmp3.mp3"
+      },
+      {
+        "title": "Ta đang làm gì, năm lễ ",
+        "date": "1994-01-23 ",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/18-TNH-1994-01-23-VN.-Ta-dang-lam-gi-day-Nam-le.mp3"
+      },
+      {
+        "title": "Quán không trong năm lễ",
+        "date": "1994-01-27",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/19-Quan-khong-trong-nam-le.mp3"
+      },
+      {
+        "title": "Ba cửa giải thoát",
+        "date": "1994-01-30",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/20-TNH-1994-01-30-VN.-Ba-canh-cua-giai-thoatmp3.mp3"
+      },
+      {
+        "title": "Giáo lý duyên khởi",
+        "date": "1994-02-03",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/21-TNH-1994-02-03-VN-Giao-ly-duyen-khoi.mp3"
+      },
+      {
+        "title": "Chân tâm duyên sinh",
+        "date": "1994-02-06",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/22-TNH-1994-02-06-VN.-Chan-tam-duyen-sinh.mp3"
+      },
+      {
+        "title": "Bốn tâm vô lượng",
+        "date": "1994-02-13",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/23-TNH-1994-02-13-VN.-Bon-tam-vo-luongmp3.mp3"
+      },
+      {
+        "title": "Niềm tin Tam Bảo",
+        "date": "1994-02-17",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/24-TNH-1994-02-17-VN.-Niem-tin-noi-Tam-bao.mp3"
+      },
+      {
+        "title": "Kết thúc",
+        "date": "1994-02-20",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/25-TNH-1994-02-20-VN.-Ket-thuc-khoa-tu-mua-dong.mp3"
+      }
+    ]
+  },
+  {
+    "collection": "Truyền thống sinh động 1994",
+    "source_url": "",
+    "audios": [
+      {
+        "title": "Thiền tập thời đạo Bụt nguyên thỉ",
+        "date": "",
+        "url": "https://langmai.org/phapduong/nghe-phap-thoai-audio/khoa-truyen-thong-sinh-dong-cua-thien-tap/phan-1-thien-tap-thoi-dao-but-nguyen-thi/"
+      },
+      {
+        "title": "Vườn thiền Việt Nam",
+        "date": "",
+        "url": "https://langmai.org/phapduong/nghe-phap-thoai-audio/khoa-truyen-thong-sinh-dong-cua-thien-tap/phan-2-vuon-thien-viet-nam/"
+      },
+      {
+        "title": "Những phương pháp tu tập tại Làng Mai",
+        "date": "",
+        "url": "https://langmai.org/phapduong/nghe-phap-thoai-audio/khoa-truyen-thong-sinh-dong-cua-thien-tap/phan-3-nhung-phuong-phap-tu-tap-tai-lang-mai/"
+      }
+
+    ]
+  },
+  {
+    "collection": "Công phu nở đóa sen ngàn cánh 1997",
+    "source_url": "https://langmai.org/thien-duong/nghe-phap-thoai/nghe-phap-thoai-audio/1997-1999-cong-phu-no-doa-sen-ngan-canh/",
+    "audios": [
+      {
+        "title": "Công phu tu tập mỗi ngày",
+        "date": "1997.11.28",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/01-TNH-1997-11-27-VN01-Khai-Mac-Khoa-Cong-Phu-Tu-Tap-Moi-Ngay.mp3"
+      },
+      {
+        "title": "Kinh Kim Cương 1",
+        "date": "1997.11.30",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/02-TNH-1997-11-30-VN-Kinh-Kim-Cuong-1.mp3"
+      },
+      {
+        "title": "Kinh Kim Cương 2",
+        "date": "1997.12.04",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/03-TNH-1997-12-04-VN-Kinh-Kim-Cuong-2.mp3"
+      },
+      {
+        "title": "Kinh Kim Cương 3",
+        "date": "1997.12.07",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/04-TNH-1997-12-07-VN-Kinh-Kim-Cuong-3.mp3"
+      },
+      {
+        "title": "Kinh Kim Cương 4",
+        "date": "1997.12.11",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/05-TNH-1997-12-11-VN-Kinh-Kim-Cuong-4.mp3"
+      },
+      {
+        "title": "Kinh Kim Cương 5 ",
+        "date": "1997.12.14",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/06-TNH-1997-12-14-VN-Kinh-Kim-Cuong-5.mp3"
+      },
+      {
+        "title": "Kinh Thương Yêu",
+        "date": "1997.12.18",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/07-TNH-1997-12-18-VN-Kinh-Thuong-Yeu.mp3"
+      },
+      {
+        "title": "Đảnh Lễ và Quy Nguyện",
+        "date": "1997.12.21",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/08-TNH-1997-12-21-VN-Sam-Quy-Nguyen-Danh-Le.mp3"
+      },
+      {
+        "title": "Quay về Nương tựa",
+        "date": "1998.01.04",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/09-TNH-1998-01-04-VN-Quay-Ve-Nuong-Tua1-Muoi-Nguyen-Pho-Hien1.mp3"
+      },
+      {
+        "title": "Kinh 10 Nguyện Phổ Hiền (01)",
+        "date": "1998.01.08",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/10-TNH-1998-01-08-VN-Muoi-Nguyen-Pho-Hien1.mp3"
+      },
+      {
+        "title": "Kinh 10 Nguyện Phổ Hiền (02)",
+        "date": "1998.01.08",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/10-TNH-1998-01-08-VN-Muoi-Nguyen-Pho-Hien2-Kinh-Diet-Tru-Phien-Gian1-Nguyen-Ngay-An-Lanh.mp3"
+      },
+      {
+        "title": "Kinh Diệt Trừ Phiền Giận",
+        "date": "1998.01.11",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/11-TNH-1998-01-11-VN-Kinh-Diet-Tru-Phien-Gian2-Quay-Ve-Nuong-Tua2.mp3"
+      },
+      {
+        "title": "Bốn Lời Quán Nguyện",
+        "date": "1998.01.15",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/12-TNH-1998-01-15-VN-Bon-Loi-Quan-Nguyen.mp3"
+      },
+      {
+        "title": "Kinh Quán Niệm Hơi Thở (1)- Kệ Vô Thường",
+        "date": "1998.01.18",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/14-TNH-1998-01-18-VN-CPNDSNC-Ke-Vo-Thuong-Kinh-Quan-Niem-Hoi-Tho1.mp3"
+      },
+      {
+        "title": "Kinh Quán Niệm Hơi Thở (2)",
+        "date": "1998.01.22",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/15-TNH-1998-01-22-VN-CPNDSNC-Kinh-Quan-Niem-Hoi-Tho-2.mp3"
+      },
+      {
+        "title": "Kinh Quán Niệm Hơi Thở (3)",
+        "date": "1998.01.25",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/16-TNH-1998-01-25-VN-CPNDSNC-Kinh-Quan-Niem-Hoi-Tho-3.mp3"
+      },
+      {
+        "title": "Hướng Về Kính Lạy",
+        "date": "1998.01.29",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/16-TNH-1998-01-29-VN-CPNDSNC-Huong-Ve-Kinh-Lay.mp3"
+      },
+      {
+        "title": "Kinh Phổ Môn",
+        "date": "1998.02.01",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/17-TNH-1998-02-01-VN-CPNDSNC-Kinh-Pho-Mon-Kinh-Suc-Manh-Quan-Am.mp3"
+      },
+      {
+        "title": "Kinh Bát Đại Nhân Giác",
+        "date": "1998.02.05",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/18-TNH-1998-02-05-VN-CPNDSNC-Kinh-Tam-Dieu-Gaic-Ngo-cua-Cac-Bac-Dai-Nhan.mp3"
+      },
+      {
+        "title": "Bài Tụng Hạnh Phúc",
+        "date": "1998.02.08",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/19-TNH-1998-02-08-VN-CPNDSNC-Bai-Tung-Hanh-Phuc.mp3"
+      },
+      {
+        "title": "Kinh Bốn Lãnh Vực Quán Niệm (1)",
+        "date": "1998.02.12",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/20-TNH-1998-02-12-VN-CPNDSNC-Kinh-Bon-Linh-Vuc-Quan-Niem-01.mp3"
+      },
+      {
+        "title": "Kinh Bốn Lãnh Vực Quán Niệm (2)",
+        "date": "1998.02.15",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/22-TNH-1998-02-15-VN-CPNDSNC-Kinh-Bon-Linh-Vuc-Quan-Niem-02.mp3"
+      },
+      {
+        "title": "Kinh Bốn Lãnh Vực Quán Niệm (3)",
+        "date": "1998.02.19",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/23-TNH-1998-02-19-VN-CPNDSNC-Kinh-Bon-Linh-Vuc-Quan-Niem-03.mp3"
+      },
+      {
+        "title": "Kinh Bốn Lãnh Vực Quán Niệm (4)",
+        "date": "1998.02.22",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/24-TNH-1998-02-22-VN-CPNDSNC-Kinh-Bon-Linh-Vuc-Quan-Niem-04.mp3"
+      },
+      {
+        "title": "Quán chiếu vô dục – Niết bàn",
+        "date": "1998.02.26",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/25-TNH-1998-02-26-VN-CPNDSNC-Kinh-Bon-Linh-Vuc-Quan-Niem-05.mp3"
+      },
+      {
+        "title": "Phòng Hộ Chuyển Hóa",
+        "date": "1998.03.12",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/26-TNH-1998-03-12-VN-CPNDSNC-Phong-Ho-Chuyen-Hoa.mp3"
+      },
+      {
+        "title": "Kinh Trung Đạo Nhân Duyên",
+        "date": "1998.03.15",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/27-TNH-1998-03-15-VN-CPNDSNC-Kinh-Trung-Dao-Nhan-Duyen-Kinh-Duyen-Sinh1.mp3"
+      },
+      {
+        "title": "Kinh Duyên Sinh và Đại Không ",
+        "date": "1998.03.19",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/28-TNH-1998-03-19-VN-CPNDSNC-Kinh-Duyen-Sinh2-Kinh-Dai-Khong.mp3"
+      },
+      {
+        "title": "Soi Sáng Nhân Diện Tập Khí ",
+        "date": "1998.03.22",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/29-TNH-1998-03-22-VN-CPNDSNC-Soi-Sang-va-Nhan-Dien-Tap-Khi.mp3"
+      },
+      {
+        "title": "Kinh Soi Gương (1/3)- Tiếp Xúc Tổ Tiên ",
+        "date": "1998.03.26",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/30-TNH-1998-03-26-VN-CPNDSNC-Tiep-Xuc-Voi-To-Tien-Trong-Ta-Kinh-Soi-Guong1.mp3"
+      },
+      {
+        "title": "Kinh Soi Gương (3/3) – Tùy Hỷ Hồi Hướng",
+        "date": "1998.04.02",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/31-TNH-1998-04-02-VN-CPNDSNC-Kinh-Soi-Guong2-Tuy-Hy-Hoi-Huong.mp3"
+      },
+      {
+        "title": "Kinh Người Biết Sống Một Mình. Kinh BNH (1) ",
+        "date": "1998.04.05",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/32-TNH-1998-04-05-VN-CPNDSNC-Kinh-Nguoi-Biet-Song-Mot-Minh.mp3"
+      },
+      {
+        "title": "Kinh Bát Nhã Hành 1",
+        "date": "1998.04.09",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/33-TNH-1998-04-09-VN-CPNDSNC-Kinh-Bat-Nha-Hanh1.mp3"
+      },
+      {
+        "title": "Kinh Bát Nhã Hành 2",
+        "date": "1998.04.12",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/34-TNH-1998-04-12-VN-CPNDSNC-Kinh-Bat-Nha-Hanh2.mp3"
+      },
+      {
+        "title": "Kinh Bát Nhã Hành 3",
+        "date": "1998.04.16",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/35-TNH-1998-04-16-VN-CPNDSNC-Kinh-Bat-Nha-Hanh3.mp3"
+      },
+      {
+        "title": "Kinh Bát Nhã Hành 4 ",
+        "date": "1998.04.19",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/36-TNH-1998-04-19-VN-CPNDSNC-Kinh-Bat-Nha-Hanh-4.mp3"
+      },
+      {
+        "title": "Kinh Bát Nhã Hành 5 ",
+        "date": "1998.04.23",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/37-TNH-1998-04-23-VN-CPNDSNC-Kinh-Bat-Nha-Hanh-5.mp3"
+      },
+      {
+        "title": "Kinh Pháp Ấn (Ba cánh của giải thoát) 1",
+        "date": "1998.04.28",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/Co%CC%82ng-Phu-No%CC%9B%CC%89-%C4%90o%CC%81a-Sen-Nga%CC%80n-Ca%CC%81nh-38-Kinh-Pha%CC%81p-A%CC%82%CC%81n-Ba-Ca%CC%81nh-Cu%CC%9B%CC%89a-Gia%CC%89i-Thoa%CC%81t-1.mp3"
+      },
+      {
+        "title": "Kinh Pháp Ấn (Ba cánh của giải thoát) 2 ",
+        "date": "1998.04.30",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/Co%CC%82ng-Phu-No%CC%9B%CC%89-%C4%90o%CC%81a-Sen-Nga%CC%80n-Ca%CC%81nh-39-Kinh-Pha%CC%81p-A%CC%82%CC%81n-Ba-Ca%CC%81nh-Cu%CC%9B%CC%89a-Gia%CC%89i-Thoa%CC%81t-2.mp3"
+      },
+      {
+        "title": "Kinh A Na Luật Đà. Ba Cái Lạy",
+        "date": "1998.07.02",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/Co%CC%82ng-Phu-No%CC%9B%CC%89-%C4%90o%CC%81a-Sen-Nga%CC%80n-Ca%CC%81nh-40-Kinh-A-Na-Lua%CC%A3%CC%82t-%C4%90a%CC%80-Tha%CC%82%CC%80y-Thi%CC%81ch-Nha%CC%82%CC%81t-Ha%CC%A3nh.mp3"
+      },
+      {
+        "title": "Chánh niệm trong từng mũi kim, từng cơn giận",
+        "date": "1998.07.12",
+        "url": "https://langmai.org/wp-content/uploads/2019/03/Co%CC%82ng-Phu-No%CC%9B%CC%89-%C4%90o%CC%81a-Sen-Nga%CC%80n-Ca%CC%81nh-41-Cha%CC%81nh-Nie%CC%A3%CC%82m-Tha%CC%82%CC%80y-Thi%CC%81ch-Nha%CC%82%CC%81t-Ha%CC%A3nh.mp3"
+      },
+      {
+        "title": "Ba Cái Lạy (tt)",
+        "date": "1998.09.06",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/Co%CC%82ng-Phu-No%CC%9B%CC%89-%C4%90o%CC%81a-Sen-Nga%CC%80n-Ca%CC%81nh-42-Ba-Ca%CC%81i-La%CC%A3y-Tha%CC%82%CC%80y-Thi%CC%81ch-Nha%CC%82%CC%81t-Ha%CC%A3nh2.mp3"
+      },
+      {
+        "title": "Kinh Người Bắt Rắn 1",
+        "date": "1998.09.13",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/Co%CC%82ng-Phu-No%CC%9B%CC%89-%C4%90o%CC%81a-Sen-Nga%CC%80n-Ca%CC%81nh-43-Kinh-Ngu%CC%9Bo%CC%9B%CC%80i-Ba%CC%86%CC%81t-Ra%CC%86%CC%81n-1-Tha%CC%82%CC%80y-Thi%CC%81ch-Nha%CC%82%CC%81t-Ha%CC%A3nh.mp3"
+      },
+      {
+        "title": "Kinh Người Bắt Rắn 2",
+        "date": "1998.09.17",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/Co%CC%82ng-Phu-No%CC%9B%CC%89-%C4%90o%CC%81a-Sen-Nga%CC%80n-Ca%CC%81nh-44-Kinh-Ngu%CC%9Bo%CC%9B%CC%80i-Ba%CC%86%CC%81t-Ra%CC%86%CC%81n-2.mp3"
+      },
+      {
+        "title": "Kinh A Di Đà 1",
+        "date": "1998.10.01",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/45-Kinh-A-Di-%C4%90a%CC%80-1-Tha%CC%82%CC%80y-Thi%CC%81ch-Nha%CC%82%CC%81t-Ha%CC%A3nh.mp3"
+      },
+      {
+        "title": "Kinh A Di Đà 2",
+        "date": "1998.10.04",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/46-Kinh-A-Di-%C4%90a%CC%80-2-Tha%CC%82%CC%80y-Thi%CC%81ch-Nha%CC%82%CC%81t-Ha%CC%A3nh.mp3"
+      },
+      {
+        "title": "Kinh A Di Đà 3",
+        "date": "1998.10.08",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/47-Kinh-A-Di-%C4%90a%CC%80-3-Tha%CC%82%CC%80y-Thi%CC%81ch-Nha%CC%82%CC%81t-Ha%CC%A3nh1.mp3"
+      },
+      {
+        "title": "Kinh A Di Đà 4",
+        "date": "1998.10.11",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/48-Kinh-A-Di-%C4%90a%CC%80-4-Tha%CC%82%CC%80y-Thi%CC%81ch-Nha%CC%82%CC%81t-Ha%CC%A3nh2.mp3"
+      },
+      {
+        "title": "Kinh A Di Đà 5",
+        "date": "1998.10.15",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/49-Kinh-A-Di-%C4%90a%CC%80-5-Tha%CC%82%CC%80y-Thi%CC%81ch-Nha%CC%82%CC%81t-Ha%CC%A3nh1.mp3"
+      },
+      {
+        "title": "Kinh A Di Đà 6",
+        "date": "1998.10.18",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/50-Kinh-A-Di-%C4%90a%CC%80-6-Tha%CC%82%CC%80y-Thi%CC%81ch-Nha%CC%82%CC%81t-Ha%CC%A3nh.mp3"
+      },
+      {
+        "title": "Thiên Long Hộ Pháp",
+        "date": "1998.10.22",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/51-Thie%CC%82n-Long-Ho%CC%A3%CC%82-Pha%CC%81p-Tha%CC%82%CC%80y-Thi%CC%81ch-Nha%CC%82%CC%81t-Ha%CC%A3nh.mp3"
+      },
+      {
+        "title": "Kinh Độ Người Hấp Hối",
+        "date": "1998.10.25",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/52-Kinh-%C4%90o%CC%A3%CC%82-Ngu%CC%9Bo%CC%9B%CC%80i-Ha%CC%82%CC%81p-Ho%CC%82%CC%81i-Tha%CC%82%CC%80y-Thi%CC%81ch-Nha%CC%82%CC%81t-Ha%CC%A3nh.mp3"
+      },
+      {
+        "title": "Kinh Phước Đức",
+        "date": "1998.11.22",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/53-Kinh-Phu%CC%9Bo%CC%9B%CC%81c-%C4%90u%CC%9B%CC%81c-Tha%CC%82%CC%80y-Thi%CC%81ch-Nha%CC%82%CC%81t-Ha%CC%A3nh.mp3"
+      },
+      {
+        "title": "Kinh Tinh Yếu Bát Nhã 1",
+        "date": "1998.11.26",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/54-Kinh-Tinh-Ye%CC%82%CC%81u-Ba%CC%81t-Nha%CC%83-1-Tha%CC%82%CC%80y-Thi%CC%81ch-Nha%CC%82%CC%81t-Ha%CC%A3nh.mp3"
+      },
+      {
+        "title": "Kinh Tinh Yếu Bát Nhã 2",
+        "date": "1998.11.29",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/55-Kinh-Tinh-Ye%CC%82%CC%81u-Ba%CC%81t-Nha%CC%83-2-Tha%CC%82%CC%80y-Thi%CC%81ch-Nha%CC%82%CC%81t-Ha%CC%A3nh-.mp3"
+      },
+      {
+        "title": "Kinh Tinh Yếu Bát Nhã 3",
+        "date": "1998.12.06",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/56-Kinh-Tinh-Ye%CC%82%CC%81u-Ba%CC%81t-Nha%CC%83-3-Tha%CC%82%CC%80y-Thi%CC%81ch-Nha%CC%82%CC%81t-Ha%CC%A3nh.mp3"
+      },
+      {
+        "title": "Kinh Tinh Yếu Bát Nhã 4",
+        "date": "1998.12.10",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/57-Kinh-Tinh-Ye%CC%82%CC%81u-Ba%CC%81t-Nha%CC%83-4-Tha%CC%82%CC%80y-Thi%CC%81ch-Nha%CC%82%CC%81t-Ha%CC%A3nh.mp3"
+      },
+      {
+        "title": "Kinh Tinh Yếu Bát Nhã 5",
+        "date": "1998.12.13",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/58-Kinh-Tinh-Ye%CC%82%CC%81u-Ba%CC%81t-Nha%CC%83-5-Tha%CC%82%CC%80y-Thi%CC%81ch-Nha%CC%82%CC%81t-Ha%CC%A3nh.mp3"
+      },
+      {
+        "title": "Kinh Tuổi Trẻ Và Hạnh Phúc 1",
+        "date": "1999.01.03",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/59-Kinh-Tuo%CC%82%CC%89i-Tre%CC%89-Va%CC%80-Ha%CC%A3nh-Phu%CC%81c-1-Tha%CC%82%CC%80y-Thi%CC%81ch-Nha%CC%82%CC%81t-Ha%CC%A3nh.mp3"
+      },
+      {
+        "title": "Kinh Hải Đảo Tự Thân",
+        "date": "1999.01.10",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/61-Kinh-ha%CC%89i-%C4%91a%CC%89o-tu%CC%9B%CC%A3-tha%CC%82n1999.01.10.VN_.mp3"
+      },
+      {
+        "title": "Nhân Diện Hạt Giống Sợ Hãi",
+        "date": "1999.01.14",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/62-Nha%CC%A3%CC%82n-die%CC%A3%CC%82n-ha%CC%A3t-gio%CC%82%CC%81ng-so%CC%9B%CC%A3-ha%CC%83i1999.01.14.VN_..mp3"
+      },
+      {
+        "title": "Sám Nguyện",
+        "date": "1999.01.21",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/63-Sa%CC%81m-nguye%CC%A3%CC%82n1999.01.21.VN_.mp3"
+      },
+      {
+        "title": "Bốn Phép Tùy Niệm 1",
+        "date": "1999.01.24",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/64-Bo%CC%82%CC%81n-Phe%CC%81p-Tu%CC%80y-Nie%CC%A3%CC%82m-1-Tha%CC%82%CC%80y-Thi%CC%81ch-Nha%CC%82%CC%81t-Ha%CC%A3nh.mp3"
+      },
+      {
+        "title": "Bốn Phép Tùy Niệm 2",
+        "date": "1999.01.24",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/65-Bo%CC%82%CC%81n-phe%CC%81p-tuy%CC%80-nhie%CC%A3%CC%82m-2-1999.01.28.mp3"
+      },
+      {
+        "title": "Bốn Phép Tùy Niệm 3",
+        "date": "1999.01.31",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/66-Bo%CC%82%CC%81n-Phe%CC%81p-Tu%CC%80y-Nie%CC%A3%CC%82m-3-Tha%CC%82%CC%80y-Thi%CC%81ch-Nha%CC%82%CC%81t-Ha%CC%A3nh.mp3"
+      },
+      {
+        "title": "Truyền Thống Làng Mai – Miên Mật",
+        "date": "1999.03.11",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/72-Truye%CC%82%CC%80n-Tho%CC%82%CC%81ng-La%CC%80ng-Mai-%E2%80%93-Mie%CC%82n-Ma%CC%A3%CC%82t-Tha%CC%82%CC%80y-Thi%CC%81ch-Nha%CC%82%CC%81t-Ha%CC%A3nh.mp3"
+      },
+      {
+        "title": "Nghi Thức Thọ Trai 1",
+        "date": "1999.03.14",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/73-Nghi-Thu%CC%9B%CC%81c-Tho%CC%A3-Trai-1-Tha%CC%82%CC%80y-Thi%CC%81ch-Nha%CC%82%CC%81t-Ha%CC%A3nh.mp3"
+      },
+      {
+        "title": "Nghi Thức Thọ Trai 2",
+        "date": "1999.03.18",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/74-Nghi-Thu%CC%9B%CC%81c-Tho%CC%A3-Trai-2-Tha%CC%82%CC%80y-Thi%CC%81ch-Nha%CC%82%CC%81t-Ha%CC%A3nh.mp3"
+      },
+      {
+        "title": "Qui Sơn Cảnh Sách 1",
+        "date": "1999.04.04",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/75-Qui-So%CC%9Bn-Ca%CC%89nh-Sa%CC%81ch-1-Tha%CC%82%CC%80y-Thi%CC%81ch-Nha%CC%82%CC%81t-Ha%CC%A3nh.mp3"
+      },
+      {
+        "title": "Qui Sơn Cảnh Sách 2",
+        "date": "1999.04.08",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/76-Qui-So%CC%9Bn-Ca%CC%89nh-Sa%CC%81ch-2-Tha%CC%82%CC%80y-Thi%CC%81ch-Nha%CC%82%CC%81t-Ha%CC%A3nh.mp3"
+      },
+      {
+        "title": "Qui Sơn Cảnh Sách 3",
+        "date": "1999.04.11",
+        "url": "http://langmai.org/wp-content/uploads/2019/04/77-Qui-So%CC%9Bn-Ca%CC%89nh-Sa%CC%81ch-3-1999.04.15.VN_.mp3"
+      },
+      {
+        "title": "Qui Sơn Cảnh Sách 4",
+        "date": "1999.04.15",
+        "url": "http://langmai.org/wp-content/uploads/2019/04/78-QuySonCanhSach-4.1999.04.25.VN_.mp3"
+      },
+      {
+        "title": "Qui Sơn Cảnh Sách 5",
+        "date": "1999.04.25",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/79-QuySonCanhSach-5.1999.04.25.VN_..mp3"
+      },
+      {
+        "title": "Qui Sơn Cảnh Sách 6",
+        "date": "1999.04.29",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/80-Quy-so%CC%9Bn-ca%CC%89nh-sa%CC%81ch-6-1999.04.29.VN_.mp3"
+      }
+    ]
+  },
+  {
+    "collection": "Nhiếp Đại Thừa Luận 1999",
+    "source_url": "https://langmai.org/thien-duong/nghe-phap-thoai/nghe-phap-thoai-audio/2000-2001-nhiep-dai-thua-luan-2/",
+    "audios": [
+      {
+        "title": "NDTL01-Miên mật, hiện pháp, lạc trú",
+        "date": "1999-11-14",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/01.-TNH-1999-11-14-Nhie%CC%82%CC%81p-%C4%90a%CC%A3i-Thu%CC%9B%CC%80a-Lua%CC%A3%CC%82n.mp3"
+      },
+      {
+        "title": "NDTL02-Đối tượng nhận thức",
+        "date": "1999-11-28",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/02.-TNH-1999-11-28-Nhie%CC%82%CC%81p-%C4%90a%CC%A3i-Thu%CC%9B%CC%80a-Lua%CC%A3%CC%82n.mp3"
+      },
+      {
+        "title": "NDTL03",
+        "date": "1999-12-02",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/03.-TNH-1999-12-02-Nhie%CC%82%CC%81p-%C4%90a%CC%A3i-Thu%CC%9B%CC%80a-Lua%CC%A3%CC%82n-.mp3"
+      },
+      {
+        "title": "NDTL04",
+        "date": "1999-12-05",
+        "url": "http://langmai.org/wp-content/uploads/2019/04/04.-1999-12-05-TNH-Nhie%CC%82%CC%81p-%C4%90a%CC%A3i-Thu%CC%9B%CC%80a-Lua%CC%A3%CC%82n.mp3"
+      },
+      {
+        "title": "NDTL05",
+        "date": "1999-12-09",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/05.-TNH-1999-12-09-Nhie%CC%82%CC%81p-%C4%90a%CC%A3i-Thu%CC%9B%CC%80a-Lua%CC%A3%CC%82n.mp3"
+      },
+      {
+        "title": "NDTL06",
+        "date": "1999-12-12",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/06.-TNH-1999-12-12-Nhie%CC%82%CC%81p-%C4%90a%CC%A3i-Thu%CC%9B%CC%80a-Lua%CC%A3%CC%82n.mp3"
+      },
+      {
+        "title": "NDTL07",
+        "date": "1999-12-16",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/07.-TNH-1999-12-16-Nhie%CC%82%CC%81p-%C4%90a%CC%A3i-Thu%CC%9B%CC%80a-Lua%CC%A3%CC%82n.mp3"
+      },
+      {
+        "title": "NDTL08",
+        "date": "1999-12-19",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/08.-TNH-1999-12-19-Nhie%CC%82%CC%81p-%C4%90a%CC%A3i-Thu%CC%9B%CC%80a-Lua%CC%A3%CC%82n.mp3"
+      },
+      {
+        "title": "NDTL09",
+        "date": "2000-01-02",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/09.-TNH-2000.01.02.LH_.VN_.Nhie%CC%82%CC%81p-%C4%91a%CC%A3i-thu%CC%9B%CC%80a.ta%CC%81c-nghi-va%CC%80-tho%CC%A3-nghie%CC%A3%CC%82p.mp3"
+      },
+      {
+        "title": "NDTL10",
+        "date": "2000-01-06",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/10.-TNH-2000-01-06-Nhie%CC%82%CC%81p-%C4%90a%CC%A3i-Thu%CC%9B%CC%80a-Lua%CC%A3%CC%82n.mp3"
+      },
+      {
+        "title": "NDTL11",
+        "date": "2000-01-09",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/11.-TNH-2000-01-09-Nhie%CC%82%CC%81p-%C4%90a%CC%A3i-Thu%CC%9B%CC%80a-Lua%CC%A3%CC%82n.mp3"
+      },
+      {
+        "title": "NDTL12",
+        "date": "2000-01-16",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/12.-TNH-2000.01.16.VN_.Nhie%CC%82%CC%81p-%C4%91a%CC%A3i-thu%CC%9B%CC%80a.mp3"
+      },
+      {
+        "title": "NDTL13",
+        "date": "2000-01-20",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/13.-TNH-2000-01-20-Nhie%CC%82%CC%81p-%C4%90a%CC%A3i-Thu%CC%9B%CC%80a-Lua%CC%A3%CC%82n.mp3"
+      },
+      {
+        "title": "NDTL14",
+        "date": "2000-01-23",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/14.-TNH-2000.01.23.VN_.Nhie%CC%82%CC%81p-%C4%91a%CC%A3i-thu%CC%9B%CC%80a-lua%CC%A3%CC%82n.mp3"
+      },
+      {
+        "title": "NDTL15",
+        "date": "2000-01-27",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/15.-TNH-2000.01.27.VN_.3-co%CC%89i-du%CC%A3c-gio%CC%9B%CC%81i.mp3"
+      },
+      {
+        "title": "NDTL16",
+        "date": "2000-01-30",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/16.-TNH-2000.01.30.LH_.VN_.Nhie%CC%82%CC%81p-%C4%91a%CC%A3i-thu%CC%9B%CC%80a.mp3"
+      },
+      {
+        "title": "NDTL17",
+        "date": "2000-02-03",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/17.-TNH-2000.02.03.UH_.VN_.Nhie%CC%82%CC%81p-%C4%91a%CC%A3i-thu%CC%9B%CC%80a.sa%CC%81t-na-die%CC%A3%CC%82t-qua%CC%89-ca%CC%82u-hu%CC%9B%CC%83u.mp3"
+      },
+      {
+        "title": "NDTL18",
+        "date": "2000-02-10",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/18.-TNH-2000.02.10-Nhie%CC%82%CC%81p-%C4%90a%CC%A3i-Thu%CC%9B%CC%80a-Lua%CC%A3%CC%82n.mp3"
+      },
+      {
+        "title": "NDTL19",
+        "date": "2000-02-13",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/19.-TNH-2000.02.13.LH_.VN_.Nhie%CC%82%CC%81p-%C4%91a%CC%A3i-thu%CC%9B%CC%80a-lua%CC%A3%CC%82n.PAL_.mp3"
+      },
+      {
+        "title": "NDTL20",
+        "date": "2000-02-17",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/20.-TNH-2000.02.17.VN_.Nhie%CC%82%CC%81p-%C4%91a%CC%A3i-thu%CC%9B%CC%80a-lua%CC%A3%CC%82n-bie%CC%82%CC%81n-ke%CC%82%CC%81-so%CC%9B%CC%89-cha%CC%82%CC%81p.PAL_.mp3"
+      },
+      {
+        "title": "21 Tướng trạng của đối tượng nhận thức",
+        "date": "2000-12-14",
+        "url": "https://langmai.org/wp-content/uploads/2019/05/21.-TNH-2000-12-14-Tu%CC%9Bo%CC%9B%CC%81ng-tra%CC%A3ng-cu%CC%89a-%C4%91o%CC%82%CC%81i-tu%CC%9Bo%CC%9B%CC%A3ng-nha%CC%A3%CC%82n-thu%CC%9B%CC%81c-VN.mp3"
+      },
+      {
+        "title": "22 Tướng y tha khởi",
+        "date": "2000-12-17",
+        "url": "https://langmai.org/wp-content/uploads/2019/05/22.-TNH-2000-12-17-Tu%CC%9Bo%CC%9B%CC%81ng-y-tha-kho%CC%9B%CC%89i-VN.mp3"
+      },
+      {
+        "title": "23 Chủng tử huân tập",
+        "date": "2000-12-21",
+        "url": "http://langmai.org/wp-content/uploads/2019/05/23.-TNH-2000-12-21-Chu%CC%89ng-tu%CC%9B%CC%89-hua%CC%82n-ta%CC%A3%CC%82p-VN.mp3"
+      },
+      {
+        "title": "24 Biến kế chấp, tam tánh",
+        "date": "2000-12-28",
+        "url": "http://langmai.org/wp-content/uploads/2019/05/24.-TNH-2000-12-28-Bie%CC%82%CC%81n-ke%CC%82%CC%81-cha%CC%82%CC%81p-tam-ta%CC%81nh-VN.mp3"
+      },
+      {
+        "title": "25 Đoạn 7 chương 2",
+        "date": "2001-01-01",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/25.-TNH-2001.01.01%C4%90oa%CC%A3n-7-Chu%CC%9Bo%CC%9Bng-2.mp3"
+      },
+      {
+        "title": "26 Đoạn 10 chương 2",
+        "date": "2001-01-04",
+        "url": "http://langmai.org/wp-content/uploads/2019/05/26.-TNH-2001-01-04-%C4%90oa%CC%A3n-10-chu%CC%9Bo%CC%9Bng-2.mp3"
+      },
+      {
+        "title": "27 Đối tượng và chủ thể nhận thức",
+        "date": "2001-01-11",
+        "url": "http://langmai.org/wp-content/uploads/2019/05/27.-TNH-2001-01-11-%C4%90o%CC%82%CC%81i-tu%CC%9Bo%CC%9B%CC%A3ng-va%CC%80-chu%CC%89-the%CC%82%CC%89-nha%CC%A3%CC%82n-thu%CC%9B%CC%81c-VN.mp3"
+      },
+      {
+        "title": "28 Các biểu hiện khác",
+        "date": "2001-01-14",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/28.-TNH-2001-01-14-Ca%CC%81c-bie%CC%82%CC%89u-hie%CC%A3%CC%82n-kha%CC%81c.mp3"
+      },
+      {
+        "title": "29 Nghệ thuật sống chánh niệm",
+        "date": "2001-02-08",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/29.-TNH-2001-02-08-Nghe%CC%A3%CC%82-Thua%CC%A3%CC%82t-So%CC%82%CC%81ng-Cha%CC%81nh-Nie%CC%A3%CC%82m.mp3"
+      },
+      {
+        "title": "30 Dòng sinh mạng",
+        "date": "2001-02-11",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/30.-TNH-2001-02-11-Do%CC%80ng-Sinh-Ma%CC%A3ng.mp3"
+      },
+      {
+        "title": "31 Cởi bỏ kết sử",
+        "date": "2001-02-15",
+        "url": "https://langmai.org/wp-content/uploads/2019/04/31.-TNH-2001-02-15-Co%CC%9B%CC%89i-Bo%CC%89-Ke%CC%82%CC%81t-Su%CC%9B%CC%89.mp3"
+      }
+
+    ]
+  },
+  {
+    "collection": "Trung quán luận 2001",
+    "source_url": "https://langmai.org/thien-duong/nghe-phap-thoai/nghe-phap-thoai-audio/2001-2003-trung-quan-luan/",
+    "audios": [
+      {
+        "title": "Quán nhân duyên 01",
+        "date": "2001-11-29",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/01-Trung-Quan-Luan-01_Quan-Nhan-Duyen.mp3"
+      },
+      {
+        "title": "Quán nhân duyên 02",
+        "date": "2001-12-02",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/02-Trung-Quan-Luan-02_Quan-Nhan-Duyen.mp3"
+      },
+      {
+        "title": "Quán nhân duyên 03",
+        "date": "2001-12-06",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/03-Trung-Quan-Luan-03_Quan-Nhan-Duyen.mp3"
+      },
+      {
+        "title": "Quán nhân duyên 04",
+        "date": "2001-12-09",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/04-Trung-Quan-Luan-04_Quan-Nhan-Duyen.mp3"
+      },
+      {
+        "title": "Quán khứ lai 01",
+        "date": "2002-01-10",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/05-Trung-Quan-Luan-05_Quan-Khu-Lai.mp3"
+      },
+      {
+        "title": "Quán khứ lai 02",
+        "date": "2002-01-13",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/06-Trung-Quan-Luan-06_Quan-Khu-Lai-1.mp3"
+      },
+      {
+        "title": "Quán khứ lai 03",
+        "date": "2002-01-17",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/07-Trung-Quan-Luan-07_Quan-Khu-Lai.mp3"
+      },
+      {
+        "title": "Quán khứ lai 04",
+        "date": "2002-01-20",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/08-Trung-Quan-Luan-08_Quan-Khu-Lai.mp3"
+      },
+      {
+        "title": "Quán khứ lai 05",
+        "date": "2002-01-24",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/09-Trung-Quan-Luan-09_Quan-Khu-Lai.mp3"
+      },
+      {
+        "title": "Quán khứ lai 06",
+        "date": "2002-01-27",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/10-Trung-Quan-Luan-10_Quan-Khu-Lai.mp3"
+      },
+      {
+        "title": "Quán tứ đế 01",
+        "date": "2002-01-31",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/11-Trung-Quan-Luan-11_Quan-Tu-De.mp3"
+      },
+      {
+        "title": "Quán tứ đế 02",
+        "date": "2002-02-03",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/12-Trung-Quan-Luan-12_Quan-Tu-De.mp3"
+      },
+      {
+        "title": "Phẩm 15 – Bài 01-04",
+        "date": "2002-12-12",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/13-Pham-15-bai-so-1-4_-Trung-Quan-Luan.mp3"
+      },
+      {
+        "title": "Phẩm 15 – Bài 05-08",
+        "date": "2002-12-15",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/14-Pham-15-bai-so-5-8_-Trung-Quan-Luan.mp3"
+      },
+      {
+        "title": "Phẩm 15 – Bài 09-11",
+        "date": "2002-12-19",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/15-Pham-15-bai-so-9-11_-Trung-Quan-Luan.mp3"
+      },
+      {
+        "title": "Phẩm 10 – Bài 00-01",
+        "date": "2002-12-22",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/16-Pham-10-bai-so-1_-Trung-Quan-Luan.mp3"
+      },
+      {
+        "title": "Phẩm 10 – Bài 01-03",
+        "date": "2003-01-02",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/17-Pham-10-bai-so-1-3_-Trung-Quan-Luan.mp3"
+      },
+      {
+        "title": "Phẩm 10 – Bài 04-05",
+        "date": "2003-01-05",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/18-Pham-10-bai-so-4-5_-Trung-Quan-Luan.mp3"
+      },
+      {
+        "title": "Phẩm 10 – Bài 06-07",
+        "date": "2003-01-19",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/19-Pham-10-bai-so-6-7_-Trung-Quan-Luan.mp3"
+      },
+      {
+        "title": "Phẩm 10 – Bài 08-13",
+        "date": "2003-01-26",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/20-Pham-10-bai-so-8-13_-Trung-Quan-Luan.mp3"
+      },
+      {
+        "title": "Phẩm 10 – Bài 14-16",
+        "date": "2003-01-30",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/21-Pham-10-bai-so-14-16_-Trung-Quan-Luan.mp3"
+      },
+      {
+        "title": "Phẩm 25 – Bài 01-03",
+        "date": "2003-02-06",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/22-Pham-25-bai-so-01-03_-Trung-Quan-Luan.mp3"
+      },
+      {
+        "title": "Phẩm 25 – Bài 04-06",
+        "date": "2003-02-09",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/23-Pham-25-bai-so-04-06_-Trung-Quan-Luan.mp3"
+      },
+      {
+        "title": "Phẩm 25 – Bài 07-12",
+        "date": "2003-02-13",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/24-Pham-25-bai-so-07-12_-Trung-Quan-Luan.mp3"
+      },
+      {
+        "title": "Phẩm 25 – Bài 17-20",
+        "date": "2003-02-20",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/25-Pham-25-bai-so-17-20_-Trung-Quan-Luan.mp3"
+      },
+      {
+        "title": "Phẩm 25- Bài 21-24",
+        "date": "2003-02-23",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/26-Pham-25-bai-so-21-24_-Trung-Quan-Luan.mp3"
+      }
+    ]
+  },
+  {
     "collection": "Pháp thoại năm 2001",
     "source_url": "https://langmai.org/thien-duong/nghe-phap-thoai/nghe-phap-thoai-audio/phap-thoai-nam-2001/",
     "audios": [
@@ -1360,6 +2187,132 @@
     ]
   },
   {
+    "collection": "Dị bộ tông luân luận 2004 ",
+    "source_url": "https://langmai.org/thien-duong/nghe-phap-thoai/nghe-phap-thoai-audio/di-bo-tong-luan-luan-2004-mp3/",
+    "audios": [
+      {
+        "title": "Chư Tổ là tiếp nối của Bụt",
+        "date": "2004-09-23",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/01.TNH-2004-09-23-VN-Chu-To-la-su-tiep-noi-cua-But.mp3"
+      },
+      {
+        "title": "Dị Bộ Tông Luân Luận (1) – Phân phái lần đầu",
+        "date": "2004-09-26",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/02.TNH-2004-09-26-VN-Phan-phai-lan-dau.mp3"
+      },
+      {
+        "title": "Đạo Bụt Luôn cần thức ăn mới",
+        "date": "2004-09-30",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/03.TNH-2004-09-30-VN-Dao-But-luon-can-thuc-an-moi.mp3"
+      },
+      {
+        "title": "Đặc tính thời sơ kỳ Tiểu Thừa",
+        "date": "2004-10-03",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/04.TNH-2004-10-03-VN-Nhung-Dac-Tinh-Cua-Tieu-Thua-So-Ky.mp3"
+      },
+      {
+        "title": "Dị Bộ Tông Luân Luận (2)-Đóng góp của các bộ phái",
+        "date": "2004-10-07",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/05.TNH-2004-10-07-VN-Di-Bo-Tong-Luan-Luan-02.mp3"
+      },
+      {
+        "title": "Sự hình thành Đại Thừa bộ phái",
+        "date": "2004-10-10",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/06.TNH-2004-10-10-VN-Su-Hinh-Thanh-Dai-Thua-Bo-Phai.mp3"
+      },
+      {
+        "title": "Dị Bộ Tông Luân Luận (3)",
+        "date": "2004-10-12",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/07.TNH-2004-10-12-VN-Di-Bo-Tong-Luan-Luan-03.mp3"
+      },
+      {
+        "title": "Dị Bộ Tông Luân Luận (4)",
+        "date": "2004-10-14",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/08.TNH-2004-10-14-VN-Di-Bo-Tong-Luan-Luan-04.mp3"
+      },
+      {
+        "title": "Dị Bộ Tông Luân Luận (5)",
+        "date": "2004-10-17",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/09.TNH-2004-10-17-VN-Di-Bo-Tong-Luan-Luan-05.mp3"
+      },
+      {
+        "title": "Dị Bộ Tông Luân Luận (6) – Ba thời không thực thể",
+        "date": "2004-10-21",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/11.TNH-2004-10-21-VN-Di-Bo-Tong-Luan-Luan-06.mp3"
+      },
+      {
+        "title": "Dị Bộ Tông Luân Luận (7) – Các Tam pháp ấn\t",
+        "date": "2004-10-24",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/12.TNH-2004-10-24-VN-Di-Bo-Tong-Luan-Luan-07.mp3"
+      },
+      {
+        "title": "Phát triển kinh Quán Niệm Hơi thở (2)",
+        "date": "2004-10-28",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/14.TNH-2004-10-28-VN-Kinh-Quan-Niem-Hoi-Tho-02.mp3"
+      },
+      {
+        "title": "Dị Bộ Tông Luân Luận (8) – Giấc mơ tình huynh đệ",
+        "date": "2004-10-31",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/15.TNH-2004-10-31-VN-Di-Bo-Tong-Luan-Luan-08.mp3"
+      },
+      {
+        "title": "Phát triển kinh Quán Niệm Hơi thở (3) – dbtll09",
+        "date": "2004-11-04",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/16.TNH-2004-11-04-VN-Kinh-QN-Hoi-Tho-03-Di-Bo-09.mp3"
+      },
+      {
+        "title": "Phát triển kinh Quán Niệm Hơi thở (4) – dbtll10",
+        "date": "2004-11-07",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/17.TNH-2004-11-07-VN-Kinh-QN-Hoi-Tho-04-Di-Bo-10.mp3"
+      },
+      {
+        "title": "Dị Bộ Tông Luân Luận (11) – Thuyết Hữu bộ",
+        "date": "2004-11-14",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/18.TNH-2004-11-14-VN-Di-Bo-Tong-Luan-Luan-11.mp3"
+      },
+      {
+        "title": "Dị Bộ Tông Luân Luận (12) – Tam thế thực hữu",
+        "date": "2004-11-18",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/19.TNH-2004-11-18-VN-Di-Bo-Tong-Luan-Luan-12.mp3"
+      },
+      {
+        "title": "Dị Bộ Tông Luân Luận (13) – Ngồi chơi với hơi thở",
+        "date": "2004-11-21",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/20.TNH-2004-11-21-VN-Di-Bo-Tong-Luan-Luan-13.mp3"
+      },
+      {
+        "title": "Ngày lễ tạ ơn- Biết ơn là hạnh phúc",
+        "date": "2004-11-25",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/TNH-2004-11-25-VN-Biet-On-va-Hanh-Phuc.mp3"
+      },
+      {
+        "title": "Pháp ấn Làng Mai",
+        "date": "2004-11-28",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/21.TNH-2004-11-28-VN-Nhung-Chu-Truong-Cua-Lang-Mai.mp3"
+      },
+      {
+        "title": "Tam thời tương tức – Quá khứ là tương lai",
+        "date": "2004-12-02",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/22.TNH-2004-12-02-VN-Qua-Khu-Chinh-La-Tuong-Lai.mp3"
+      },
+      {
+        "title": "Dị Bộ Tông Luân Luận (14 ) – Tín ngưỡng",
+        "date": "2004-12-05",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/23.TNH-2004-12-05-VN-Di-Bo-Tong-Luan-Luan-14.mp3"
+      },
+      {
+        "title": "Tư tưởng các bộ phái – dbtll15",
+        "date": "2004-12-09",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/24.TNH-2004-12-09-VN-Tu-Chung-Nghiep-Bao-Tin-Nguong.mp3"
+      },
+      {
+        "title": "Dị Bộ Tông Luân Luận (16) – bộ phái Đại Thừa",
+        "date": "2004-12-12",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/25.TNH-2004-12-12-VN-Khe-Co-Cua-Dai-Thua.mp3"
+      }
+    ]
+  },
+  {
     "collection": "Pháp thoại năm 2004",
     "source_url": "https://langmai.org/thien-duong/nghe-phap-thoai/nghe-phap-thoai-audio/phap-thoai-nam-2004/",
     "audios": [
@@ -1483,6 +2436,329 @@
         "date": "2004-12-30",
         "url": "https://langmai.org/wp-content/uploads/2018/12/28.TNH-2004-12-30-O%CC%82m-la%CC%82%CC%81y-nie%CC%82%CC%80m-%C4%91au-sau-co%CC%9Bn-ha%CC%89i-cha%CC%82%CC%81n.mp3"
       }
+    ]
+  },
+  {
+    "collection": "Lâm Tế Lục – Người vô sự 2003",
+    "source_url": "https://langmai.org/thien-duong/nghe-phap-thoai/nghe-phap-thoai-audio/binh-giang-lam-te-luc-nguoi-vo-su/",
+    "audios": [
+      {
+        "title": "1. Bụt Tổ là ai",
+        "date": "",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/01-TNH-2003-10-02-VN-But-To-la-ai.mp3"
+      },
+      {
+        "title": "2. Đã về đã tới",
+        "date": "",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/02-TNH-2003-10-05-VN-Da-ve-da-toi.mp3"
+      },
+      {
+        "title": "3. Tánh tướng biệt quán",
+        "date": "",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/03-TNH-2003-10-09-VN-Tanh-tuong-biet-quan.mp3"
+      },
+      {
+        "title": "4. Bình thường vô sự ",
+        "date": "",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/04-TNH-2003-10-12-VN-Binh-thuong-vo-su-la-Nguoi-qui.mp3"
+      },
+      {
+        "title": "5. Không Bụt không chúng sanh",
+        "date": "",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/05-TNH-2003-10-16-VN-Khong-co-But-cung-khong-co-chung-sanh.mp3"
+      },
+      {
+        "title": "6. Bây giờ và ở đây",
+        "date": "",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/06-TNH-2003-10-26-VN-Bay-gio-va-o-day.mp3"
+      },
+      {
+        "title": "7. Đến đi thong dong",
+        "date": "",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/07-TNH-2003-10-30-VN-Den-di-thong-dong.mp3"
+      },
+      {
+        "title": "8. Điều phục tâm ý – thực tập căn bản",
+        "date": "",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/08-TNH-2003-11-02-VN-Dieu-phuc-tam-y.mp3"
+      },
+      {
+        "title": "9. Bốn cảnh vô tướng",
+        "date": "",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/09-TNH-2003-11-06-VN-Nhan-dien-bon-canh-Vo-tuong.mp3"
+      },
+      {
+        "title": "10. Ba thân ba cõi ",
+        "date": "",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/10-TNH-2003-11-09-VN-Ba-Than-va-Ba-Coi.mp3"
+      },
+      {
+        "title": "11. Bình thường tâm thị đạo",
+        "date": "",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/11-TNH-2003-11-13-VN-Binh-Thuong-Tam-La-Dao.mp3"
+      },
+      {
+        "title": "12. Vượt thoát giả danh",
+        "date": "",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/12-TNH-2003-11-16-VN-Vuot-Thoat-Gia-danh.mp3"
+      },
+      {
+        "title": "13. Chủ và khách",
+        "date": "",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/13-TNH-2003-11-20-VN-Ai-la-Chu-Ai-La-Khach.mp3"
+      },
+      {
+        "title": "14. Tri kiến chân thật",
+        "date": "",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/14-TNH-2003-11-23-VN-Tri-Kien-chan-That.mp3"
+      },
+      {
+        "title": "15. Thiền duyệt pháp hỷ",
+        "date": "",
+        "url": "http://langmai.org/wp-content/uploads/2018/12/15-TNH-2003-11-27-VN-Thien-Duyet-Phap-Hy-de-nuoi-Than-Tam.mp3"
+      },
+      {
+        "title": "16. Ai đi tìm phật pháp",
+        "date": "",
+        "url": "http://langmai.org/wp-content/uploads/2018/12/16-TNH-2003-11-30-VN-Ai-dang-di-tim-Phat-Phap.mp3"
+      },
+      {
+        "title": "17. Sự trao truyền của chư tổ",
+        "date": "",
+        "url": "http://langmai.org/wp-content/uploads/2018/12/17-TNH-2003-12-04-VN-Su-Trao-truyen-Cua-Chu-To.mp3"
+      },
+      {
+        "title": "18. Danh từ và kiến giải",
+        "date": "",
+        "url": "http://langmai.org/wp-content/uploads/2018/12/18-TNH-2003-12-07-VN-Danh-Tu-Kien-Giai.mp3"
+      },
+      {
+        "title": "19. Bụt pháp đạo là thật",
+        "date": "",
+        "url": "http://langmai.org/wp-content/uploads/2018/12/19-TNH-2003-12-11-VN-But-Phap-Dao-la-That.mp3"
+      },
+      {
+        "title": "20. Tam cảnh tương tức",
+        "date": "",
+        "url": "http://langmai.org/wp-content/uploads/2018/12/20-TNH-2003-12-14-VN-Tam-Canh-tuong-tuc.mp3"
+      },
+      {
+        "title": "21. Năm nghiệp vô gián",
+        "date": "",
+        "url": "http://langmai.org/wp-content/uploads/2018/12/21-TNH-2003-12-18-VN-Nam-nghiep-vo-Gian.mp3"
+      },
+      {
+        "title": "22. Chặt bỏ ảo ảnh",
+        "date": "",
+        "url": "http://langmai.org/wp-content/uploads/2018/12/22-TNH-2003-12-21-VN-Chat-bo-Ao-Anhmp3.mp3"
+      },
+      {
+        "title": "23. Thuốc và bệnh",
+        "date": "",
+        "url": "http://langmai.org/wp-content/uploads/2018/12/23-TNH-2003-12-28-VN-Thuoc-va-Benh.mp3"
+      },
+      {
+        "title": "24. Trở về thực tại",
+        "date": "",
+        "url": "http://langmai.org/wp-content/uploads/2018/12/24-TNH-2004-01-07-VN-Tro-ve-Thuc-tai.mp3"
+      },
+      {
+        "title": "25. Phải tự nổ lực",
+        "date": "",
+        "url": "http://langmai.org/wp-content/uploads/2018/12/25-TNH-2004-01-14-VN-Moi-nguoi-Phai-tu-no-luc.mp3"
+      },
+      {
+        "title": "26. Đối trị căn cơ 1",
+        "date": "",
+        "url": "http://langmai.org/wp-content/uploads/2018/12/26-TNH-2004-01-28-VN-Doi-tri-Can-co-1.mp3"
+      },
+      {
+        "title": "27. Đối trị căn cơ 2",
+        "date": "",
+        "url": "http://langmai.org/wp-content/uploads/2018/12/27-TNH-2004-02-04-VN-Doi-tri-can-co-2.mp3"
+      },
+      {
+        "title": "28. Đối trị căn cơ 3",
+        "date": "",
+        "url": "http://langmai.org/wp-content/uploads/2018/12/28-TNH-2004-02-18-VN-Doi-tri-Can-co-3.mp3"
+      },
+      {
+        "title": "29. Đối trị căn cơ 4",
+        "date": "",
+        "url": "http://langmai.org/wp-content/uploads/2018/12/29-TNH-2004-02-25-VN-Doi-tri-Can-co-4.mp3"
+      },
+      {
+        "title": "30. Tìm lại con người chân thật",
+        "date": "",
+        "url": "http://langmai.org/wp-content/uploads/2018/12/30-TNH-2004-03-10Tim-lai-con-nguoi-chan-that-.mp3"
+      },
+      {
+        "title": "31. Bản thân và năm uẩn",
+        "date": "",
+        "url": "http://langmai.org/wp-content/uploads/2018/12/31.-TNH-18-04-2004-Ba%CC%89n-Tha%CC%82n-Va%CC%80-Na%CC%86m-Ua%CC%82%CC%89n.mp3"
+      },
+      {
+        "title": "32. Mẫu người lý tưởng",
+        "date": "",
+        "url": "http://langmai.org/wp-content/uploads/2018/12/32-TNH-22-04-2004-Ma%CC%82%CC%83u-Ngu%CC%9Bo%CC%9B%CC%80i-Ly%CC%81-Tu%CC%9Bo%CC%9B%CC%89ng.mp3"
+      },
+      {
+        "title": "33. Vô sự là tự do",
+        "date": "",
+        "url": "http://langmai.org/wp-content/uploads/2018/12/33-TNH-25-04-2004-Vo-su-la-tu-do-mp3.mp3"
+      },
+      {
+        "title": "34. Buông bỏ sự tìm cầu",
+        "date": "",
+        "url": "http://langmai.org/wp-content/uploads/2018/12/34-TNH-29-04-2004-Buo%CC%82ng-Bo%CC%89-Su%CC%9B%CC%A3-Ti%CC%80m-Ca%CC%82%CC%80u.mp3"
+      },
+      {
+        "title": "35. Tuệ giác và kiến thức",
+        "date": "",
+        "url": "http://langmai.org/wp-content/uploads/2018/12/35.-TNH-13-04-2004-Tue-giac-va-kien-thuc.mp3"
+      },
+      {
+        "title": "36. Tùy xứ tác chủ",
+        "date": "",
+        "url": "http://langmai.org/wp-content/uploads/2018/12/36.-TNH-16-05-2004-Tu%CC%80y-Xu%CC%9B%CC%81-Ta%CC%81c-Chu%CC%89.mp3"
+      },
+      {
+        "title": "Phải tự nổ lực",
+        "date": "",
+        "url": "http://langmai.org/wp-content/uploads/2018/12/25-TNH-2004-01-14-VN-Moi-nguoi-Phai-tu-no-luc.mp3"
+      }
+    ]
+  },
+  {
+    "collection": "Định đề giáo lý làng mai 2005",
+    "source_url": "https://langmai.org/thien-duong/nghe-phap-thoai/nghe-phap-thoai-audio/khoa-dinh-de-giao-ly-lang-mai/",
+    "audios": [
+      {
+        "title": "01. Không gian không phải vô vi (D1,2)",
+        "date": "17-11-2005",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/01.TNH-2005-11-17-VN-khong-gian-khong-phai-la-phap-vo-vi.mp3"
+      },
+      {
+        "title": "02. Niết bàn là vắng mặt của vô minh (D3,4,5,6,7)",
+        "date": "24-11-2005",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/02.TNH-2005-11-24-VN-Net-ban-la-su-vang-mat-cua-vo-minh.mp3"
+      },
+      {
+        "title": "03. Cửa ngõ đi vào bản thể (D8,9)",
+        "date": "01-12-2005",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/03.TNH-2005-12-01-VN-Cua-ngo-di-vao-ban-the.mp3"
+      },
+      {
+        "title": "04. Hợp xướng trong sự thống nhất (D11)",
+        "date": "08-12-2005",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/04.TNH-2005-12-08-VN-hop-xuong-trong-su-thong-nhat.mp3"
+      },
+      {
+        "title": "05. Giới cần khổ dưới ánh sáng chánh niệm (D12,13,14,15)",
+        "date": "15-12-2005",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/05..TNH-2005-12-15-VN-Gioi-Can-Kho-Duoi-Anh-Sang-Chanh-Niem.mp3"
+      },
+      {
+        "title": "06. Sự thật thứ 3 là lạc đế (D16,17)",
+        "date": "22-12-2005",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/06.TNH-2005-12-22-VN-Su-that-ve-diet-de.mp3"
+      },
+      {
+        "title": "07. Tự do ý chí (D18)",
+        "date": "29-12-2005",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/07.TNH-2005-12-29-VN-Tu-do-y-chi.mp3"
+      },
+      {
+        "title": "08. Tập đế là bát tà đạo (D19)",
+        "date": "05-01-2006",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/08.TNH-2006-01-05-VN-Ban-chat-cua-tap-de.mp3"
+      },
+      {
+        "title": "09. Alahan là bồ tát (D20)",
+        "date": "26-01-2006",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/09.TNH-2006-01-26-VN-Tam-Duc-Doan-DucAn-DucTri-Duc.mp3"
+      },
+      {
+        "title": "10. Thân người thân bụt (D21)",
+        "date": "09-02-2006",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/10.TNH-2006-02-09-VN-Tim-lai-con-nguoi-that-cua-But.mp3"
+      },
+      {
+        "title": "11. Thân người thân bụt (tt) (D22)",
+        "date": "02-03-2006",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/11.TNH-2006-03-02-VN-Tim-hieu-cac-than-But.mp3"
+      },
+      {
+        "title": "12. Tuệ giác vô ngã tương tục tương tức (D23)",
+        "date": "23-03-2006",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/12.TNH-2006-03-23-VN-Tue-giac-vo-nga.mp3"
+      },
+      {
+        "title": "13.  Luân hồi dưới cái nhìn chân đế (D24)",
+        "date": "06-04-2006",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/13.TNH-2006-04-06-VN-Luan-Hoi-Duoi-Cai-Nhin-cua-Tuc-De-va-Chan-De.mp3"
+      },
+      {
+        "title": "14. Khổ lạc tương tức (D25)",
+        "date": "28-09-2006",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/14.TNH-2006-09-28-VN-kho-lac-tuong-tuc.mp3"
+      },
+      {
+        "title": "15. Tăng thân, phật thân, pháp thân tương tức (D26)",
+        "date": "05-10-2006",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/15.TNH-2005-10-05-VN-Tang-than-Phat-than-va-Phap-than-tuong-tuc.mp3"
+      },
+      {
+        "title": "16. Sự thực tập cần liên tục (D27)",
+        "date": "26-10-2006",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/16.TNH-2005-10-05-VN-ban-chat-kho-de.mp3"
+      },
+      {
+        "title": "17. Biểu và vô biểu (D28,29)",
+        "date": "02-11-2006",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/17.TNH-2005-10-05-VN-Bieu-va-vo-bieu.mp3"
+      },
+      {
+        "title": "18. Pháp là đối tượng của tâm thức (D30,31)",
+        "date": "16-11-2006",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/18.TNH-2006-11-16-VN-Phap-la-doi-tuong-cua-tam-thuc.mp3"
+      },
+      {
+        "title": "19. Không có ngã nhưng có luân hồi (D32,33)",
+        "date": "23-11-2006",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/19.TNH-2006-11-23-VN-Khong-co-nga-nhung-van-co-luan-hoi.mp3"
+      },
+      {
+        "title": "20. Tàng thức, mạc na thức (D34,35,36)",
+        "date": "30-11-2006",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/20.TNH-2006-11-30-VN-Tang-thuc-mac-na-va-y-thuc.mp3"
+      },
+      {
+        "title": "21. Bốn điều nương tựa của người học đạo",
+        "date": "07-12-2006",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/21.TNH-2006-12-07-VN-Bo%CC%82%CC%81n-%C4%90ie%CC%82%CC%80u-Nu%CC%9Bo%CC%9Bng-Tu%CC%9B%CC%A3a-Cu%CC%89a-Ngu%CC%9Bo%CC%9B%CC%80i-Ho%CC%A3c-%C4%90a%CC%A3o.mp3"
+      },
+      {
+        "title": "22. Trở về tắm trong dòng sông nguyên thỉ (D37)",
+        "date": "04-01-2007",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/22.TNH-2007-01-04-VN-tro-ve-tam-trong-dong-song-nguyen-thuy.mp3"
+      },
+      {
+        "title": "23. Tịnh độ, niết bàn vượt không thời gian (D38)",
+        "date": "11-01-2007",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/23.TNH-2007-01-11-VN-thuc-chat-cua-tinh-do-niet-ban.mp3"
+      },
+      {
+        "title": "24. Không chống đối giữa các trình bày giáo lý (D39)",
+        "date": "18-01-2007",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/24.-TNH-2007-01-18-VN-Ko-chong-doi-nhau-guia-mo-thuc-giao-li.mp3"
+      },
+      {
+        "title": "25. Trái tim tuệ giác đạo bụt (D40)",
+        "date": "01-02-2007",
+        "url": "http://langmai.org/wp-content/uploads/2018/12/25.TNH-2007-02-01-VN-trai-tim-tue-giac-dao-But.mp3"
+      }
+
     ]
   },
   {
@@ -1861,6 +3137,98 @@
     ]
   },
   {
+    "collection": "Con đường của Bụt 2008",
+    "source_url": "https://langmai.org/thien-duong/nghe-phap-thoai/nghe-phap-thoai-audio/con-duong-cua-but/",
+    "audios": [
+      {
+        "title": "Quê hương giây phút hiên tại",
+        "date": "2008-11-20",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/01.-TNH-2008-11-20-VN-Que-hu%CC%9Bo%CC%9Bng-giay-phut-hien-tai.mp3"
+      },
+      {
+        "title": "Đừng tìm hạnh phúc trong tương lai",
+        "date": "2008-11-23",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/02.-TNH-2008-11-23-VN-dung-tim-hanh-phuc-trong-tuong-lai.mp3"
+      },
+      {
+        "title": "Tri ân là hạnh phúc",
+        "date": "2008-11-27",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/03.-TNH-2008-11-27-VN-tri-an-la-hanh-phuc.mp3"
+      },
+      {
+        "title": "Chánh kiến nền tảng hạnh phúc",
+        "date": "2008-11-30",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/04.-TNH-2008-11-30-VN-Cha%CC%81nh-kien-nen-tang-hanh-phuc.mp3"
+      },
+      {
+        "title": "Trở về căn nhà của mình",
+        "date": "2008-12-04",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/05.-TNH-2008-12-04-VN-tro-ve-can-nha-cua-minh.mp3"
+      },
+      {
+        "title": "Hạnh phúc trong đau khổ",
+        "date": "2008-12-07",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/06.-TNH-2008-12-07-VN-hanh-phuc-trong-dau-kho.mp3"
+      },
+      {
+        "title": "Chánh kiến là cái nhìn vượt thoát",
+        "date": "2008-12-11",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/07.-TNH-2008-12-11-VN-chanh-kien-la-cai-nhin-vuot-thoat.mp3"
+      },
+      {
+        "title": "Dùng tuệ giác để vượt thoát định kiến",
+        "date": "2008-12-14",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/08.-TNH-2008-12-14-VN-dung-tue-giac-de-vuot-thoat-dinh-kien.mp3"
+      },
+      {
+        "title": "Quay về nương tựa tỉnh giác",
+        "date": "2008-12-18",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/09.-TNH-2008-12-18-VN-quay-ve-nuong-tua-tinh-giac.mp3"
+      },
+      {
+        "title": "Hiện pháp lạc trú",
+        "date": "2009-01-04",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/10.-TNH-2009-01-04-VN-hien-phap-lac-tru.mp3"
+      },
+      {
+        "title": "Ái ngữ là nghệ thuật",
+        "date": "2009-01-08",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/11.-TNH-2009-01-08-VN-ai-ngu-la-nghe-thuat.mp3"
+      },
+      {
+        "title": "Hòa hợp trong năm uẩn",
+        "date": "2009-01-22",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/12.-TNH-2009-01-22-VN-hoa-hop-trong-nam-uan.mp3"
+      },
+      {
+        "title": "Giao thừa",
+        "date": "2009-01-25",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/13.-TNH-2009-01-25-VN-giao-thua.mp3"
+      },
+      {
+        "title": "Mộng trung ngộ",
+        "date": "2009-02-01",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/14.-TNH-2009-02-01-VN-mong-trung-ngo.mp3"
+      },
+      {
+        "title": "Làm bạn với khổ đau",
+        "date": "2009-02-08",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/15.-TNH-2009-02-08-VN-Lam-ban-voi-kho-dau.mp3"
+      },
+      {
+        "title": "Quán niệm hơi thở",
+        "date": "2009-02-12",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/16.-2009-02-12-VN-quan-niem-hoi-tho.mp3"
+      },
+      {
+        "title": "Dừng lại với hơi thở",
+        "date": "2009-02-15",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/17.-TNH-2009-02-15-VN-dung-lai-voi-hoi-tho.mp3"
+      }
+
+    ]
+  },
+  {
     "collection": "Pháp thoại năm 2008",
     "source_url": "https://langmai.org/thien-duong/nghe-phap-thoai/nghe-phap-thoai-audio/phap-thoai-nam-2008/",
     "audios": [
@@ -1871,6 +3239,130 @@
       {
         "title": "Thực tập cho có hạnh phúc",
         "url": "https://langmai.org/wp-content/uploads/2019/04/05.-Thu%CC%9B%CC%A3c-ta%CC%A3%CC%82p-cho-co%CC%81-ha%CC%A3nh-phu%CC%81c.-TNH-2008-08-01-VIET.mp3"
+      },
+      {
+        "title": "Giảng kinh quán niệm hơi thở năm 2008",
+        "url": "https://langmai.org/phapduong/nghe-phap-thoai-audio/phap-thoai-nam-2008/giang-kinh-quan-niem-hoi-tho-nam-2008/?preview_id=32255&preview_nonce=85c29b7396&preview=true"
+      }
+    ]
+  },
+  {
+    "collection": "Nghệ thuật hạnh phúc 2009",
+    "source_url": "https://langmai.org/thien-duong/nghe-phap-thoai/nghe-phap-thoai-audio/2009-2010-nghe-thuat-hanh-phuc-mp3/",
+    "audios": [
+      {
+        "title": "Nghệ thuật chế tác hạnh phúc và chuyển hóa khổ đau ",
+        "date": "2009-11-26",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/Nghe%CC%A3%CC%82-Thua%CC%A3%CC%82t-Che%CC%82%CC%81-Ta%CC%81c-Ha%CC%A3nh-Phu%CC%81c-Va%CC%80-Chuye%CC%82%CC%89n-Ho%CC%81a-Kho%CC%82%CC%89-%C4%90au-Thi%CC%81ch-Nha%CC%82%CC%81t-Ha%CC%A3nh-gia%CC%89ng1.mp3"
+      },
+      {
+        "title": "Kinh Cát Tường p1 – Thế nào là điềm lành",
+        "date": "2009-11-29",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/01.TNH-2009-11-29-VN.mp3"
+      },
+      {
+        "title": "Kinh Cát Tường p2 – nguồn gốc và pháp triển",
+        "date": "2009-12-03",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/02.TNH-2009-12-03-VN.mp3"
+      },
+      {
+        "title": "Kinh Cát Tường p3 – phạm hạnh và bố thí ",
+        "date": "2009-12-10",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/03.TNH-2009-12-10-VN.mp3"
+      },
+      {
+        "title": "Kinh Cát Tường p4 -Xây xựng lại con người trong thời đại mới",
+        "date": "2009-12-13",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/04.TNH-2009-12-13-VN.mp3"
+      },
+      {
+        "title": "Kệ truyền thừa thiền phái Liễu Quán",
+        "date": "2009-12-17",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/Ke%CC%A3%CC%82-Truye%CC%82%CC%80n-Thu%CC%9B%CC%80a-Thie%CC%82%CC%80n-Pha%CC%81i-Lie%CC%82%CC%83u-Qua%CC%81n-HT-Thie%CC%82%CC%80n-Su%CC%9B-Thi%CC%81ch-Nha%CC%82%CC%81t-Ha%CC%A3nh.mp3"
+      },
+      {
+        "title": "Kinh Mâu Ni",
+        "date": "2009-12-20",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/01.Kinh-Mau-Ni-TNH-2009-12-20.mp3"
+      },
+      {
+        "title": "Kinh Phu Tử Cộng Hội p1",
+        "date": "2010-01-03",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/01.TNH-2010-01-03-VN.mp3"
+      },
+      {
+        "title": "Kinh Phu Tử Cộng Hội p2",
+        "date": "2010-01-07",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/02.TNH-2010-01-07-VN.mp3"
+      },
+      {
+        "title": "Kinh Phu Tử Cộng Hội p3",
+        "date": "2010-01-10",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/03.TNH-2010-01-10-VN.mp3"
+      },
+      {
+        "title": "Kinh Di Lặc Nạn p1",
+        "date": "2010-01-24",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/01.TNH-2010-01-24-VN-1.mp3"
+      },
+      {
+        "title": "Kinh Di Lặc Nạn p2",
+        "date": "2010-01-28",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/02.TNH-2010-01-28-VN-1.mp3"
+      },
+      {
+        "title": "Kinh Kính Diện Vương p1",
+        "date": "2010-01-31",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/01.TNH-2010-01-31-VN.mp3"
+      },
+      {
+        "title": "Kinh Kính Diện Vương p2",
+        "date": "2010-02-04",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/02.TNH-2010-02-04-VN.mp3"
+      },
+      {
+        "title": "Kinh Duy Lâu Lặc Vương p1",
+        "date": "2010-02-07",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/02.TNH-2010-02-07-VN.mp3"
+      },
+      {
+        "title": "Kinh Duy Lâu Lặc Vương p2",
+        "date": "2010-02-11",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/03.TNH-2010-02-11-VN.mp3"
+      },
+      {
+        "title": "Bình thơ giao thừa",
+        "date": "2010-02-13 ",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/Bi%CC%80nh-Tho%CC%9B-%C4%90e%CC%82m-Giao-Thu%CC%9B%CC%80a-na%CC%86m-2010-HT-Thie%CC%82%CC%80n-Su%CC%9B-Thi%CC%81ch-Nha%CC%82%CC%81t-Ha%CC%A3nh1.mp3"
+      },
+      {
+        "title": "Nghệ thuật chế tác hạnh phúc và chuyển hóa khổ đau ",
+        "date": "2009-11-26",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/Nghe%CC%A3%CC%82-Thua%CC%A3%CC%82t-Che%CC%82%CC%81-Ta%CC%81c-Ha%CC%A3nh-Phu%CC%81c-Va%CC%80-Chuye%CC%82%CC%89n-Ho%CC%81a-Kho%CC%82%CC%89-%C4%90au-Thi%CC%81ch-Nha%CC%82%CC%81t-Ha%CC%A3nh-gia%CC%89ng1.mp3"
+      },
+      {
+        "title": "Nghệ thuật chế tác hạnh phúc và chuyển hóa khổ đau ",
+        "date": "2009-11-26",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/Nghe%CC%A3%CC%82-Thua%CC%A3%CC%82t-Che%CC%82%CC%81-Ta%CC%81c-Ha%CC%A3nh-Phu%CC%81c-Va%CC%80-Chuye%CC%82%CC%89n-Ho%CC%81a-Kho%CC%82%CC%89-%C4%90au-Thi%CC%81ch-Nha%CC%82%CC%81t-Ha%CC%A3nh-gia%CC%89ng1.mp3"
+      },
+      {
+        "title": "Nghệ thuật chế tác hạnh phúc và chuyển hóa khổ đau ",
+        "date": "2009-11-26",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/Nghe%CC%A3%CC%82-Thua%CC%A3%CC%82t-Che%CC%82%CC%81-Ta%CC%81c-Ha%CC%A3nh-Phu%CC%81c-Va%CC%80-Chuye%CC%82%CC%89n-Ho%CC%81a-Kho%CC%82%CC%89-%C4%90au-Thi%CC%81ch-Nha%CC%82%CC%81t-Ha%CC%A3nh-gia%CC%89ng1.mp3"
+      },
+      {
+        "title": "Nghệ thuật chế tác hạnh phúc và chuyển hóa khổ đau ",
+        "date": "2009-11-26",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/Nghe%CC%A3%CC%82-Thua%CC%A3%CC%82t-Che%CC%82%CC%81-Ta%CC%81c-Ha%CC%A3nh-Phu%CC%81c-Va%CC%80-Chuye%CC%82%CC%89n-Ho%CC%81a-Kho%CC%82%CC%89-%C4%90au-Thi%CC%81ch-Nha%CC%82%CC%81t-Ha%CC%A3nh-gia%CC%89ng1.mp3"
+      },
+      {
+        "title": "Nghệ thuật chế tác hạnh phúc và chuyển hóa khổ đau ",
+        "date": "2009-11-26",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/Nghe%CC%A3%CC%82-Thua%CC%A3%CC%82t-Che%CC%82%CC%81-Ta%CC%81c-Ha%CC%A3nh-Phu%CC%81c-Va%CC%80-Chuye%CC%82%CC%89n-Ho%CC%81a-Kho%CC%82%CC%89-%C4%90au-Thi%CC%81ch-Nha%CC%82%CC%81t-Ha%CC%A3nh-gia%CC%89ng1.mp3"
+      },
+      {
+        "title": "Kinh Cát Tường p1 – Thế nào là điềm lành",
+        "url": ""
       },
       {
         "title": "Giảng kinh quán niệm hơi thở năm 2008",
@@ -1910,6 +3402,112 @@
       {
         "title": "Giảng kinh quán niệm hơi thở năm 2008",
         "url": "https://langmai.org/phapduong/nghe-phap-thoai-audio/phap-thoai-nam-2008/giang-kinh-quan-niem-hoi-tho-nam-2008/?preview_id=32255&preview_nonce=85c29b7396&preview=true"
+      }
+    ]
+  },
+  {
+    "collection": "Pháp thoại khóa tu mùa Xuân, Hè, Thu 2010",
+    "source_url": "https://langmai.org/thien-duong/nghe-phap-thoai/nghe-phap-thoai-audio/khoa-tu-mua-xuan-2010/",
+    "audios": [
+      {
+        "title": "Kinh Duy Lâu Lặc Vương (phần III)",
+        "date": "01.04.2010",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/04.TNH-2010-04-01-VN-XTLMPhap.mp3"
+      },
+      {
+        "title": "Kinh Duy Lâu Lặc Vương (phần IV)",
+        "date": "25.04.2010",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/05.TNH-2010-04-25-VN-XTLMPhap-Duy-Lau-Lac-Vuong-Kinh-P4.mp3"
+      },
+      {
+        "title": "Kinh Duy Lâu Lặc Vương (phần V)",
+        "date": "29.04.2010",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/06.TNH-2010-04-29-VN-XTLMPhap.mp3"
+      },
+      {
+        "title": "Kinh Chiếc Lưới Ái Ân (phần 1)",
+        "date": "02.05.2010",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/01.TNH-2010-05-02-VN-Kinh-Chiec-Luoi-Ai-An-Ai-Duc-Pham-Phap-Cu-Kinh-Phan-I-XMLM.mp3"
+      },
+      {
+        "title": "Kinh Chiếc Lưới Ái Ân (phần 2)",
+        "date": "06.05.2010",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/02.TNH-2010-05-06-VN-Kinh-Chiec-Luoi-Ai-An-Ai-Duc-Pham-Phap-Cu-Kinh-Phan-II-XTLM.mp3"
+      },
+      {
+        "title": "Kinh Chiếc Lưới Ái Ân (phần 3)",
+        "date": "09.05.2010",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/03.TNH-2010-05-09-VN-Kinh-Chiec-Luoi-Ai-AnAi-Duc-Pham-Phap-Cu-Kinh-PhanIII-XHLM.mp3"
+      },
+      {
+        "title": "Kinh Chiếc Lưới Ái Ân (phần 4)",
+        "date": "13.05.2010",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/04.TNH-2010-05-13-VN-Kinh-Chiec-Luoi-Ai-AnAi-Duc-Pham-Phap-Cu-Kinh-PhanIV-XMLM.mp3"
+      },
+      {
+        "title": "Kinh Chiếc Lưới Ái Ân (phần 5)",
+        "date": "16.05.2010",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/05.TNH-2010-05-16-VN-KinhChiecLuoiAi-AnAiDucPhamPhapCuKinh-Phan-V-XTLM.mp3"
+      },
+      {
+        "title": "Kinh Chiếc Lưới Ái Ân (phần 6)",
+        "date": "20.05.2010",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/06.TNH-2010-05-20-VN-KinhChiecLuoiAi-AnAiDucPhamPhapCuKinh-Phan-VI-XHLM.mp3"
+      },
+      {
+        "title": "Kinh Chiếc Lưới Ái Ân (phần 7 hết)",
+        "date": "23.05.2010",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/07.TNH-2010-05-23-VN-KinhChiecLuoiAi-AnAiDucPhamPhapCuKinh-Phan-Cuoi-XMLM.mp3"
+      },
+      {
+        "title": "Dòng Tu Tiếp Hiện",
+        "date": "11.06.2010",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/TNH-11-06-2010-Do%CC%80ng-tu-Tie%CC%82%CC%81p-Hie%CC%A3%CC%82n.mp3"
+      },
+      {
+        "title": "Kinh Rong Chơi Trời Phương Ngoại (phần 1)",
+        "date": "27.06.2010",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/Rong-Cho%CC%9Bi-Tro%CC%9B%CC%80i-Phu%CC%9Bo%CC%9Bng-Ngoa%CC%A3i-Pha%CC%82%CC%80n-1-HT-Thie%CC%82%CC%80n-Su%CC%9B-Thi%CC%81ch-Nha%CC%82%CC%81t-Ha%CC%A3nh.mp3"
+      },
+      {
+        "title": "Kinh Rong Chơi Trời Phương Ngoại (phần 2)\n",
+        "date": "01.07.2010",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/Rong-Cho%CC%9Bi-Tro%CC%9B%CC%80i-Phu%CC%9Bo%CC%9Bng-Ngoa%CC%A3i-Pha%CC%82%CC%80n-2-HT-Thie%CC%82%CC%80n-Su%CC%9B-Thi%CC%81ch-Nha%CC%82%CC%81t-Ha%CC%A3nh.mp3"
+      },
+      {
+        "title": "Kinh Rong Chơi Trời Phương Ngoại (phần 3)",
+        "date": "04.07.2010",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/Rong-Cho%CC%9Bi-Tro%CC%9B%CC%80i-Phu%CC%9Bo%CC%9Bng-Ngoa%CC%A3i-Pha%CC%82%CC%80n-3-HT-Thie%CC%82%CC%80n-Su%CC%9B-Thi%CC%81ch-Nha%CC%82%CC%81t-Ha%CC%A3nh.mp3"
+      },
+      {
+        "title": "Pháp thoại tại Xóm Trung-Làm sao để mở rộng trái tim",
+        "date": "26.07.2010",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/01.TNH-2010-07-26-VN-LamSaoDeMoRongTraiTim-XTLM.mp3"
+      },
+      {
+        "title": "Pháp thoại tại Xóm Trung-Làm sao để giúp người kia thay đổi",
+        "date": "02.08.2010",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/02.TNH-2010-08-02-VN-LamSaoDeGiupNguoiKiaThayDoi-XTrungLM.mp3"
+      },
+      {
+        "title": "Kinh Rong Chơi Trời Phương Ngoại (phần 4)",
+        "date": "18.11.2010",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/01.TNH-2010-11-18-VN-RongChoiTroiPhuongNgoai-XMLM-PhanIV-Tiep-theo-1.mp3"
+      },
+      {
+        "title": "Kinh Rong Chơi Trời Phương Ngoại (phần 5)",
+        "date": "21.11.2010",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/TNH-2010-11-21-VN-RongChoiTroiPhuongNgoai-PhanV-UHPV.mp3"
+      },
+      {
+        "title": "Kinh Rong Chơi Trời Phương Ngoại (phần 6)",
+        "date": "25.11.2010",
+        "url": "https://langmai.org/wp-content/uploads/2018/12/TNH-2010-11-25-VN-RongChoiTroiPhuongNgoai-PhanVI-XHLM.mp3"
+      },
+      {
+        "title": "Kinh Rong Chơi Trời Phương Ngoại (phần 7)",
+        "date": "28.11.2010",
+        "url": "http://langmai.org/wp-content/uploads/2019/11/2010.11.28.NH_.VN_.Kinh-rong-cho%CC%9Bi-tro%CC%9B%CC%80i-phu%CC%9Bo%CC%9Bng-ngoa%CC%A3i.04.mp3"
       }
     ]
   },
