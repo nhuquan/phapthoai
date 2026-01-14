@@ -8,6 +8,13 @@ class PlayerWidget extends StatelessWidget {
 
   const PlayerWidget({super.key, required this.player, this.currentAudio});
 
+  String _formatDuration(Duration? duration) {
+    if (duration == null) return '--:--';
+    final minutes = duration.inMinutes.remainder(60).toString().padLeft(2, '0');
+    final seconds = duration.inSeconds.remainder(60).toString().padLeft(2, '0');
+    return '${duration.inHours > 0 ? '${duration.inHours}:' : ''}$minutes:$seconds';
+  }
+
   @override
   Widget build(BuildContext context) {
     if (currentAudio == null) return const SizedBox.shrink();
@@ -45,92 +52,112 @@ class PlayerWidget extends StatelessWidget {
 
                     // LayoutBuilder needs a constrained width to work correctly.
                     // The Column's stretch alignment ensures this.
-                    return LayoutBuilder(
-                      builder: (context, constraints) {
-                        return GestureDetector(
-                          behavior: HitTestBehavior.opaque,
-                          onTapDown: (details) {
-                            final renderBox =
-                                context.findRenderObject() as RenderBox;
-                            final localPos = renderBox.globalToLocal(
-                              details.globalPosition,
+                    return Column(
+                      children: [
+                        LayoutBuilder(
+                          builder: (context, constraints) {
+                            return GestureDetector(
+                              behavior: HitTestBehavior.opaque,
+                              onTapDown: (details) {
+                                final renderBox =
+                                    context.findRenderObject() as RenderBox;
+                                final localPos = renderBox.globalToLocal(
+                                  details.globalPosition,
+                                );
+                                if (constraints.maxWidth > 0) {
+                                  final seekPct =
+                                      localPos.dx / constraints.maxWidth;
+                                  player.seek(
+                                    Duration(
+                                      milliseconds: (seekPct * max).toInt(),
+                                    ),
+                                  );
+                                }
+                              },
+                              onHorizontalDragUpdate: (details) {
+                                final renderBox =
+                                    context.findRenderObject() as RenderBox;
+                                final localPos = renderBox.globalToLocal(
+                                  details.globalPosition,
+                                );
+                                if (constraints.maxWidth > 0) {
+                                  final seekPct =
+                                      localPos.dx / constraints.maxWidth;
+                                  player.seek(
+                                    Duration(
+                                      milliseconds: (seekPct * max).toInt(),
+                                    ),
+                                  );
+                                }
+                              },
+                              child: Container(
+                                height: 30.0,
+                                alignment: Alignment.center,
+                                child: Stack(
+                                  alignment: Alignment.centerLeft,
+                                  children: [
+                                    Container(
+                                      height: 4.0,
+                                      width: double.infinity,
+                                      decoration: BoxDecoration(
+                                        color: Colors.grey.withOpacity(0.3),
+                                        borderRadius: BorderRadius.circular(
+                                          2.0,
+                                        ),
+                                      ),
+                                    ),
+                                    Container(
+                                      height: 4.0,
+                                      width: constraints.maxWidth * percentage,
+                                      decoration: BoxDecoration(
+                                        color:
+                                            Theme.of(
+                                              context,
+                                            ).colorScheme.primary,
+                                        borderRadius: BorderRadius.circular(
+                                          2.0,
+                                        ),
+                                      ),
+                                    ),
+                                    Positioned(
+                                      left:
+                                          (constraints.maxWidth * percentage) -
+                                          6.0,
+                                      child: Container(
+                                        width: 12.0,
+                                        height: 12.0,
+                                        decoration: BoxDecoration(
+                                          color:
+                                              Theme.of(
+                                                context,
+                                              ).colorScheme.primary,
+                                          shape: BoxShape.circle,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
                             );
-                            if (constraints.maxWidth > 0) {
-                              final seekPct =
-                                  localPos.dx / constraints.maxWidth;
-                              player.seek(
-                                Duration(
-                                  milliseconds: (seekPct * max).toInt(),
-                                ),
-                              );
-                            }
                           },
-                          onHorizontalDragUpdate: (details) {
-                            final renderBox =
-                                context.findRenderObject() as RenderBox;
-                            final localPos = renderBox.globalToLocal(
-                              details.globalPosition,
-                            );
-                            if (constraints.maxWidth > 0) {
-                              final seekPct =
-                                  localPos.dx / constraints.maxWidth;
-                              player.seek(
-                                Duration(
-                                  milliseconds: (seekPct * max).toInt(),
-                                ),
-                              );
-                            }
-                          },
-                          child: Container(
-                            height: 30.0,
-                            alignment: Alignment.center,
-                            child: Stack(
-                              alignment: Alignment.centerLeft,
-                              children: [
-                                Container(
-                                  height: 4.0,
-                                  width: double.infinity,
-                                  decoration: BoxDecoration(
-                                    color: Colors.grey.withOpacity(0.3),
-                                    borderRadius: BorderRadius.circular(
-                                      2.0,
-                                    ),
-                                  ),
-                                ),
-                                Container(
-                                  height: 4.0,
-                                  width: constraints.maxWidth * percentage,
-                                  decoration: BoxDecoration(
-                                    color:
-                                        Theme.of(
-                                          context,
-                                        ).colorScheme.primary,
-                                    borderRadius: BorderRadius.circular(
-                                      2.0,
-                                    ),
-                                  ),
-                                ),
-                                Positioned(
-                                  left:
-                                      (constraints.maxWidth * percentage) -
-                                      6.0,
-                                  child: Container(
-                                    width: 12.0,
-                                    height: 12.0,
-                                    decoration: BoxDecoration(
-                                      color:
-                                          Theme.of(
-                                            context,
-                                          ).colorScheme.primary,
-                                      shape: BoxShape.circle,
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 0.0),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                _formatDuration(position),
+                                style: Theme.of(context).textTheme.bodySmall,
+                              ),
+                              Text(
+                                _formatDuration(duration),
+                                style: Theme.of(context).textTheme.bodySmall,
+                              ),
+                            ],
                           ),
-                        );
-                      },
+                        ),
+                      ],
                     );
                   },
                 );
@@ -208,6 +235,31 @@ class PlayerWidget extends StatelessWidget {
                   },
                   icon: const Icon(Icons.forward_10),
                   iconSize: 32,
+                ),
+                StreamBuilder<LoopMode>(
+                  stream: player.loopModeStream,
+                  builder: (context, snapshot) {
+                    final loopMode = snapshot.data ?? LoopMode.off;
+                    const icons = [
+                      Icon(Icons.repeat, color: Colors.grey),
+                      Icon(Icons.repeat, color: Colors.orange), // all
+                      Icon(Icons.repeat_one, color: Colors.orange), // one
+                    ];
+                    final cycleModes = [
+                      LoopMode.off,
+                      LoopMode.all,
+                      LoopMode.one,
+                    ];
+                    final index = cycleModes.indexOf(loopMode);
+                    return IconButton(
+                      icon: icons[index],
+                      onPressed: () {
+                        player.setLoopMode(
+                            cycleModes[(index + 1) % cycleModes.length]);
+                      },
+                      iconSize: 32,
+                    );
+                  },
                 ),
               ],
             ),
