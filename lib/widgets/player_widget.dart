@@ -21,7 +21,7 @@ class PlayerWidget extends StatelessWidget {
 
     return Container(
       width: double.infinity,
-      color: Theme.of(context).primaryColor.withOpacity(0.1),
+      color: Theme.of(context).colorScheme.primary.withOpacity(0.1),
       padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
       child: SafeArea(
         top: false,
@@ -207,21 +207,21 @@ class PlayerWidget extends StatelessWidget {
                         onPressed: player.play,
                         icon: const Icon(Icons.play_circle_fill),
                         iconSize: 64.0,
-                        color: Theme.of(context).primaryColor,
+                        color: Theme.of(context).colorScheme.primary,
                       );
                     } else if (processingState != ProcessingState.completed) {
                       return IconButton(
                         onPressed: player.pause,
                         icon: const Icon(Icons.pause_circle_filled),
                         iconSize: 64.0,
-                        color: Theme.of(context).primaryColor,
+                        color: Theme.of(context).colorScheme.primary,
                       );
                     } else {
                       return IconButton(
                         onPressed: () => player.seek(Duration.zero),
                         icon: const Icon(Icons.replay_circle_filled),
                         iconSize: 64.0,
-                        color: Theme.of(context).primaryColor,
+                        color: Theme.of(context).colorScheme.primary,
                       );
                     }
                   },
