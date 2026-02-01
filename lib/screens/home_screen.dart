@@ -111,12 +111,12 @@ class HomeScreen extends StatelessWidget {
 
                     if (!audioState.isSearching)
                       Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Row(
+                        padding: const EdgeInsets.fromLTRB(8.0, 5, 8, 20),
+                        child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                           Text(
-                            "For the best experience, try out native app",
+                            "For more content, try out the official app",
                             style: TextStyle(
                               color: Theme.of(
                                 context,
@@ -124,7 +124,10 @@ class HomeScreen extends StatelessWidget {
                               fontSize: 12,
                             ),
                           ),
-                          SizedBox(width: 10,),
+                        
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
                           GestureDetector(
                             onTap:
                                 () => launchUrl(
@@ -174,8 +177,10 @@ class HomeScreen extends StatelessWidget {
                               ),
                             ),
                           ),
+                            ]),
                         ],
                       ),
+
                     ),
                   ],
                 );
