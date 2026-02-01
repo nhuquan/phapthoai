@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:phapthoailangmai/blocs/theme/theme_bloc.dart';
-import 'package:phapthoailangmai/blocs/theme/theme_state.dart';
+import 'package:phapthoai/blocs/theme/theme_bloc.dart';
+import 'package:phapthoai/blocs/theme/theme_state.dart';
 import '../blocs/audio/audio_bloc.dart';
 import '../blocs/audio/audio_event.dart';
 import '../blocs/audio/audio_state.dart';
 import '../models/audio.dart';
-import '../utils/download_helper.dart';
 import '../widgets/download_button.dart';
 import '../widgets/glass_card.dart';
-import 'dart:ui';
 
 class PlaylistScreen extends StatelessWidget {
   final Collection collection;
