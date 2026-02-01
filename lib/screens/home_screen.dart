@@ -109,7 +109,7 @@ class HomeScreen extends StatelessWidget {
 
                     Expanded(child: _buildBody(context, audioState)),
 
-                    if (!audioState.isSearching)
+                    if (!audioState.isSearching && !audioState.isPlaying)
                       Padding(
                         padding: const EdgeInsets.fromLTRB(8.0, 5, 8, 20),
                         child: Column(
