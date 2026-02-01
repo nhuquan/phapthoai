@@ -1,4 +1,4 @@
-package phapthoai.livana.dev
+package dev.livana.phapthoai
 
 import io.flutter.embedding.android.FlutterActivity
 
