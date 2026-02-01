@@ -90,12 +90,32 @@ class HomeScreen extends StatelessWidget {
                                 color: Theme.of(context).colorScheme.onSurface,
                               ),
                               border: InputBorder.none,
-                              hintStyle: TextStyle(
-                                color: Theme.of(
-                                  context,
-                                ).colorScheme.onSurface.withValues(alpha: 0.6),
+                                hintStyle: TextStyle(
+                                  color: Theme.of(
+                                    context,
+                                  ).colorScheme.onSurface.withValues(alpha: 0.6),
+                                ),
+                                suffixIcon: IconButton(
+                                  icon: Icon(
+                                    audioState.showOnlyDownloaded
+                                        ? Icons.download_done_rounded
+                                        : Icons.download_for_offline_outlined,
+                                    color:
+                                        audioState.showOnlyDownloaded
+                                            ? Theme.of(context).colorScheme.primary
+                                            : Theme.of(context)
+                                                .colorScheme
+                                                .onSurface
+                                                .withValues(alpha: 0.6),
+                                  ),
+                                  onPressed: () {
+                                    context.read<AudioBloc>().add(
+                                      ToggleDownloadedFilter(),
+                                    );
+                                  },
+                                  tooltip: 'Show only downloaded',
+                                ),
                               ),
-                            ),
                             style: TextStyle(
                               color: Theme.of(context).colorScheme.onSurface,
                             ),

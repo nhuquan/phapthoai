@@ -9,6 +9,7 @@ class AudioState extends Equatable {
   final bool isLoading;
   final bool isPlaying;
   final String searchQuery;
+  final bool showOnlyDownloaded;
   final AudioPlayer? player;
 
   const AudioState({
@@ -18,27 +19,30 @@ class AudioState extends Equatable {
     this.isLoading = true,
     this.isPlaying = false,
     this.searchQuery = '',
+    this.showOnlyDownloaded = false,
     this.player,
   });
 
-  bool get isSearching => searchQuery.isNotEmpty;
+  bool get isSearching => searchQuery.isNotEmpty || showOnlyDownloaded;
 
   AudioState copyWith({
     List<Collection>? collections,
     List<Audio>? searchResults,
-    Audio? currentAudio,
+    Audio? Function()? currentAudio,
     bool? isLoading,
     bool? isPlaying,
     String? searchQuery,
+    bool? showOnlyDownloaded,
     AudioPlayer? player,
   }) {
     return AudioState(
       collections: collections ?? this.collections,
       searchResults: searchResults ?? this.searchResults,
-      currentAudio: currentAudio ?? this.currentAudio,
+      currentAudio: currentAudio != null ? currentAudio() : this.currentAudio,
       isLoading: isLoading ?? this.isLoading,
       isPlaying: isPlaying ?? this.isPlaying,
       searchQuery: searchQuery ?? this.searchQuery,
+      showOnlyDownloaded: showOnlyDownloaded ?? this.showOnlyDownloaded,
       player: player ?? this.player,
     );
   }
@@ -51,6 +55,7 @@ class AudioState extends Equatable {
     isLoading,
     isPlaying,
     searchQuery,
+    showOnlyDownloaded,
     player,
   ];
 }

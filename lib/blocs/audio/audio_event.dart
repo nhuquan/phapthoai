@@ -28,6 +28,10 @@ class PlayAudio extends AudioEvent {
   List<Object> get props => [audio];
 }
 
+class StopAudio extends AudioEvent {}
+
+class ToggleDownloadedFilter extends AudioEvent {}
+
 class ToggleFavorite extends AudioEvent {
   final Collection collection;
 

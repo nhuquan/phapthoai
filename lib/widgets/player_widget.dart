@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:just_audio/just_audio.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import '../blocs/audio/audio_bloc.dart';
+import '../blocs/audio/audio_event.dart';
 import '../models/audio.dart';
 
 class PlayerWidget extends StatelessWidget {
@@ -29,12 +32,32 @@ class PlayerWidget extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Text(
-              currentAudio!.title,
-              maxLines: 1,
-              textAlign: TextAlign.center,
-              overflow: TextOverflow.ellipsis,
-              style: Theme.of(context).textTheme.titleMedium,
+            Stack(
+              children: [
+                Center(
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 40.0),
+                    child: Text(
+                      currentAudio!.title,
+                      maxLines: 1,
+                      textAlign: TextAlign.center,
+                      overflow: TextOverflow.ellipsis,
+                      style: Theme.of(context).textTheme.titleMedium,
+                    ),
+                  ),
+                ),
+                Positioned(
+                  right: 0,
+                  top: -8,
+                  child: IconButton(
+                    onPressed: () {
+                      context.read<AudioBloc>().add(StopAudio());
+                    },
+                    icon: const Icon(Icons.close_rounded),
+                    visualDensity: VisualDensity.compact,
+                  ),
+                ),
+              ],
             ),
             const SizedBox(height: 12),
             StreamBuilder<Duration>(

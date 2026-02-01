@@ -21,6 +21,8 @@ class AudioBloc extends Bloc<AudioEvent, AudioState> {
     on<LoadCollections>(_onLoadCollections);
     on<SearchAudio>(_onSearchAudio);
     on<PlayAudio>(_onPlayAudio);
+    on<StopAudio>(_onStopAudio);
+    on<ToggleDownloadedFilter>(_onToggleDownloadedFilter);
     on<ToggleFavorite>(_onToggleFavorite);
 
     // Initialize player and load data
@@ -110,27 +112,72 @@ class AudioBloc extends Bloc<AudioEvent, AudioState> {
     });
   }
 
-  void _onSearchAudio(SearchAudio event, Emitter<AudioState> emit) {
+  Future<void> _onSearchAudio(SearchAudio event, Emitter<AudioState> emit) async {
     final query = event.query.toLowerCase();
-    if (query.isEmpty) {
-      emit(state.copyWith(searchQuery: query, searchResults: []));
-    } else {
-      final allAudios = state.collections.expand((c) => c.audios);
-      final results =
-          allAudios.where((audio) {
+    emit(state.copyWith(searchQuery: query));
+    await _performSearch(query, state.showOnlyDownloaded, emit);
+  }
+
+  Future<void> _onToggleDownloadedFilter(
+    ToggleDownloadedFilter event,
+    Emitter<AudioState> emit,
+  ) async {
+    final newValue = !state.showOnlyDownloaded;
+    emit(state.copyWith(showOnlyDownloaded: newValue));
+    await _performSearch(state.searchQuery, newValue, emit);
+  }
+
+  Future<void> _performSearch(
+    String query,
+    bool onlyDownloaded,
+    Emitter<AudioState> emit,
+  ) async {
+    if (query.isEmpty && !onlyDownloaded) {
+      emit(state.copyWith(searchResults: []));
+      return;
+    }
+
+    final allAudios = state.collections.expand((c) => c.audios).toList();
+
+    // Filter by query
+    var filtered = allAudios;
+    if (query.isNotEmpty) {
+      filtered =
+          filtered.where((audio) {
             final title = audio.title.toLowerCase();
             final date = audio.date?.toLowerCase() ?? '';
             return title.contains(query) || date.contains(query);
           }).toList();
-      emit(state.copyWith(searchQuery: query, searchResults: results));
     }
+
+    // Filter by downloaded
+    if (onlyDownloaded) {
+      final downloadStatuses = await Future.wait(
+        filtered.map((audio) => DownloadHelper.isDownloaded(audio.url)),
+      );
+
+      final results = <Audio>[];
+      for (int i = 0; i < filtered.length; i++) {
+        if (downloadStatuses[i]) {
+          results.add(filtered[i]);
+        }
+      }
+      emit(state.copyWith(searchResults: results));
+    } else {
+      emit(state.copyWith(searchResults: filtered));
+    }
+  }
+
+  Future<void> _onStopAudio(StopAudio event, Emitter<AudioState> emit) async {
+    await _player.stop();
+    emit(state.copyWith(currentAudio: () => null, isPlaying: false));
   }
 
   Future<void> _onPlayAudio(PlayAudio event, Emitter<AudioState> emit) async {
     final audio = event.audio;
 
     // Optimistic update
-    emit(state.copyWith(currentAudio: audio, isPlaying: true));
+    emit(state.copyWith(currentAudio: () => audio, isPlaying: true));
 
     try {
       if (_player.playing) {
