@@ -57,6 +57,11 @@ class DownloadHelper {
       await _dio.download(
         url,
         path,
+        options: Options(
+          headers: {
+            "Accept-Encoding": "identity", // Disables compression
+          },
+        ),
         onReceiveProgress: (received, total) {
           if (onProgress != null) {
             onProgress(received, total);

@@ -51,6 +51,7 @@ class _DownloadButtonState extends State<DownloadButton> {
       );
       if (mounted) {
         setState(() {
+          _progress = 1.0; // Force 100% UI
           _isDownloaded = true;
           _isDownloading = false;
         });
