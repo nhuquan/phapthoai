@@ -14,7 +14,7 @@ import 'package:just_audio_background/just_audio_background.dart';
 Future<void> main() async {
   await JustAudioBackground.init(
     androidNotificationChannelId: 'dev.livana.phapthoai.channel.audio',
-    androidNotificationChannelName: 'Pháp Thoại Sư Ông',
+    androidNotificationChannelName: 'Audio playback',
     androidNotificationOngoing: true,
   );
   runApp(const MyApp());
