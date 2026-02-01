@@ -232,7 +232,6 @@ class HomeScreen extends StatelessWidget {
                   spacing: 8,
                   crossAxisAlignment: WrapCrossAlignment.center,
                   children: [
-                    DownloadButton(url: audio.url),
                     Icon(
                       Icons.play_arrow_rounded,
                       color: Theme.of(context).colorScheme.primary,
