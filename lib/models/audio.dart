@@ -2,6 +2,7 @@ class Audio {
   final String title;
   final String url;
   final String? date;
+  String? collectionName;
 
   Audio({required this.title, required this.url, this.date});
 
@@ -30,7 +31,11 @@ class Collection {
       title: json['collection'] as String,
       audios:
           (json['audios'] as List)
-              .map((e) => Audio.fromJson(e as Map<String, dynamic>))
+              .map((e) {
+                final audio = Audio.fromJson(e as Map<String, dynamic>);
+                audio.collectionName = json['collection'] as String;
+                return audio;
+          } )
               .toList(),
     );
   }

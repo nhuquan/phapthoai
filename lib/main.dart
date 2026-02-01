@@ -9,7 +9,14 @@ import 'screens/home_screen.dart';
 import 'widgets/player_widget.dart';
 import 'blocs/audio/audio_state.dart';
 
-void main() {
+import 'package:just_audio_background/just_audio_background.dart';
+
+Future<void> main() async {
+  await JustAudioBackground.init(
+    androidNotificationChannelId: 'dev.livana.phapthoai.channel.audio',
+    androidNotificationChannelName: 'Pháp Thoại Sư Ông',
+    androidNotificationOngoing: true,
+  );
   runApp(const MyApp());
 }
 

@@ -1,10 +1,12 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:just_audio/just_audio.dart';
+import 'package:audio_session/audio_session.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../data/audio_repository.dart';
 import '../../models/audio.dart';
 import '../../utils/download_helper.dart';
+import 'package:just_audio_background/just_audio_background.dart';
 import 'audio_event.dart';
 import 'audio_state.dart';
 
@@ -15,6 +17,7 @@ class AudioBloc extends Bloc<AudioEvent, AudioState> {
   AudioBloc(this._repository)
     : _player = AudioPlayer(),
       super(const AudioState()) {
+    _initSession();
     on<LoadCollections>(_onLoadCollections);
     on<SearchAudio>(_onSearchAudio);
     on<PlayAudio>(_onPlayAudio);
@@ -135,10 +138,23 @@ class AudioBloc extends Bloc<AudioEvent, AudioState> {
       }
       
       final source = await DownloadHelper.getAudioSource(audio.url);
+      
+      final mediaItem = MediaItem(
+        id: audio.url,
+        album: audio.collectionName ?? "Pháp Thoại",
+        title: audio.title,
+        artist: "Sư Ông Làng Mai",
+        artUri: Uri.parse("https://langmai.org/wp-content/uploads/2022/01/hi%CC%80nh-ca%CC%81o-pho%CC%81-su%CC%9B-o%CC%82ng-1028x1536.jpeg"),
+      );
+
       if (source.startsWith('http')) {
-        await _player.setUrl(source);
+        await _player.setAudioSource(
+          AudioSource.uri(Uri.parse(source), tag: mediaItem),
+        );
       } else {
-        await _player.setFilePath(source);
+        await _player.setAudioSource(
+          AudioSource.file(source, tag: mediaItem),
+        );
       }
       
       await _player.play();
@@ -161,5 +177,10 @@ class AudioBloc extends Bloc<AudioEvent, AudioState> {
       return int.parse(match.group(0)!);
     }
     return 0; // Put collections without year at the end
+  }
+
+  Future<void> _initSession() async {
+    final session = await AudioSession.instance;
+    await session.configure(const AudioSessionConfiguration.music());
   }
 }
