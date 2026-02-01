@@ -4,7 +4,7 @@ publish_to: 'none'
 version: 0.1.0
 
 environment:
-  sdk: ^3.7.0
+  sdk: ^3.6.0
 
 dependencies:
   flutter:
@@ -16,12 +16,22 @@ dependencies:
   url_launcher: ^6.3.1
   flutter_bloc: ^9.1.1
   equatable: ^2.0.7
-  shared_preferences: ^2.5.4
+  shared_preferences: ^2.3.0
+  path_provider:
+  dio:
+  path:
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.13.1
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "web/favicon.png"
+  remove_alpha_ios: true
 
 flutter:
   uses-material-design: true

@@ -4,6 +4,7 @@ import 'package:just_audio/just_audio.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../data/audio_repository.dart';
 import '../../models/audio.dart';
+import '../../utils/download_helper.dart';
 import 'audio_event.dart';
 import 'audio_state.dart';
 
@@ -132,7 +133,14 @@ class AudioBloc extends Bloc<AudioEvent, AudioState> {
       if (_player.playing) {
         await _player.stop();
       }
-      await _player.setUrl(audio.url);
+      
+      final source = await DownloadHelper.getAudioSource(audio.url);
+      if (source.startsWith('http')) {
+        await _player.setUrl(source);
+      } else {
+        await _player.setFilePath(source);
+      }
+      
       await _player.play();
     } catch (e) {
       debugPrint("Error playing audio: $e");

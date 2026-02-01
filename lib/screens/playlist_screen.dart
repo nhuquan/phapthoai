@@ -7,6 +7,7 @@ import '../blocs/audio/audio_event.dart';
 import '../blocs/audio/audio_state.dart';
 import '../models/audio.dart';
 import '../utils/download_helper.dart';
+import '../widgets/download_button.dart';
 import '../widgets/glass_card.dart';
 import 'dart:ui';
 
@@ -106,12 +107,7 @@ class PlaylistScreen extends StatelessWidget {
                                     ),
                                   )
                                   : null,
-                          trailing: IconButton(
-                            icon: const Icon(Icons.download_rounded),
-                            onPressed: () {
-                              DownloadHelper.downloadAudio(audio.url);
-                            },
-                          ),
+                          trailing: DownloadButton(url: audio.url),
                         ),
                       ),
                     );

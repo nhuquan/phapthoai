@@ -9,6 +9,7 @@ import '../blocs/theme/theme_bloc.dart';
 import '../blocs/theme/theme_event.dart';
 import '../blocs/theme/theme_state.dart';
 import 'dart:ui';
+import '../widgets/download_button.dart';
 import '../widgets/glass_card.dart';
 import '../widgets/timeline_item.dart';
 import 'playlist_screen.dart';
@@ -227,9 +228,16 @@ class HomeScreen extends StatelessWidget {
                           ),
                         )
                         : null,
-                trailing: Icon(
-                  Icons.play_arrow_rounded,
-                  color: Theme.of(context).colorScheme.primary,
+                trailing: Wrap(
+                  spacing: 8,
+                  crossAxisAlignment: WrapCrossAlignment.center,
+                  children: [
+                    DownloadButton(url: audio.url),
+                    Icon(
+                      Icons.play_arrow_rounded,
+                      color: Theme.of(context).colorScheme.primary,
+                    ),
+                  ],
                 ),
               ),
             ),
