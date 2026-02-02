@@ -19,6 +19,15 @@ class SearchAudio extends AudioEvent {
   List<Object> get props => [query];
 }
 
+class SetSearchFocus extends AudioEvent {
+  final bool isFocused;
+
+  const SetSearchFocus(this.isFocused);
+
+  @override
+  List<Object> get props => [isFocused];
+}
+
 class PlayAudio extends AudioEvent {
   final Audio audio;
 

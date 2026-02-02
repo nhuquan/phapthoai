@@ -62,7 +62,7 @@ class MyApp extends StatelessWidget {
                     Expanded(child: child!),
                     BlocBuilder<AudioBloc, AudioState>(
                       builder: (context, audioState) {
-                        if (audioState.player != null && !audioState.isSearching) {
+                        if (audioState.player != null && !audioState.shouldHidePlayer) {
                           return PlayerWidget(
                             player: audioState.player!,
                             currentAudio: audioState.currentAudio,

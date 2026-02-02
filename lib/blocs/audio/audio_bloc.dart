@@ -20,6 +20,7 @@ class AudioBloc extends Bloc<AudioEvent, AudioState> {
     _initSession();
     on<LoadCollections>(_onLoadCollections);
     on<SearchAudio>(_onSearchAudio);
+    on<SetSearchFocus>(_onSetSearchFocus);
     on<PlayAudio>(_onPlayAudio);
     on<StopAudio>(_onStopAudio);
     on<ToggleDownloadedFilter>(_onToggleDownloadedFilter);
@@ -118,6 +119,10 @@ class AudioBloc extends Bloc<AudioEvent, AudioState> {
     await _performSearch(query, state.showOnlyDownloaded, emit);
   }
 
+  void _onSetSearchFocus(SetSearchFocus event, Emitter<AudioState> emit) {
+    emit(state.copyWith(isSearchFocused: event.isFocused));
+  }
+
   Future<void> _onToggleDownloadedFilter(
     ToggleDownloadedFilter event,
     Emitter<AudioState> emit,
@@ -177,7 +182,16 @@ class AudioBloc extends Bloc<AudioEvent, AudioState> {
     final audio = event.audio;
 
     // Optimistic update
-    emit(state.copyWith(currentAudio: () => audio, isPlaying: true));
+    emit(
+      state.copyWith(
+        currentAudio: () => audio,
+        isPlaying: true,
+        searchQuery: '',
+        showOnlyDownloaded: false,
+        isSearchFocused: false,
+        searchResults: [],
+      ),
+    );
 
     try {
       if (_player.playing) {

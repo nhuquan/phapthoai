@@ -14,8 +14,34 @@ import '../widgets/glass_card.dart';
 import '../widgets/timeline_item.dart';
 import 'playlist_screen.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  final TextEditingController _searchController = TextEditingController();
+  final FocusNode _searchFocusNode = FocusNode();
+
+  @override
+  void initState() {
+    super.initState();
+    _searchFocusNode.addListener(_onFocusChange);
+  }
+
+  @override
+  void dispose() {
+    _searchFocusNode.removeListener(_onFocusChange);
+    _searchFocusNode.dispose();
+    _searchController.dispose();
+    super.dispose();
+  }
+
+  void _onFocusChange() {
+    context.read<AudioBloc>().add(SetSearchFocus(_searchFocusNode.hasFocus));
+  }
 
   String? _extractYear(String title) {
     final regex = RegExp(r'\b(19|20)\d{2}\b');
@@ -25,75 +51,95 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<ThemeBloc, ThemeState>(
-      builder: (context, themeState) {
-        return Container(
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image:
-                  Theme.of(context).brightness == Brightness.dark
-                      ? const AssetImage('assets/bg2.jpeg')
-                      : const AssetImage('assets/bg1.jpeg'),
-              fit: BoxFit.cover,
-              colorFilter: ColorFilter.mode(
-                Colors.black.withValues(alpha: 0.2),
-                BlendMode.darken,
-              ),
-            ),
-          ),
-          child: Scaffold(
-            appBar: AppBar(
-              leadingWidth: 100, // Make logo area wider
-              leading: Padding(
-                padding: const EdgeInsets.only(left: 16.0),
-                child: Image.asset(
-                  Theme.of(context).brightness == Brightness.dark
-                      ? 'assets/langmai_2.png'
-                      : 'assets/langmai_1.png',
-                  fit: BoxFit.cover,
-                ),
-              ),
-              title: const Text('Pháp Thoại Sư Ông'),
-              centerTitle: true,
-              backgroundColor: Colors.transparent,
-              actions: [
-                IconButton(
-                  icon: Icon(
+    return BlocListener<AudioBloc, AudioState>(
+      listenWhen: (previous, current) =>
+          previous.searchQuery != current.searchQuery &&
+          current.searchQuery.isEmpty,
+      listener: (context, state) {
+        _searchController.clear();
+      },
+      child: BlocBuilder<ThemeBloc, ThemeState>(
+        builder: (context, themeState) {
+          return Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image:
                     Theme.of(context).brightness == Brightness.dark
-                        ? Icons.light_mode
-                        : Icons.dark_mode,
-                  ),
-                  onPressed: () {
-                    context.read<ThemeBloc>().add(ToggleTheme());
-                  },
+                        ? const AssetImage('assets/bg2.jpeg')
+                        : const AssetImage('assets/bg1.jpeg'),
+                fit: BoxFit.cover,
+                colorFilter: ColorFilter.mode(
+                  Colors.black.withValues(alpha: 0.2),
+                  BlendMode.darken,
                 ),
-              ],
+              ),
             ),
-            backgroundColor: Colors.transparent,
-            body: BlocBuilder<AudioBloc, AudioState>(
-              builder: (context, audioState) {
-                final isDark = Theme.of(context).brightness == Brightness.dark;
-                return Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 8.0),
-                      child: GlassCard(
-                        isDark: isDark,
-                        borderRadius: 30,
-                        child: Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                          child: TextField(
-                            decoration: InputDecoration(
-                              hintText: 'Search by title or date...',
-                              icon: Icon(
-                                Icons.search,
-                                color: Theme.of(context).colorScheme.onSurface,
-                              ),
-                              border: InputBorder.none,
+            child: Scaffold(
+              appBar: AppBar(
+                leadingWidth: 100, // Make logo area wider
+                leading: Padding(
+                  padding: const EdgeInsets.only(left: 16.0),
+                  child: Image.asset(
+                    Theme.of(context).brightness == Brightness.dark
+                        ? 'assets/langmai_2.png'
+                        : 'assets/langmai_1.png',
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                title: const Text('Pháp Thoại Sư Ông'),
+                centerTitle: true,
+                backgroundColor: Colors.transparent,
+                actions: [
+                  IconButton(
+                    icon: Icon(
+                      Theme.of(context).brightness == Brightness.dark
+                          ? Icons.light_mode
+                          : Icons.dark_mode,
+                    ),
+                    onPressed: () {
+                      context.read<ThemeBloc>().add(ToggleTheme());
+                    },
+                  ),
+                ],
+              ),
+              backgroundColor: Colors.transparent,
+              body: BlocBuilder<AudioBloc, AudioState>(
+                builder: (context, audioState) {
+                  final isDark =
+                      Theme.of(context).brightness == Brightness.dark;
+                  return Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(
+                          16.0,
+                          16.0,
+                          16.0,
+                          8.0,
+                        ),
+                        child: GlassCard(
+                          isDark: isDark,
+                          borderRadius: 30,
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 16.0,
+                            ),
+                            child: TextField(
+                              controller: _searchController,
+                              focusNode: _searchFocusNode,
+                              decoration: InputDecoration(
+                                hintText: 'Search by title or date...',
+                                icon: Icon(
+                                  Icons.search,
+                                  color:
+                                      Theme.of(context).colorScheme.onSurface,
+                                ),
+                                border: InputBorder.none,
                                 hintStyle: TextStyle(
-                                  color: Theme.of(
-                                    context,
-                                  ).colorScheme.onSurface.withValues(alpha: 0.6),
+                                  color:
+                                      Theme.of(context)
+                                          .colorScheme
+                                          .onSurface
+                                          .withValues(alpha: 0.6),
                                 ),
                                 suffixIcon: IconButton(
                                   icon: Icon(
@@ -102,7 +148,9 @@ class HomeScreen extends StatelessWidget {
                                         : Icons.download_for_offline_outlined,
                                     color:
                                         audioState.showOnlyDownloaded
-                                            ? Theme.of(context).colorScheme.primary
+                                            ? Theme.of(
+                                              context,
+                                            ).colorScheme.primary
                                             : Theme.of(context)
                                                 .colorScheme
                                                 .onSurface
@@ -116,99 +164,110 @@ class HomeScreen extends StatelessWidget {
                                   tooltip: 'Show only downloaded',
                                 ),
                               ),
-                            style: TextStyle(
-                              color: Theme.of(context).colorScheme.onSurface,
+                              style: TextStyle(
+                                color: Theme.of(context).colorScheme.onSurface,
+                              ),
+                              onChanged: (query) {
+                                context.read<AudioBloc>().add(
+                                  SearchAudio(query),
+                                );
+                              },
                             ),
-                            onChanged: (query) {
-                              context.read<AudioBloc>().add(SearchAudio(query));
-                            },
                           ),
                         ),
                       ),
-                    ),
 
-                    Expanded(child: _buildBody(context, audioState)),
+                      Expanded(child: _buildBody(context, audioState)),
 
-                    if (!audioState.isSearching && !audioState.isPlaying)
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(8.0, 5, 8, 20),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                          Text(
-                            "For more content, try out the official app",
-                            style: TextStyle(
-                              color: Theme.of(
-                                context,
-                              ).colorScheme.onSurface.withValues(alpha: 0.6),
-                              fontSize: 12,
-                            ),
-                          ),
-                        
-                          Row(
+                      if (!audioState.isSearching && !audioState.isPlaying)
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(8.0, 5, 8, 20),
+                          child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                          GestureDetector(
-                            onTap:
-                                () => launchUrl(
-                              Uri.parse(
-                                'https://apps.apple.com/vn/app/plum-village-zen-meditation/id1273719339?l=vi',
+                              Text(
+                                "For more content, try out the official app",
+                                style: TextStyle(
+                                  color:
+                                      Theme.of(context)
+                                          .colorScheme
+                                          .onSurface
+                                          .withValues(alpha: 0.6),
+                                  fontSize: 12,
+                                ),
                               ),
-                              mode: LaunchMode.externalApplication,
-                            ),
-                            child: Text(
-                              'iOS',
-                              style: TextStyle(
-                                color:
-                                Theme.of(context).colorScheme.primary,
-                                fontWeight: FontWeight.bold,
-                                decoration: TextDecoration.underline,
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 8.0,
-                            ),
-                            child: Text(
-                              '•',
-                              style: TextStyle(
-                                color: Theme.of(
-                                  context,
-                                ).colorScheme.onSurface.withValues(alpha: 0.6),
-                              ),
-                            ),
-                          ),
-                          GestureDetector(
-                            onTap:
-                                () => launchUrl(
-                              Uri.parse(
-                                'https://play.google.com/store/apps/details?id=org.plumvillageapp&hl=vi',
-                              ),
-                              mode: LaunchMode.externalApplication,
-                            ),
-                            child: Text(
-                              'Android',
-                              style: TextStyle(
-                                color:
-                                Theme.of(context).colorScheme.primary,
-                                fontWeight: FontWeight.bold,
-                                decoration: TextDecoration.underline,
-                              ),
-                            ),
-                          ),
-                            ]),
-                        ],
-                      ),
 
-                    ),
-                  ],
-                );
-              },
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  GestureDetector(
+                                    onTap:
+                                        () => launchUrl(
+                                          Uri.parse(
+                                            'https://apps.apple.com/vn/app/plum-village-zen-meditation/id1273719339?l=vi',
+                                          ),
+                                          mode: LaunchMode.externalApplication,
+                                        ),
+                                    child: Text(
+                                      'iOS',
+                                      style: TextStyle(
+                                        color:
+                                            Theme.of(
+                                              context,
+                                            ).colorScheme.primary,
+                                        fontWeight: FontWeight.bold,
+                                        decoration: TextDecoration.underline,
+                                      ),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 8.0,
+                                    ),
+                                    child: Text(
+                                      '•',
+                                      style: TextStyle(
+                                        color:
+                                            Theme.of(context)
+                                                .colorScheme
+                                                .onSurface
+                                                .withValues(alpha: 0.6),
+                                      ),
+                                    ),
+                                  ),
+                                  GestureDetector(
+                                    onTap:
+                                        () => launchUrl(
+                                          Uri.parse(
+                                            'https://play.google.com/store/apps/details?id=org.plumvillageapp&hl=vi',
+                                          ),
+                                          mode: LaunchMode.externalApplication,
+                                        ),
+                                    child: Text(
+                                      'Android',
+                                      style: TextStyle(
+                                        color:
+                                            Theme.of(
+                                              context,
+                                            ).colorScheme.primary,
+                                        fontWeight: FontWeight.bold,
+                                        decoration: TextDecoration.underline,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                    ],
+                  );
+                },
+              ),
             ),
-          ),
-        );
-      },
+          );
+        },
+      ),
     );
   }
 
@@ -235,6 +294,7 @@ class HomeScreen extends StatelessWidget {
               borderRadius: 12,
               onTap: () {
                 context.read<AudioBloc>().add(PlayAudio(audio));
+                _searchFocusNode.unfocus();
               },
               child: ListTile(
                 title: Text(
@@ -313,7 +373,10 @@ class HomeScreen extends StatelessWidget {
                             height: 48,
                             alignment: Alignment.center,
                             decoration: BoxDecoration(
-                              color: Theme.of(context).colorScheme.tertiaryContainer,
+                              color:
+                                  Theme.of(
+                                    context,
+                                  ).colorScheme.tertiaryContainer,
                               shape: BoxShape.circle,
                             ),
                             child: Builder(
@@ -323,7 +386,10 @@ class HomeScreen extends StatelessWidget {
                                   return Text(
                                     year,
                                     style: TextStyle(
-                                      color: Theme.of(context).colorScheme.onTertiaryContainer,
+                                      color:
+                                          Theme.of(
+                                            context,
+                                          ).colorScheme.onTertiaryContainer,
                                       fontWeight: FontWeight.bold,
                                       fontSize: 15,
                                     ),
@@ -332,7 +398,10 @@ class HomeScreen extends StatelessWidget {
                                 return Icon(
                                   Icons.folder_open_rounded,
                                   size: 24.0,
-                                  color: Theme.of(context).colorScheme.onTertiaryContainer,
+                                  color:
+                                      Theme.of(
+                                        context,
+                                      ).colorScheme.onTertiaryContainer,
                                 );
                               },
                             ),
@@ -449,7 +518,9 @@ class HomeScreen extends StatelessWidget {
                               BoxShadow(
                                 color:
                                     isDark
-                                        ? Colors.greenAccent.withValues(alpha: 0.1)
+                                        ? Colors.greenAccent.withValues(
+                                          alpha: 0.1,
+                                        )
                                         : Colors.green.withValues(alpha: 0.1),
                                 blurRadius: 12,
                                 spreadRadius: 2,
@@ -497,7 +568,9 @@ class HomeScreen extends StatelessWidget {
                         color:
                             collection.isFavorite
                                 ? Colors.red
-                                : Theme.of(context).colorScheme.onSurfaceVariant,
+                                : Theme.of(
+                                  context,
+                                ).colorScheme.onSurfaceVariant,
                       ),
                     ),
                   ),
