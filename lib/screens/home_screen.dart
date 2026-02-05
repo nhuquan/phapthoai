@@ -141,27 +141,55 @@ class _HomeScreenState extends State<HomeScreen> {
                                           .onSurface
                                           .withValues(alpha: 0.6),
                                 ),
-                                suffixIcon: IconButton(
-                                  icon: Icon(
-                                    audioState.showOnlyDownloaded
-                                        ? Icons.download_done_rounded
-                                        : Icons.download_for_offline_outlined,
-                                    color:
-                                        audioState.showOnlyDownloaded
-                                            ? Theme.of(
-                                              context,
-                                            ).colorScheme.primary
-                                            : Theme.of(context)
-                                                .colorScheme
-                                                .onSurface
-                                                .withValues(alpha: 0.6),
-                                  ),
-                                  onPressed: () {
-                                    context.read<AudioBloc>().add(
-                                      ToggleDownloadedFilter(),
+                                suffixIcon: ValueListenableBuilder<TextEditingValue>(
+                                  valueListenable: _searchController,
+                                  builder: (context, value, child) {
+                                    return Row(
+                                      mainAxisSize: MainAxisSize.min,
+                                      children: [
+                                        if (value.text.isNotEmpty)
+                                          IconButton(
+                                            icon: Icon(
+                                              Icons.clear,
+                                              color:
+                                                  Theme.of(context)
+                                                      .colorScheme
+                                                      .onSurface
+                                                      .withValues(alpha: 0.6),
+                                            ),
+                                            onPressed: () {
+                                              _searchController.clear();
+                                              context.read<AudioBloc>().add(
+                                                const SearchAudio(''),
+                                              );
+                                            },
+                                          ),
+                                        IconButton(
+                                          icon: Icon(
+                                            audioState.showOnlyDownloaded
+                                                ? Icons.download_done_rounded
+                                                : Icons
+                                                    .download_for_offline_outlined,
+                                            color:
+                                                audioState.showOnlyDownloaded
+                                                    ? Theme.of(
+                                                      context,
+                                                    ).colorScheme.primary
+                                                    : Theme.of(context)
+                                                        .colorScheme
+                                                        .onSurface
+                                                        .withValues(alpha: 0.6),
+                                          ),
+                                          onPressed: () {
+                                            context.read<AudioBloc>().add(
+                                              ToggleDownloadedFilter(),
+                                            );
+                                          },
+                                          tooltip: 'Show only downloaded',
+                                        ),
+                                      ],
                                     );
                                   },
-                                  tooltip: 'Show only downloaded',
                                 ),
                               ),
                               style: TextStyle(
@@ -280,7 +308,22 @@ class _HomeScreenState extends State<HomeScreen> {
 
     if (state.isSearching) {
       if (state.searchResults.isEmpty) {
-        return const Center(child: Text('No results found'));
+        return Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Text('No results found'),
+              const SizedBox(height: 16),
+              TextButton(
+                onPressed: () {
+                  _searchController.clear();
+                  context.read<AudioBloc>().add(const SearchAudio(''));
+                },
+                child: const Text('Clear Search'),
+              ),
+            ],
+          ),
+        );
       }
       return ListView.builder(
         padding: const EdgeInsets.all(16.0),

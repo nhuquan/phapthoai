@@ -1,12 +1,13 @@
+import 'package:audio_session/audio_session.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:just_audio/just_audio.dart';
-import 'package:audio_session/audio_session.dart';
+import 'package:just_audio_background/just_audio_background.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
 import '../../data/audio_repository.dart';
 import '../../models/audio.dart';
 import '../../utils/download_helper.dart';
-import 'package:just_audio_background/just_audio_background.dart';
 import 'audio_event.dart';
 import 'audio_state.dart';
 
@@ -15,8 +16,8 @@ class AudioBloc extends Bloc<AudioEvent, AudioState> {
   final AudioPlayer _player;
 
   AudioBloc(this._repository)
-    : _player = AudioPlayer(),
-      super(const AudioState()) {
+      : _player = AudioPlayer(),
+        super(const AudioState()) {
     _initSession();
     on<LoadCollections>(_onLoadCollections);
     on<SearchAudio>(_onSearchAudio);
@@ -39,7 +40,7 @@ class AudioBloc extends Bloc<AudioEvent, AudioState> {
     emit(state.copyWith(isLoading: true, player: _player));
     try {
       final collections = await _repository.loadCollections();
-      
+
       List<String> favorites = [];
       try {
         final prefs = await SharedPreferences.getInstance();
@@ -49,10 +50,9 @@ class AudioBloc extends Bloc<AudioEvent, AudioState> {
       }
 
       // Update collections with favorite status
-      final updatedCollections =
-          collections.map((c) {
-            return c.copyWith(isFavorite: favorites.contains(c.title));
-          }).toList();
+      final updatedCollections = collections.map((c) {
+        return c.copyWith(isFavorite: favorites.contains(c.title));
+      }).toList();
 
       _sortCollections(updatedCollections);
 
@@ -72,13 +72,12 @@ class AudioBloc extends Bloc<AudioEvent, AudioState> {
       isFavorite: !collection.isFavorite,
     );
 
-    final updatedCollections =
-        state.collections.map((c) {
-          if (c.title == collection.title) {
-            return updatedCollection;
-          }
-          return c;
-        }).toList();
+    final updatedCollections = state.collections.map((c) {
+      if (c.title == collection.title) {
+        return updatedCollection;
+      }
+      return c;
+    }).toList();
 
     _sortCollections(updatedCollections);
 
@@ -114,8 +113,9 @@ class AudioBloc extends Bloc<AudioEvent, AudioState> {
     });
   }
 
-  Future<void> _onSearchAudio(SearchAudio event, Emitter<AudioState> emit) async {
-    final query = event.query.toLowerCase();
+  Future<void> _onSearchAudio(
+      SearchAudio event, Emitter<AudioState> emit) async {
+    final query = event.query.trim();
     emit(state.copyWith(searchQuery: query));
     await _performSearch(query, state.showOnlyDownloaded, emit);
   }
@@ -148,12 +148,11 @@ class AudioBloc extends Bloc<AudioEvent, AudioState> {
     // Filter by query
     var filtered = allAudios;
     if (query.isNotEmpty) {
-      filtered =
-          filtered.where((audio) {
-            final title = audio.title.toLowerCase();
-            final date = audio.date?.toLowerCase() ?? '';
-            return title.contains(query) || date.contains(query);
-          }).toList();
+      filtered = filtered.where((audio) {
+        final title = audio.title.toLowerCase();
+        final date = audio.date?.toLowerCase() ?? '';
+        return title.contains(query) || date.contains(query);
+      }).toList();
     }
 
     // Filter by downloaded
@@ -207,15 +206,16 @@ class AudioBloc extends Bloc<AudioEvent, AudioState> {
       if (_player.playing) {
         await _player.stop();
       }
-      
+
       final source = await DownloadHelper.getAudioSource(audio.url);
-      
+
       final mediaItem = MediaItem(
         id: audio.url,
         album: audio.collectionName ?? "Pháp Thoại",
         title: audio.title,
         artist: "Sư Ông Làng Mai",
-        artUri: Uri.parse("https://langmai.org/wp-content/uploads/2022/01/hi%CC%80nh-ca%CC%81o-pho%CC%81-su%CC%9B-o%CC%82ng-1028x1536.jpeg"),
+        artUri: Uri.parse(
+            "https://langmai.org/wp-content/uploads/2022/01/hi%CC%80nh-ca%CC%81o-pho%CC%81-su%CC%9B-o%CC%82ng-1028x1536.jpeg"),
       );
 
       if (source.startsWith('http')) {
@@ -227,7 +227,7 @@ class AudioBloc extends Bloc<AudioEvent, AudioState> {
           AudioSource.file(source, tag: mediaItem),
         );
       }
-      
+
       await _player.play();
     } catch (e) {
       debugPrint("Error playing audio: $e");
