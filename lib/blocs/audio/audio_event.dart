@@ -49,3 +49,12 @@ class ToggleFavorite extends AudioEvent {
   @override
   List<Object> get props => [collection];
 }
+
+class DeleteDownloadedAudio extends AudioEvent {
+  final Audio audio;
+
+  const DeleteDownloadedAudio(this.audio);
+
+  @override
+  List<Object> get props => [audio];
+}

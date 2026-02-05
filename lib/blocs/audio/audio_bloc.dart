@@ -25,6 +25,7 @@ class AudioBloc extends Bloc<AudioEvent, AudioState> {
     on<StopAudio>(_onStopAudio);
     on<ToggleDownloadedFilter>(_onToggleDownloadedFilter);
     on<ToggleFavorite>(_onToggleFavorite);
+    on<DeleteDownloadedAudio>(_onDeleteDownloadedAudio);
 
     // Initialize player and load data
     add(LoadCollections());
@@ -171,6 +172,15 @@ class AudioBloc extends Bloc<AudioEvent, AudioState> {
     } else {
       emit(state.copyWith(searchResults: filtered));
     }
+  }
+
+  Future<void> _onDeleteDownloadedAudio(
+    DeleteDownloadedAudio event,
+    Emitter<AudioState> emit,
+  ) async {
+    await DownloadHelper.deleteAudio(event.audio.url);
+    // Refresh search results to reflect the deletion
+    await _performSearch(state.searchQuery, state.showOnlyDownloaded, emit);
   }
 
   Future<void> _onStopAudio(StopAudio event, Emitter<AudioState> emit) async {

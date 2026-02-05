@@ -83,4 +83,16 @@ class DownloadHelper {
     }
     return url;
   }
+
+  static Future<void> deleteAudio(String url) async {
+    if (kIsWeb) return;
+    final path = await getLocalPath(url);
+    if (path != null) {
+      final file = File(path);
+      if (await file.exists()) {
+        await file.delete();
+        debugPrint('Deleted downloaded file: $path');
+      }
+    }
+  }
 }

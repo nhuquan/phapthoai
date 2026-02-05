@@ -313,16 +313,23 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         )
                         : null,
-                trailing: Wrap(
-                  spacing: 8,
-                  crossAxisAlignment: WrapCrossAlignment.center,
-                  children: [
-                    Icon(
+                trailing: state.showOnlyDownloaded
+                    ? IconButton(
+                      icon: const Icon(
+                        Icons.delete_outline_rounded,
+                        color: Colors.redAccent,
+                      ),
+                      onPressed: () {
+                        context.read<AudioBloc>().add(
+                          DeleteDownloadedAudio(audio),
+                        );
+                      },
+                      tooltip: 'Remove from downloads',
+                    )
+                    : Icon(
                       Icons.play_arrow_rounded,
                       color: Theme.of(context).colorScheme.primary,
                     ),
-                  ],
-                ),
               ),
             ),
           );
