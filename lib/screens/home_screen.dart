@@ -1,3 +1,6 @@
+import 'dart:io';
+
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -228,61 +231,73 @@ class _HomeScreenState extends State<HomeScreen> {
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  GestureDetector(
-                                    onTap:
-                                        () => launchUrl(
-                                          Uri.parse(
-                                            'https://apps.apple.com/vn/app/plum-village-zen-meditation/id1273719339?l=vi',
+
+                                  if (kIsWeb || Platform.isIOS)  ...[
+                                    GestureDetector(
+                                      onTap:
+                                          () =>
+                                          launchUrl(
+                                            Uri.parse(
+                                              'https://apps.apple.com/vn/app/plum-village-zen-meditation/id1273719339?l=vi',
+                                            ),
+                                            mode: LaunchMode
+                                                .externalApplication,
                                           ),
-                                          mode: LaunchMode.externalApplication,
+                                      child: Text(
+                                        'iOS',
+                                        style: TextStyle(
+                                          color:
+                                          Theme
+                                              .of(
+                                            context,
+                                          )
+                                              .colorScheme
+                                              .primary,
+                                          fontWeight: FontWeight.bold,
+                                          decoration: TextDecoration.underline,
                                         ),
-                                    child: Text(
-                                      'iOS',
-                                      style: TextStyle(
-                                        color:
-                                            Theme.of(
-                                              context,
-                                            ).colorScheme.primary,
-                                        fontWeight: FontWeight.bold,
-                                        decoration: TextDecoration.underline,
                                       ),
                                     ),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                      horizontal: 8.0,
-                                    ),
-                                    child: Text(
-                                      '•',
-                                      style: TextStyle(
-                                        color:
-                                            Theme.of(context)
-                                                .colorScheme
-                                                .onSurface
-                                                .withValues(alpha: 0.6),
+                                  ],
+
+                                  if (kIsWeb)
+                                    Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                        horizontal: 8.0,
+                                      ),
+                                      child: Text(
+                                        ' - ',
+                                        style: TextStyle(
+                                          color:
+                                          Theme.of(context)
+                                              .colorScheme
+                                              .onSurface
+                                              .withValues(alpha: 0.6),
+                                        ),
                                       ),
                                     ),
-                                  ),
-                                  GestureDetector(
-                                    onTap:
-                                        () => launchUrl(
-                                          Uri.parse(
-                                            'https://play.google.com/store/apps/details?id=org.plumvillageapp&hl=vi',
+
+                                  if (kIsWeb || Platform.isAndroid)
+                                    GestureDetector(
+                                      onTap:
+                                          () => launchUrl(
+                                            Uri.parse(
+                                              'https://play.google.com/store/apps/details?id=org.plumvillageapp&hl=vi',
+                                            ),
+                                            mode: LaunchMode.externalApplication,
                                           ),
-                                          mode: LaunchMode.externalApplication,
+                                      child: Text(
+                                        'Android',
+                                        style: TextStyle(
+                                          color:
+                                              Theme.of(
+                                                context,
+                                              ).colorScheme.primary,
+                                          fontWeight: FontWeight.bold,
+                                          decoration: TextDecoration.underline,
                                         ),
-                                    child: Text(
-                                      'Android',
-                                      style: TextStyle(
-                                        color:
-                                            Theme.of(
-                                              context,
-                                            ).colorScheme.primary,
-                                        fontWeight: FontWeight.bold,
-                                        decoration: TextDecoration.underline,
                                       ),
                                     ),
-                                  ),
                                 ],
                               ),
                             ],
