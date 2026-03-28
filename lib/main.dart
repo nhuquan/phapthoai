@@ -5,7 +5,7 @@ import 'data/audio_repository.dart';
 import 'blocs/audio/audio_bloc.dart';
 import 'blocs/theme/theme_bloc.dart';
 import 'blocs/theme/theme_state.dart';
-import 'screens/home_screen.dart';
+import 'screens/main_screen.dart';
 import 'widgets/player_widget.dart';
 import 'blocs/audio/audio_state.dart';
 
@@ -54,26 +54,9 @@ class MyApp extends StatelessWidget {
                 ThemeData.dark().textTheme,
               ),
             ),
-            home: const HomeScreen(),
+            home: const MainScreen(),
             builder: (context, child) {
-              return Material(
-                child: Column(
-                  children: [
-                    Expanded(child: child!),
-                    BlocBuilder<AudioBloc, AudioState>(
-                      builder: (context, audioState) {
-                        if (audioState.player != null && !audioState.shouldHidePlayer) {
-                          return PlayerWidget(
-                            player: audioState.player!,
-                            currentAudio: audioState.currentAudio,
-                          );
-                        }
-                        return const SizedBox.shrink();
-                      },
-                    ),
-                  ],
-                ),
-              );
+              return child!;
             },
           );
         },

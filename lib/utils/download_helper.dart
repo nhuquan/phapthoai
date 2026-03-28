@@ -16,10 +16,7 @@ class DownloadHelper {
   }
 
   static String _getFileName(String url) {
-    // Basic filename extraction, could be improved with hashing if URLs have no clear filename
-    // and ensuring valid filename characters
     final base = url.split('/').last.split('?').first;
-    // Replace non-alphanumeric (except . and -) with _
     return base.replaceAll(RegExp(r'[^a-zA-Z0-9\.\-]'), '_');
   }
 
